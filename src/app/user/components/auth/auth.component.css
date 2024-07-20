@@ -1,0 +1,10 @@
+.auth-bg {
+    background-color: green;
+    
+}
+
+.center-items {
+    align-items: center; /* Correspondiente a 'items-center' */
+    justify-content: center;
+}
+  
