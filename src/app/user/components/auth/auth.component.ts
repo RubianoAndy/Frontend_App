@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
+import { environment } from '../../../../environments/environment';
+
 @Component({
   selector: 'app-auth',
   standalone: true,
@@ -11,6 +13,9 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './auth.component.css'
 })
 export class AuthComponent implements OnInit {
+  currentYear: number = environment.currentYear;
+  page: string = environment.site_name;
+
   constructor() {}
 
   ngOnInit(): void {

@@ -5,6 +5,8 @@
 export const environment = {
   production: false,
   apiUrl: 'http://localhost:8000/',
+  currentYear: new Date().getFullYear(),
+  site_name: 'Andy Rubiano™ - Plantas carnívoras',
 };
 
 /*
