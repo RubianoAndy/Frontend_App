@@ -19,7 +19,7 @@ import { AuthService } from '../../../services/auth/auth.service';
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
 })
-export class LoginComponent implements OnInit {
+export default class LoginComponent implements OnInit {
   loading: boolean = false;
 
   form!: FormGroup;
