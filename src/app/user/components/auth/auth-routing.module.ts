@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { AuthComponent } from './auth.component';
 import { LoginComponent } from './login/login.component';
+import { authenticatedGuard } from '../../guards/authenticated/authenticated.guard';
 
 // import { ForgotPasswordComponent } from './pages/forgot-password/forgot-password.component';
 // import { NewPasswordComponent } from './pages/new-password/new-password.component';
@@ -16,7 +17,7 @@ const routes: Routes = [
     component: AuthComponent,
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
-      { path: 'login', component: LoginComponent, data: { returnUrl: window.location.pathname } },
+      { path: 'login', component: LoginComponent, data: { returnUrl: window.location.pathname }, canActivate: [authenticatedGuard] },
       // { path: 'sign-up', component: SignUpComponent },
       // { path: 'forgot-password', component: ForgotPasswordComponent },
       // { path: 'new-password', component: NewPasswordComponent },

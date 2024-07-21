@@ -39,18 +39,23 @@ export class AuthService {
   }
 
   private getToken(): string | null {
-    return localStorage.getItem(this.token);
+    if (typeof(window) !== undefined)
+      return localStorage.getItem(this.token);
+    else
+      return null;
   }
 
-  // ESTA FUNCIÓN ES PARA VERIFICAR CUANDO SE VENCE EL TOKEN JWT
-  /* isAuthenticated(): boolean {
+  isAuthenticated(): boolean {
     const token = this.getToken();
 
     if (!token)
       return false;
+    else
+      return true;  // Borrar el else si se tiene token tipo JWT
 
-    const payload = JSON.parse(atob(token.split('.')[1]));  // Recupera el payload del token JWT
+    // Esta parte es para token de tipo JWT
+    /* const payload = JSON.parse(atob(token.split('.')[1]));  // Recupera el payload del token JWT
     const expired = payload.exp * 1000;   // Para dejarlo en milisegundos
-    return Date.now() < expired;
-  } */
+    return Date.now() < expired; */
+  }
 }
