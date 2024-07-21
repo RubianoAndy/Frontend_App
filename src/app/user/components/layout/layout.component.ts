@@ -3,6 +3,8 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { SidebarComponent } from './sidebar/sidebar.component';
 
+import { environment } from '../../../../environments/environment';
+
 @Component({
   selector: 'app-layout',
   standalone: true,
@@ -11,5 +13,9 @@ import { SidebarComponent } from './sidebar/sidebar.component';
   styleUrl: './layout.component.css'
 })
 export default class LayoutComponent {
+  private apiUrl = environment.apiUrl;
 
+  constructor () {
+    alert(this.apiUrl);
+  }
 }
