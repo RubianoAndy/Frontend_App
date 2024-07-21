@@ -23,6 +23,8 @@ export class LoginComponent implements OnInit {
   submitted = false;
   passwordTextType!: boolean;
 
+  isPasswordVisible: boolean = false;
+
   constructor(
     private readonly _formBuilder: FormBuilder,
     private readonly _router: Router
@@ -56,5 +58,9 @@ export class LoginComponent implements OnInit {
     }
 
     this._router.navigate(['/']);
+  }
+
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
   }
 }
