@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
+import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
   selector: 'app-login',
@@ -19,6 +20,8 @@ import { NgClass, NgIf } from '@angular/common';
   styleUrl: './login.component.css'
 })
 export class LoginComponent implements OnInit {
+  loading: boolean = false;
+
   form!: FormGroup;
   submitted = false;
   passwordTextType!: boolean;
@@ -26,8 +29,10 @@ export class LoginComponent implements OnInit {
   isPasswordVisible: boolean = false;
 
   constructor(
-    private readonly _formBuilder: FormBuilder,
-    private readonly _router: Router
+    private readonly formBuilder: FormBuilder,
+    private readonly router: Router,
+
+    private authService: AuthService,
   ) {
 
   }
@@ -42,7 +47,7 @@ export class LoginComponent implements OnInit {
       password: '',
     }
 
-    this.form = this._formBuilder.group({
+    this.form = this.formBuilder.group({
       email: [data.email, [Validators.required, Validators.minLength(6), Validators.email]],
       password: [data.password, [ Validators.required, Validators.minLength(6) ]],
     });
@@ -50,18 +55,40 @@ export class LoginComponent implements OnInit {
 
   onSubmit() {
     this.submitted = true;
-    
-    const { email, password } = this.form.value;
+
+    const email = this.form.value.email;
+    const password = this.form.value.password;
+
+    var param = {
+      email: email,
+      password: password
+    };
+
+    if (this.form.valid && param) {
+      this.loading = true;
+      this.login(email, password);
+    }
 
     // stop here if form is invalid
     if (this.form.invalid) {
       return;
     }
-
-    this._router.navigate(['/']);
   }
 
   togglePasswordVisibility(): void {
     this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
+  login(email: string, password: string): void {
+    this.authService.login(email, password).subscribe({
+      next: () => {
+        alert('Se ejecutó bien esta parte');
+        // this.router.navigate(['dashboard']);
+      },
+      error: (err) => {
+        console.error('Login failed', err);
+        alert('No se ejecutó bien esta parte');
+      }
+    });
   }
 }

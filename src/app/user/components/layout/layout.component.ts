@@ -16,6 +16,6 @@ export default class LayoutComponent {
   private apiUrl = environment.apiUrl;
 
   constructor () {
-    alert(this.apiUrl);
+    // alert(this.apiUrl);
   }
 }
