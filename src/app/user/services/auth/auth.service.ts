@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 
 import { environment } from '../../../../environments/environment';
@@ -18,10 +18,8 @@ export class AuthService {
   ) { }
 
   login(email: string, password: string): Observable<any> {
-    // return this.http.post(this.apiUrl + 'login/', { email, password });
-
-    // Esto de acá abajo permite imprimir luego de que se consuma el API
     return this.http.post<any>(this.apiUrl + 'login/', { email, password }).pipe(
+      // El tap se ejecuta depués de realizada la petición
       tap(response => {
         if (response.token)
           this.setToken(response.token);
@@ -29,9 +27,19 @@ export class AuthService {
     );
   }
 
-  logout(): void {
-    localStorage.removeItem(this.token);
-    this.router.navigate(['auth/login']);
+  logout(): Observable<any> {
+    const token = this.getToken();
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+
+    
+
+    return this.http.post<any>(this.apiUrl + 'logout/', {}, { headers }).pipe(
+      // El tap se ejecuta depués de realizada la petición
+      tap(() => {
+        localStorage.removeItem(this.token);
+        this.router.navigate(['auth/login']);
+      })
+    );
   }
 
   private setToken(token: string): void {
