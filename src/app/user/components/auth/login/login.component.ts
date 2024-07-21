@@ -11,10 +11,8 @@ import { AuthService } from '../../../services/auth/auth.service';
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
-    // AngularSvgIconModule,
     NgClass,
     NgIf,
-    // ButtonComponent
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -23,7 +21,6 @@ export default class LoginComponent implements OnInit {
   loading: boolean = false;
 
   form!: FormGroup;
-  submitted = false;
   passwordTextType!: boolean;
 
   isPasswordVisible: boolean = false;
@@ -54,8 +51,6 @@ export default class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    this.submitted = true;
-
     const email = this.form.value.email;
     const password = this.form.value.password;
 
