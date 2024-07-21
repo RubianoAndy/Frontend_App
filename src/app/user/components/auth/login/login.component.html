@@ -30,4 +30,8 @@
             <i [ngClass]="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" class="text-gray-500"></i>
         </button>
     </div>
+
+    <div class="row items-center">
+        <button type="submit" [disabled]="form.invalid" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-400 disabled:opacity-50">Login</button>
+    </div>
 </form>

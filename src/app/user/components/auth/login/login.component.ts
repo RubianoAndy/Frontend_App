@@ -43,13 +43,14 @@ export class LoginComponent implements OnInit {
     }
 
     this.form = this._formBuilder.group({
-      email: [data.email, [Validators.required, Validators.email]],
-      password: [data.password, Validators.required],
+      email: [data.email, [Validators.required, Validators.minLength(5), Validators.email]],
+      password: [data.password, [ Validators.required, Validators.minLength(5) ]],
     });
   }
 
   onSubmit() {
     this.submitted = true;
+    
     const { email, password } = this.form.value;
 
     // stop here if form is invalid
