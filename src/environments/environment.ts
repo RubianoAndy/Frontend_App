@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:8000/',
+  apiUrl: 'http://localhost:8000/api/backend/',
   currentYear: new Date().getFullYear(),
   site_name: 'Andy Rubiano™ - Plantas carnívoras',
 };
