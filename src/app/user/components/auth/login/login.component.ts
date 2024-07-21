@@ -21,7 +21,6 @@ export default class LoginComponent implements OnInit {
   loading: boolean = false;
 
   form!: FormGroup;
-  passwordTextType!: boolean;
 
   isPasswordVisible: boolean = false;
 
