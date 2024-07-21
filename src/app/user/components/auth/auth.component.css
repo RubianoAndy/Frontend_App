@@ -1,5 +1,5 @@
 .auth-bg {
-    background-image: url('../../../../../public/assets/images/auth wallpaper/Cephalotus Follicularis.jpg'); /* Ruta a tu imagen */
+    background-image: url('../../../../../public/assets/images/auth wallpaper/Cephalotus Follicularis.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
     background-position: center; /* Centra la imagen en el contenedor */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
@@ -8,4 +8,11 @@
 .center-items {
     align-items: center;
     justify-content: center;
+}
+
+.authentication-bg {
+    background-image: url('../../../../../public/assets/images/auth wallpaper/Wallpaper texture.jpg');
+    background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
+    background-position: center; /* Centra la imagen en el contenedor */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
