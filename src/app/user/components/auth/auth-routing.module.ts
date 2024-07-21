@@ -11,6 +11,7 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', loadComponent: () => import('./login/login.component'), canActivate: [authenticatedGuard] },
+      { path: 'register', loadComponent: () => import('./register/register.component'), canActivate: [authenticatedGuard] },
       { path: '**', redirectTo: 'login', pathMatch: 'full' },
     ],
   },

@@ -26,8 +26,8 @@ export default class LoginComponent implements OnInit {
   isPasswordVisible: boolean = false;
 
   constructor(
-    private readonly formBuilder: FormBuilder,
-    private readonly router: Router,
+    private formBuilder: FormBuilder,
+    private router: Router,
 
     private authService: AuthService,
   ) {
@@ -45,7 +45,7 @@ export default class LoginComponent implements OnInit {
     }
 
     this.form = this.formBuilder.group({
-      email: [data.email, [Validators.required, Validators.minLength(6), Validators.email]],
+      email: [data.email, [ Validators.required, Validators.minLength(6), Validators.email ]],
       password: [data.password, [ Validators.required, Validators.minLength(6) ]],
     });
   }
