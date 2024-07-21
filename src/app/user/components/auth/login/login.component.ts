@@ -82,12 +82,12 @@ export class LoginComponent implements OnInit {
   login(email: string, password: string): void {
     this.authService.login(email, password).subscribe({
       next: () => {
-        alert('Se ejecutó bien esta parte');
+        this.loading = false;
         // this.router.navigate(['dashboard']);
       },
       error: (err) => {
+        this.loading = false;
         console.error('Login failed', err);
-        alert('No se ejecutó bien esta parte');
       }
     });
   }
