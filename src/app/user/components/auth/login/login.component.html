@@ -17,21 +17,27 @@
         </div>
     </div>
 
-    <div class="row">
-        <label for="email" class="text-sm text-start text-white">Email * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
-        <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="mail@loopple.com" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+    <div class="flex">
+        <div class="w-full">
+            <label for="email" class="text-sm text-start text-white">Email * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
+            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="mail@loopple.com" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+        </div>
     </div>
 
-    <div class="row relative items-center">
-        <label for="password" class="text-sm text-start text-white">Password * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
-        <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="Password" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+    <div class="flex relative items-center">
+        <div class="w-full">
+            <label for="password" class="text-start text-white">Password * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
+            <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="Password" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
 
-        <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-0 flex items-center px-3 mt-6">
-            <i [ngClass]="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" class="text-gray-500"></i>
-        </button>
+            <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-0 flex items-center px-3 mt-4">
+                <i [ngClass]="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" class="text-gray-500"></i>
+            </button>
+        </div>
     </div>
 
-    <div class="row items-center">
-        <button type="submit" [disabled]="form.invalid || loading" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-400 disabled:opacity-50">Login</button>
+    <div class="flex items-center">
+        <div class="w-full">
+            <button type="submit" [disabled]="form.invalid || loading" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-400 disabled:opacity-50">Login</button>
+        </div>
     </div>
 </form>
