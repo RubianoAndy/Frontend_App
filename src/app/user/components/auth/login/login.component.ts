@@ -50,22 +50,14 @@ export default class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    const email = this.form.value.email;
-    const password = this.form.value.password;
-
     var param = {
-      email: email,
-      password: password
+      email: this.form.value.email,
+      password: this.form.value.password
     };
 
     if (this.form.valid && param) {
       this.loading = true;
-      this.login(email, password);
-    }
-
-    // stop here if form is invalid
-    if (this.form.invalid) {
-      return;
+      this.login(param.email, param.password);
     }
   }
 

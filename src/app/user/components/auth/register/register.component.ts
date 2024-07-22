@@ -69,7 +69,25 @@ export default class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    // TOCA AGREGAR AL FORMULARIO EL CAMPO DE username para enviarlo al backend y guardarlo, se puede hacer con un split antes del @ en el correo
+    var param = {
+      name_1: this.form.value.name_1,
+      name_2: this.form.value.name_2,
+      lastname_1: this.form.value.lastname_1,
+      lastname_2: this.form.value.lastname_2,
+
+      identification_number: this.form.value.identification_number,
+      birth_date: this.form.value.birth_date,
+      mobile: this.form.value.mobile,
+
+      email: this.form.value.email,
+      username: this.form.value.email,  // Se le asigna el correo al username que no genere problema en la base de datos
+      password: this.form.value.password,
+    };
+
+    if (this.form.valid && param) {
+      this.loading = true;
+      alert('Si está ejecutando el formulario');
+    }
   }
 
   togglePasswordVisibility(): void {
