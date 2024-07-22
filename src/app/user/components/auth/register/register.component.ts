@@ -21,6 +21,8 @@ export default class RegisterComponent implements OnInit {
 
   form!: FormGroup;
 
+  isPasswordVisible: boolean = false;
+
   constructor (
     private formBuilder: FormBuilder,
     private router: Router,
@@ -29,42 +31,48 @@ export default class RegisterComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.createForm();
   }
 
   createForm(data: any = null) {
     data = data || {
-      name_1: null,
+      name_1: '',
       name_2: null,
-      lastname_1: null,
+      lastname_1: '',
       lastname_2: null,
 
-      identification_number: null,
-      birth_date: null,
-      mobile: null,
+      identification_number: '',
+      birth_date: '',
+      mobile: '',
 
-      email: null,
-      username: null,
+      email: '',
+      // username: '',
 
-      password: null,
-      password_confirm: null,
+      password: '',
     }
 
     this.form = this.formBuilder.group({
       name_1: [data.name_1, [ Validators.required, Validators.minLength(2), Validators.maxLength(25) ]],
       name_2: [data.name_2, [ Validators.minLength(2), Validators.maxLength(25) ]],
-      lastname_1: [data.lastname_1, [ Validators.minLength(2), Validators.maxLength(25) ]],
-      lastname_2: [data.lastname_2, [ Validators.required, Validators.minLength(2), Validators.maxLength(25) ]],
+      lastname_1: [data.lastname_1, [ Validators.required, Validators.minLength(2), Validators.maxLength(25) ]],
+      lastname_2: [data.lastname_2, [ Validators.minLength(2), Validators.maxLength(25) ]],
 
-      identification_number: [data.identification_number, [ Validators.required, Validators.minLength(6), Validators.maxLength(25) ]],
+      identification_number: [data.identification_number, [ Validators.required, Validators.pattern('^[0-9]*$'), Validators.minLength(6), Validators.maxLength(25) ]],
       birth_date: [data.birth_date ? new Date(data.birth_date): null, [ Validators.required, Validators.minLength(1) ]],
-      // mobile
+      mobile: [data.mobile, [ Validators.required, Validators.pattern('^[0-9]*$'), Validators.minLength(7), Validators.maxLength(10) ]],
 
-      username: [data.username, [ Validators.required, Validators.minLength(6), Validators.minLength(25) ]],
-      email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.minLength(100) ]],
+      email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.maxLength(100) ]],
+      // username: [data.username, [ Validators.required, Validators.pattern('^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$'), Validators.minLength(6), Validators.minLength(20) ]],
 
       password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
-      password_confirm: [data.password_confirm, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
     });
+  }
+
+  onSubmit() {
+    // TOCA AGREGAR AL FORMULARIO EL CAMPO DE username para enviarlo al backend y guardarlo, se puede hacer con un split antes del @ en el correo
+  }
+
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
   }
 }

@@ -31,8 +31,6 @@ export class AuthService {
     const token = this.getToken();
     const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    
-
     return this.http.post<any>(this.apiUrl + 'logout/', {}, { headers }).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(() => {
