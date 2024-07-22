@@ -49,7 +49,7 @@
     
         <div class="w-1/2">
             <label for="birth_date" class="text-sm text-start text-white">Birth date *</label>
-            <input [ngClass]="{'bg-red-300': !form.controls['birth_date'].valid && form.controls['birth_date'].touched}" id="birth_date" formControlName="birth_date" type="text" placeholder="Birth date" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['birth_date'].valid && form.controls['birth_date'].touched}" id="birth_date" formControlName="birth_date" type="date" placeholder="Birth date" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
         </div>
     </div>
 
