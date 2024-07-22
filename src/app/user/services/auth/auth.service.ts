@@ -17,8 +17,8 @@ export class AuthService {
     private router: Router,
   ) { }
 
-  login(email: string, password: string): Observable<any> {
-    return this.http.post<any>(this.apiUrl + 'login/', { email, password }).pipe(
+  login(body: any): Observable<any> {
+    return this.http.post<any>(this.apiUrl + 'login/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(response => {
         if (response.token)

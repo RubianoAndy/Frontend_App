@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+import { RegisterService } from '../../../services/register/register.service';
 
 @Component({
   selector: 'app-register',
@@ -26,6 +27,8 @@ export default class RegisterComponent implements OnInit {
   constructor (
     private formBuilder: FormBuilder,
     private router: Router,
+
+    private registerService: RegisterService,
   ) {
 
   }
@@ -69,7 +72,7 @@ export default class RegisterComponent implements OnInit {
   }
 
   onSubmit() {
-    var param = {
+    var body = {
       name_1: this.form.value.name_1,
       name_2: this.form.value.name_2,
       lastname_1: this.form.value.lastname_1,
@@ -84,13 +87,26 @@ export default class RegisterComponent implements OnInit {
       password: this.form.value.password,
     };
 
-    if (this.form.valid && param) {
+    if (this.form.valid && body) {
       this.loading = true;
-      alert('Si está ejecutando el formulario');
+      this.register(body);
     }
   }
 
   togglePasswordVisibility(): void {
     this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
+  register(body: any): void {
+    this.registerService.register(body).subscribe({
+      next: () => {
+        this.loading = false;
+        this.router.navigate(['auth/login']);
+      },
+      error: (err) => {
+        this.loading = false;
+        console.error('Login failed', err);
+      }
+    });
   }
 }

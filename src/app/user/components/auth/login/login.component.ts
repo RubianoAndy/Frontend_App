@@ -50,14 +50,14 @@ export default class LoginComponent implements OnInit {
   }
 
   onSubmit() {
-    var param = {
+    var body = {
       email: this.form.value.email,
       password: this.form.value.password
     };
 
-    if (this.form.valid && param) {
+    if (this.form.valid && body) {
       this.loading = true;
-      this.login(param.email, param.password);
+      this.login(body);
     }
   }
 
@@ -65,8 +65,8 @@ export default class LoginComponent implements OnInit {
     this.isPasswordVisible = !this.isPasswordVisible;
   }
 
-  login(email: string, password: string): void {
-    this.authService.login(email, password).subscribe({
+  login(body: any): void {
+    this.authService.login(body).subscribe({
       next: () => {
         this.loading = false;
         this.router.navigate(['dashboard']);
