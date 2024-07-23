@@ -7,7 +7,7 @@
                 </a>
                 
                 <button (click)="toggleSidebar()" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200">
-                    <span class="w-8 h-8 flex justify-center items-center">
+                    <span class="w-7 h-7 flex justify-center items-center">
                         <i class="fa-solid fa-bars text-2xl"></i>
                     </span>
                 </button>                
@@ -16,9 +16,10 @@
             <div class="flex items-center">
                 <div class="relative">
                     <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" (click)="toggleMenuDropdown()">
-                        <span class="sr-only">Open user menu</span>
+                        <!-- <span class="sr-only">Open user menu</span> -->
                         <img class="w-8 h-8 rounded-full" src="https://flowbite.com/docs/images/people/profile-picture-5.jpg" alt="user photo">
                     </button>
+
                     <div #dropdownMenu id="dropdown-user" class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-200 rounded shadow dark:bg-gray-700 dark:divide-gray-600">
                         <div class="px-4 py-3" role="none">
                             <p class="text-sm text-gray-900 dark:text-white" role="none">Neil Sims</p>
@@ -46,6 +47,7 @@
         <ul class="space-y-2 font-medium">
             <li>
                 <button routerLink="/home" class="flex items-center w-full text-left p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                    <i class="fa-solid fa-house"></i>
                     <span class="ms-3">Dashboard</span>
                 </button>
             </li>
