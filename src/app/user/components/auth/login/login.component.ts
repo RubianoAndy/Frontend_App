@@ -69,7 +69,7 @@ export default class LoginComponent implements OnInit {
     this.authService.login(body).subscribe({
       next: () => {
         this.loading = false;
-        this.router.navigate(['dashboard']);
+        this.router.navigate(['user']);
       },
       error: (err) => {
         this.loading = false;
