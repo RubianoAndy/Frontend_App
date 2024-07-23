@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterOutlet } from '@angular/router';
 
@@ -12,13 +12,28 @@ import { Router, RouterOutlet } from '@angular/router';
   styleUrl: './dashboard.component.css'
 })
 export class DashboardComponent {
+  @ViewChild('dropdownMenu', { static: true }) dropdownMenu!: ElementRef;
   loading: boolean = false;
 
   constructor (
     private authService: AuthService,
     private router: Router,
+    private renderer: Renderer2,
   ) {
 
+  }
+
+  toggleDropdown() {
+    const dropdown = this.dropdownMenu.nativeElement;
+    const isHidden = dropdown.classList.contains('hidden');
+
+    if (isHidden) {
+      this.renderer.removeClass(dropdown, 'hidden');
+      this.renderer.setAttribute(dropdown, 'aria-expanded', 'true');
+    } else {
+      this.renderer.addClass(dropdown, 'hidden');
+      this.renderer.setAttribute(dropdown, 'aria-expanded', 'false');
+    }
   }
 
   logout() {

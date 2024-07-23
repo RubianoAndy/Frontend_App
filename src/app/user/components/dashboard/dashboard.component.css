@@ -1,0 +1,8 @@
+#dropdown-user {
+    position: absolute; /* Asegúrate de que el menú se posicione de manera absoluta respecto a su contenedor */
+    top: 100%; /* Posición en relación al botón (100% de la altura del botón) */
+    right: 0; /* Pegado al lado derecho del contenedor */
+    margin-top: 8px; /* Espacio entre el botón y el menú */
+    border-radius: 0.375rem; /* Radio de esquina redondeada (puedes ajustar esto según tu preferencia) */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra opcional para mayor efecto flotante */
+}
