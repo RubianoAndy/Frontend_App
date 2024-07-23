@@ -1,7 +1,7 @@
 import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterOutlet } from '@angular/router';
-import { NgClass } from '@angular/common';
+import { NgClass, NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +9,7 @@ import { NgClass } from '@angular/common';
   imports: [
     RouterOutlet,
     NgClass,
+    NgIf,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

@@ -58,10 +58,16 @@
             <li>
                 <button (click)="toggleListDropdown('products')" class="flex items-center w-full text-left transition duration-75 p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                     <span class="flex-1 ms-3 text-left rtl:text-right whitespace-nowrap">Products</span>
-                    <span class="flex-1 ms-3 text-right rtl:text-right whitespace-nowrap">></span>
+                    <span *ngIf="!isDropdownOpen['products']" class="flex-1 ms-3 text-right rtl:text-right whitespace-nowrap">
+                        <i class="fa-solid fa-angle-down"></i>
+                    </span>
+
+                    <span *ngIf="isDropdownOpen['products']" class="flex-1 ms-3 text-right rtl:text-right whitespace-nowrap">
+                        <i class="fa-solid fa-angle-up"></i>
+                    </span>
                 </button>
             
-                <ul id="dropdown-example" [ngClass]="{'hidden': !isDropdownOpen['products'], 'py-2': true, 'space-y-2': true}">
+                <ul id="dropdown-products" [ngClass]="{'hidden': !isDropdownOpen['products'], 'py-2': true, 'space-y-2': true}">
                     <li>
                        <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
                     </li>
