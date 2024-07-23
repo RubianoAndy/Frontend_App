@@ -17,6 +17,8 @@ export class DashboardComponent {
   @ViewChild('dropdownMenu', { static: true }) dropdownMenu!: ElementRef;
   @ViewChild('sidebar', { static: false }) sidebar!: ElementRef;
 
+  isDropdownOpen: { [key: string]: boolean } = {};
+
   isSidebarOpen = true;
 
   loading: boolean = false;
@@ -29,7 +31,7 @@ export class DashboardComponent {
 
   }
 
-  toggleDropdown() {
+  toggleMenuDropdown() {
     const dropdown = this.dropdownMenu.nativeElement;
     const isHidden = dropdown.classList.contains('hidden');
 
@@ -40,6 +42,10 @@ export class DashboardComponent {
       this.renderer.addClass(dropdown, 'hidden');
       this.renderer.setAttribute(dropdown, 'aria-expanded', 'false');
     }
+  }
+
+  toggleListDropdown(menu: string) {
+    this.isDropdownOpen[menu] = !this.isDropdownOpen[menu];
   }
 
   // toggleSidebar() {
