@@ -20,13 +20,13 @@ import { TranslatePipe } from '../../../../../translate/translate.pipe';
   styleUrl: './login.component.css'
 })
 export default class LoginComponent implements OnInit {
+  language: 'en' | 'es' = 'es';
+  
   loading: boolean = false;
 
   form!: FormGroup;
 
   isPasswordVisible: boolean = false;
-
-  language: 'en' | 'es' = 'es';
 
   constructor(
     private formBuilder: FormBuilder,

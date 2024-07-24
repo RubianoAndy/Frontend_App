@@ -16,6 +16,8 @@ export class TranslatePipe implements PipeTransform {
 
   private translations: LanguageTranslations = {
     'en': {
+      'all rights reserved': 'All rights reserved',
+
       'hello': 'Hello!',
       'enter the credentials to access your account': 'Enter the credentials to access your account',
       'lets get started to this awesome advanture!': 'Let\'s get started to this awesome advanture!',
@@ -43,6 +45,8 @@ export class TranslatePipe implements PipeTransform {
     },
 
     'es': {
+      'all rights reserved': 'Todos los derechos reservados',
+
       'hello': '¡Hola!',
       'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',
       'lets get started to this awesome advanture!': '¡Comencemos con esta increíble aventura!',

@@ -20,13 +20,13 @@ import { TranslatePipe } from '../../../../../translate/translate.pipe';
   styleUrl: './register.component.css'
 })
 export default class RegisterComponent implements OnInit {
+  language: 'en' | 'es' = 'es';
+  
   loading: boolean = false;
 
   form!: FormGroup;
 
   isPasswordVisible: boolean = false;
-
-  language: 'en' | 'es' = 'es';
 
   constructor (
     private formBuilder: FormBuilder,
