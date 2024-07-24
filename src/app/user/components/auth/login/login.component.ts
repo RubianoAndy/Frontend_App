@@ -3,6 +3,7 @@ import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } 
 import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { AuthService } from '../../../services/auth/auth.service';
+import { TranslatePipe } from '../../../../../translate/translate.pipe';
 
 @Component({
   selector: 'app-login',
@@ -13,6 +14,7 @@ import { AuthService } from '../../../services/auth/auth.service';
     RouterLink,
     NgClass,
     NgIf,
+    TranslatePipe,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -23,6 +25,8 @@ export default class LoginComponent implements OnInit {
   form!: FormGroup;
 
   isPasswordVisible: boolean = false;
+
+  language: 'en' | 'es' = 'es';
 
   constructor(
     private formBuilder: FormBuilder,
