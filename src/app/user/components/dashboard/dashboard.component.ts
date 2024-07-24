@@ -1,6 +1,6 @@
 import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
-import { Router, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 
 @Component({
@@ -8,6 +8,7 @@ import { NgClass, NgIf } from '@angular/common';
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLink,
     NgClass,
     NgIf,
   ],
