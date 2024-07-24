@@ -31,6 +31,7 @@ export class TranslatePipe implements PipeTransform {
       'email': 'Email',
       'password': 'Password',
 
+      'have account': 'Have account?',
       'forgot password': 'forgot your password?',
       'login with google': 'Login with Google',
       'sign up with google': 'Sign up with Google',
@@ -60,6 +61,7 @@ export class TranslatePipe implements PipeTransform {
       'name@email.com': 'nombre@email.com',
       'password': 'Contraseña',
 
+      'have account': '¿Ya tienes cuenta?',
       'forgot password': '¿Olvidaste tu contraseña?',
       'login with google': 'Ingresa con Google',
       'sign up with google': 'Regístrate con Google',

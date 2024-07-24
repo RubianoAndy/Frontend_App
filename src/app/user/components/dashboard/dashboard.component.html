@@ -2,7 +2,7 @@
     <div class="px-3 py-3 lg:px-5 lg:pl-3">
         <div class="flex items-center justify-between">
             <div class="flex items-center space-x-4">
-                <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="flex items-center">
+                <a routerLink="https://YouTube.com/@RubianoAndy" target="_blank" class="flex items-center">
                     <img src="assets/images/Logo.png" class="h-8 me-3" alt="Andy Rubiano logo"/>
                 </a>
                 
@@ -27,7 +27,7 @@
                         </div>
                         <ul class="py-1" role="none">
                             <li>
-                                <a href="/user/account" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                                <a routerLink="/user/account" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
                                     <i class="fa-solid fa-gear me-2"></i> Account
                                 </a>
                             </li>
@@ -49,7 +49,7 @@
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li>
-                <a href="/user/home" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a routerLink="/user/home" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                     <i class="fa-solid fa-house"></i>
                     <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
                 </a>
@@ -69,13 +69,13 @@
             
                 <ul id="dropdown-products" [ngClass]="{'hidden': !isDropdownOpen['products'], 'py-2': true, 'space-y-2': true}">
                     <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
+                       <a routerLink="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Products</a>
                     </li>
                     <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
+                       <a routerLink="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Billing</a>
                     </li>
                     <li>
-                       <a href="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
+                       <a routerLink="#" class="flex items-center w-full p-2 text-gray-900 transition duration-75 rounded-lg pl-11 group hover:bg-gray-100 dark:text-white dark:hover:bg-gray-700">Invoice</a>
                     </li>
                 </ul>
             </li>
