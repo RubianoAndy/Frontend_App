@@ -3,6 +3,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { RegisterService } from '../../../services/register/register.service';
+import { TranslatePipe } from '../../../../../translate/translate.pipe';
 
 @Component({
   selector: 'app-register',
@@ -12,7 +13,8 @@ import { RegisterService } from '../../../services/register/register.service';
     ReactiveFormsModule,
     RouterLink,
     NgClass,
-    NgIf
+    NgIf,
+    TranslatePipe,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
@@ -23,6 +25,8 @@ export default class RegisterComponent implements OnInit {
   form!: FormGroup;
 
   isPasswordVisible: boolean = false;
+
+  language: 'en' | 'es' = 'es';
 
   constructor (
     private formBuilder: FormBuilder,
@@ -49,7 +53,6 @@ export default class RegisterComponent implements OnInit {
       mobile: '',
 
       email: '',
-      // username: '',
 
       password: '',
     }
@@ -65,7 +68,6 @@ export default class RegisterComponent implements OnInit {
       mobile: [data.mobile, [ Validators.required, Validators.pattern('^[0-9]*$'), Validators.minLength(7), Validators.maxLength(10) ]],
 
       email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.maxLength(100) ]],
-      // username: [data.username, [ Validators.required, Validators.pattern('^(?=[a-zA-Z0-9._]{8,20}$)(?!.*[_.]{2})[^_.].*[^_.]$'), Validators.minLength(6), Validators.minLength(20) ]],
 
       password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
     });
