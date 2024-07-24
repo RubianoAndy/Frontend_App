@@ -26,12 +26,19 @@
                             <p class="text-sm font-medium text-gray-900 truncate dark:text-gray-300" role="none">neil.sims&#64;flowbite.com</p>
                         </div>
                         <ul class="py-1" role="none">
-                            <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Dashboard</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Settings</a></li>
-                            <li><a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">Earnings</a></li>
+                            <li><a href="/user/password" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                                    <i class="fa-solid fa-gear me-2"></i> Dashboard
+                                </a>
+                            </li>
+                            
+                            <!-- <li><a href="/user/password" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
+                                <i class="fa-solid fa-gear"></i> Dashboard
+                                </a>
+                            </li> -->
+
                             <li>
                                 <button (click)="logout()" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white w-full text-left" role="menuitem">
-                                  Sign out
+                                    <i class="fa-solid fa-right-from-bracket me-2"></i> Sign out
                                 </button>
                             </li>
                         </ul>
@@ -46,14 +53,9 @@
     <div class="h-full px-3 pb-4 overflow-y-auto bg-white dark:bg-gray-800">
         <ul class="space-y-2 font-medium">
             <li>
-                <button routerLink="/home" class="flex items-center w-full text-left p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
+                <a href="/user/home" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                     <i class="fa-solid fa-house"></i>
-                    <span class="ms-3">Dashboard</span>
-                </button>
-            </li>
-            <li>
-                <a href="#" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
-                    <span class="flex-1 ms-3 whitespace-nowrap">Kanban</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
                 </a>
             </li>
 
