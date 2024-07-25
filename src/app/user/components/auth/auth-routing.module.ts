@@ -12,6 +12,8 @@ const routes: Routes = [
       { path: '', redirectTo: 'login', pathMatch: 'full' },
       { path: 'login', loadComponent: () => import('./login/login.component'), canActivate: [authenticatedGuard] },
       { path: 'register', loadComponent: () => import('./register/register.component'), canActivate: [authenticatedGuard] },
+      { path: 'forgot-password', loadComponent: () => import('./forgot-password/forgot-password.component'), canActivate: [authenticatedGuard] },
+      { path: 'change-password', loadComponent: () => import('./change-password/change-password.component'), canActivate: [authenticatedGuard] },
       { path: '**', redirectTo: 'login', pathMatch: 'full' },
     ],
   },
