@@ -19,6 +19,8 @@ export class DashboardComponent {
   @ViewChild('dropdownMenu', { static: true }) dropdownMenu!: ElementRef;
   @ViewChild('sidebar', { static: false }) sidebar!: ElementRef;
 
+  profile = JSON.parse(localStorage.getItem('profile') ?? '{}');
+
   isDropdownOpen: { [key: string]: boolean } = {};
 
   isSidebarOpen = true;
