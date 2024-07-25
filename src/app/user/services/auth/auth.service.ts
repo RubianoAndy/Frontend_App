@@ -11,6 +11,7 @@ import { Router } from '@angular/router';
 export class AuthService {
   private apiUrl = environment.apiUrl;
   private token = 'token';
+  private profile = 'profile';
 
   constructor(
     private http: HttpClient,
@@ -21,8 +22,13 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl + 'login/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(response => {
-        if (response.token)
-          this.setToken(response.token);
+        if (response) {
+          if (response.token)
+            localStorage.setItem(this.token, response.token);
+
+          if (response.profile)
+            localStorage.setItem(this.profile, JSON.stringify(response.profile));
+        }
       })
     );
   }
@@ -35,13 +41,10 @@ export class AuthService {
       // El tap se ejecuta depués de realizada la petición
       tap(() => {
         localStorage.removeItem(this.token);
+        localStorage.removeItem(this.profile);
         this.router.navigate(['auth/login']);
       })
     );
-  }
-
-  private setToken(token: string): void {
-    localStorage.setItem(this.token, token);
   }
 
   private getToken(): string | null {
