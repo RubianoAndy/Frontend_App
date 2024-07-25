@@ -20,9 +20,10 @@ export class TranslatePipe implements PipeTransform {
 
       'hello': 'Hello!',
       'enter the credentials to access your account': 'Enter the credentials to access your account',
-      'lets get started to this awesome advanture!': 'Let\'s get started to this awesome advanture!',
+      'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',
       'dont worry, it happens to all of us': 'don\'t worry, it happens to all of us!',
       'complete the following form to recover your account': 'Complete the following form to recover your account',
+      'please introduce the 6 digit code we sent via email' : 'Please introduce the 6 digit code we sent via email',
 
       'login': 'Login',
       'sign up': 'Sign up',
@@ -53,9 +54,10 @@ export class TranslatePipe implements PipeTransform {
 
       'hello': '¡Hola!',
       'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',
-      'lets get started to this awesome advanture!': '¡Comencemos con esta increíble aventura!',
+      'lets get started to this awesome advanture': '¡Comencemos con esta increíble aventura!',
       'dont worry, it happens to all of us': '¡No te preocupes, a todos nos pasa!',
       'complete the following form to recover your account': 'Completa el siguiente formulario para recuperar tu cuenta',
+      'please introduce the 6 digit code we sent via email' : 'Por favor introduce el código de 6 dígitos que te enviamos por correo electrónico',
 
       'login': 'Ingresa',
       'sign up': 'Regístrate',
