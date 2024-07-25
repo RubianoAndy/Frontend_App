@@ -1,5 +1,5 @@
 <form class="space-y-2" [formGroup]="form" (ngSubmit)="onSubmit()">
-    <div class="flex flex-col w-full text-center">
+    <div class="text-center">
         <h2 class="mb-1 text-3xl font-semibold text-foreground">{{ 'hello' | translate: language }}</h2>
         <p class="text-sm text-muted-foreground">{{ 'enter the credentials to access your account' | translate: language }}</p>
     </div>
@@ -7,12 +7,12 @@
     <div class="flex">
         <div class="w-full">
             <label for="email" class="text-sm text-start text-white">{{ 'email' | translate: language }} * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ 'name@email.com' | translate: language }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ 'name@email.com' | translate: language }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
         </div>
     </div>
 
-    <div class="flex relative items-center">
-        <div class="w-full">
+    <div class="flex">
+        <div class="w-full relative">
             <label for="password" class="text-start text-white">{{ 'password' | translate: language }} * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
             <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="{{ 'password' | translate: language }}" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
 
