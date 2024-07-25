@@ -46,7 +46,7 @@ export default class ChangePasswordComponent implements OnInit{
       code_5: null,
       code_6: null,
 
-      // password: '',
+      password: '',
     }
 
     this.form = this.formBuilder.group({
@@ -57,7 +57,7 @@ export default class ChangePasswordComponent implements OnInit{
       code_5: [data.code_5, [ Validators.required ]],
       code_6: [data.code_6, [ Validators.required ]],
       
-      // password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
+      password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
     });
   }
 
