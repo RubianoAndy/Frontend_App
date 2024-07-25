@@ -80,12 +80,16 @@ export default class ChangePasswordComponent implements OnInit{
   handlePaste(event: ClipboardEvent): void {
     const pasteData = event.clipboardData?.getData('text') || '';
     if (pasteData.length === 6) {
-      this.form.controls['code_1'].setValue(pasteData.charAt(0));
-      this.form.controls['code_2'].setValue(pasteData.charAt(1));
-      this.form.controls['code_3'].setValue(pasteData.charAt(2));
-      this.form.controls['code_4'].setValue(pasteData.charAt(3));
-      this.form.controls['code_5'].setValue(pasteData.charAt(4));
-      this.form.controls['code_6'].setValue(pasteData.charAt(5));
+      for (var i = 0; i < pasteData.length; i++){
+        var name = 'code_' + (i + 1);
+        this.form.controls[name].setValue(pasteData.charAt(i));
+      }
+      // this.form.controls['code_1'].setValue(pasteData.charAt(0));
+      // this.form.controls['code_2'].setValue(pasteData.charAt(1));
+      // this.form.controls['code_3'].setValue(pasteData.charAt(2));
+      // this.form.controls['code_4'].setValue(pasteData.charAt(3));
+      // this.form.controls['code_5'].setValue(pasteData.charAt(4));
+      // this.form.controls['code_6'].setValue(pasteData.charAt(5));
       
       (document.getElementById('code_6') as HTMLInputElement)?.focus();
       
