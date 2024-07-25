@@ -60,4 +60,12 @@ export default class ChangePasswordComponent implements OnInit{
       // password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
     });
   }
+
+  onSubmit() {
+
+  }
+
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
 }
