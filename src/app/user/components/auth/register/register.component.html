@@ -55,7 +55,7 @@
 
         <div class="w-1/2">
             <label for="mobile" class="text-sm text-start text-white">{{ 'mobile' | translate: language }} *</label>
-            <input [ngClass]="{'bg-red-300': !form.controls['mobile'].valid && form.controls['mobile'].touched}" id="mobile" formControlName="mobile" type="text" placeholder="{{ 'mobile' | translate: language }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['mobile'].valid && form.controls['mobile'].touched}" id="mobile" formControlName="mobile" type="phone" placeholder="{{ 'mobile' | translate: language }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
         </div>
 
         <div class="w-1/2 relative">
