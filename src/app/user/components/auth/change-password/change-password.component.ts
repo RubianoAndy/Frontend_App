@@ -68,4 +68,38 @@ export default class ChangePasswordComponent implements OnInit{
   togglePasswordVisibility(): void {
     this.isPasswordVisible = !this.isPasswordVisible;
   }
+
+  focusNextInput(event: Event, nextInputId: string | null): void {
+    const input = event.target as HTMLInputElement;
+    if (input.value.length === input.maxLength && nextInputId) {
+      const nextInput = document.getElementById(nextInputId);
+      nextInput?.focus();
+    }
+  }
+
+  handlePaste(event: ClipboardEvent): void {
+    const pasteData = event.clipboardData?.getData('text') || '';
+    if (pasteData.length === 6) {
+      this.form.controls['code_1'].setValue(pasteData.charAt(0));
+      this.form.controls['code_2'].setValue(pasteData.charAt(1));
+      this.form.controls['code_3'].setValue(pasteData.charAt(2));
+      this.form.controls['code_4'].setValue(pasteData.charAt(3));
+      this.form.controls['code_5'].setValue(pasteData.charAt(4));
+      this.form.controls['code_6'].setValue(pasteData.charAt(5));
+      
+      (document.getElementById('code_6') as HTMLInputElement)?.focus();
+      
+      event.preventDefault();
+    }
+  }
+
+  handleKeyDown(event: KeyboardEvent, prevInputId: string | null): void {
+    const input = event.target as HTMLInputElement;
+    if (event.key === 'Backspace' && input.value.length === 0 && prevInputId) {
+      const prevInput = document.getElementById(prevInputId) as HTMLInputElement;
+      prevInput.focus();
+      prevInput.value = '';  // Borrar el valor anterior
+      event.preventDefault();
+    }
+  }
 }
