@@ -2,6 +2,8 @@ import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterLink, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
+import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -11,6 +13,7 @@ import { NgClass, NgIf } from '@angular/common';
     RouterLink,
     NgClass,
     NgIf,
+    TranslatePipe,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
@@ -19,13 +22,17 @@ export class DashboardComponent {
   @ViewChild('dropdownMenu', { static: true }) dropdownMenu!: ElementRef;
   @ViewChild('sidebar', { static: false }) sidebar!: ElementRef;
 
+  currentYear: number = environment.currentYear;
+  page: string = environment.site_name;
+
   profile = JSON.parse(localStorage.getItem('profile') ?? '{}');
 
   isDropdownOpen: { [key: string]: boolean } = {};
-
   isSidebarOpen = true;
 
   loading: boolean = false;
+
+  language: 'en' | 'es' = 'es';
 
   constructor (
     private authService: AuthService,
