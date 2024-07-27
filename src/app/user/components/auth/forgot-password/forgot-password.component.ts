@@ -23,7 +23,11 @@ export default class ForgotPasswordComponent implements OnInit{
   
   loading: boolean = false;
 
-  form!: FormGroup;
+  form_status: string = 'Send email'; // 'Send code and password'
+  form_1!: FormGroup;
+  form_2!: FormGroup;
+
+  isPasswordVisible: boolean = false;
 
   constructor (
     private formBuilder: FormBuilder,
@@ -33,20 +37,98 @@ export default class ForgotPasswordComponent implements OnInit{
   }
 
   ngOnInit(): void {
-    this.createForm();
+    this.createForm1();
+    this.createForm2();
   }
 
-  createForm(data: any = null) {
+  createForm1(data: any = null) {
     data = data || {
       email: '',
     }
 
-    this.form = this.formBuilder.group({
+    this.form_1 = this.formBuilder.group({
       email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.maxLength(100) ]],
     });
   }
 
-  onSubmit() {
+  createForm2(data: any = null) {
+    data = data || {
+      code_1: null,
+      code_2: null,
+      code_3: null,
+      code_4: null,
+      code_5: null,
+      code_6: null,
 
+      password: '',
+    }
+
+    this.form_2 = this.formBuilder.group({
+      code_1: [data.code_1, [ Validators.required ]],
+      code_2: [data.code_2, [ Validators.required ]],
+      code_3: [data.code_3, [ Validators.required ]],
+      code_4: [data.code_4, [ Validators.required ]],
+      code_5: [data.code_5, [ Validators.required ]],
+      code_6: [data.code_6, [ Validators.required ]],
+      
+      password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
+    });
+  }
+
+  onSubmitForm1() {
+    var body = {
+      email: this.form_1.value.email,
+    };
+    alert(body.email);
+  }
+
+  onSubmitForm2() {
+    var total_codes = 6;    // Cantidad de dígitos a llenar en el formulario
+    var code = '';
+    for (var i = 0; i < total_codes; i++){
+      var name = 'code_' + (i + 1);
+      code += this.form_2.value[name];
+    }
+    var body = {
+      code: code,
+      password: this.form_2.value.email,
+    };
+
+    alert(body.code);
+  }
+
+  togglePasswordVisibility(): void {
+    this.isPasswordVisible = !this.isPasswordVisible;
+  }
+
+  focusNextInput(event: Event, nextInputId: string | null): void {
+    const input = event.target as HTMLInputElement;
+    if (input.value.length === input.maxLength && nextInputId) {
+      const nextInput = document.getElementById(nextInputId);
+      nextInput?.focus();
+    }
+  }
+
+  handlePaste(event: ClipboardEvent): void {
+    const pasteData = event.clipboardData?.getData('text') || '';
+    if (pasteData.length === 6) {
+      for (var i = 0; i < pasteData.length; i++){
+        var name = 'code_' + (i + 1);
+        this.form_2.controls[name].setValue(pasteData.charAt(i));
+      }
+      (document.getElementById('code_6') as HTMLInputElement)?.focus();
+      
+      event.preventDefault();
+    }
+  }
+
+  handleKeyDown(event: KeyboardEvent, prevInputId: string | null): void {
+    const input = event.target as HTMLInputElement;
+    if (event.key === 'Backspace' && input.value.length === 0 && prevInputId) {
+      const prevInput = document.getElementById(prevInputId) as HTMLInputElement;
+      prevInput.focus();
+      prevInput.value = '';  // Borrar el valor anterior
+      event.preventDefault();
+    }
   }
 }

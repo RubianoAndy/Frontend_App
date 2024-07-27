@@ -21,7 +21,7 @@ export class TranslatePipe implements PipeTransform {
       'hello': 'Hello!',
       'enter the credentials to access your account': 'Enter the credentials to access your account',
       'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',
-      'dont worry, it happens to all of us': 'don\'t worry, it happens to all of us!',
+      'dont worry, it happens to all of us': 'Don\'t worry, it happens to all of us!',
       'complete the following form to recover your account': 'Complete the following form to recover your account',
       'please introduce the 6 digit code we sent via email' : 'Please introduce the 6 digit code we sent via email',
 
@@ -35,7 +35,8 @@ export class TranslatePipe implements PipeTransform {
       'password': 'Password',
 
       'have account': 'Have account?',
-      'forgot password': 'forgot your password?',
+      'forgot password': 'Forgot your password?',
+      'change password': 'Change password',
       'login with google': 'Login with Google',
       'sign up with google': 'Sign up with Google',
       'send code': 'Send code',
@@ -70,6 +71,7 @@ export class TranslatePipe implements PipeTransform {
 
       'have account': '¿Ya tienes cuenta?',
       'forgot password': '¿Olvidaste tu contraseña?',
+      'change password': 'Cambiar la contraseña',
       'login with google': 'Ingresa con Google',
       'sign up with google': 'Regístrate con Google',
       'send code': 'Enviar código',
