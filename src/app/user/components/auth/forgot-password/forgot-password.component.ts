@@ -3,6 +3,7 @@ import { TranslatePipe } from '../../../../../translate/translate.pipe';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgClass, NgIf } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-password.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -29,9 +30,13 @@ export default class ForgotPasswordComponent implements OnInit{
 
   isPasswordVisible: boolean = false;
 
+  user_id: number = 0;
+
   constructor (
     private formBuilder: FormBuilder,
     private router: Router,
+    
+    private forgotPasswordService: ForgotPasswordService
   ) {
 
   }
@@ -60,7 +65,7 @@ export default class ForgotPasswordComponent implements OnInit{
       code_5: null,
       code_6: null,
 
-      password: '',
+      new_password: '',
     }
 
     this.form_2 = this.formBuilder.group({
@@ -71,7 +76,7 @@ export default class ForgotPasswordComponent implements OnInit{
       code_5: [data.code_5, [ Validators.required ]],
       code_6: [data.code_6, [ Validators.required ]],
       
-      password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
+      new_password: [data.new_password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
     });
   }
 
@@ -79,22 +84,64 @@ export default class ForgotPasswordComponent implements OnInit{
     var body = {
       email: this.form_1.value.email,
     };
-    alert(body.email);
+    
+    if (this.form_1.valid && body) {
+      this.loading = true;
+      this.generateCode(body);
+    }
   }
 
   onSubmitForm2() {
     var total_codes = 6;    // Cantidad de dígitos a llenar en el formulario
     var code = '';
+
     for (var i = 0; i < total_codes; i++){
       var name = 'code_' + (i + 1);
       code += this.form_2.value[name];
     }
+
     var body = {
+      user_id: this.user_id,  // (this.user_id != 0) ? this.user_id : null
       code: code,
-      password: this.form_2.value.email,
+      new_password: this.form_2.value.new_password,
     };
 
-    alert(body.code);
+    if (this.form_2.valid && body) {
+      this.loading = true;
+      this.changePasswordFromCode(body);
+    }
+  }
+
+  generateCode(body: any): void {
+    this.forgotPasswordService.generateCode(body).subscribe({
+      next: (response) => {
+        this.user_id = response.user_id;
+        this.loading = false;
+        this.form_status = 'Send code and password';
+      },
+      error: (err) => {
+        this.loading = false;
+        console.error('error: ', err);
+
+        // Resetear el formulario form_1 y poner una aleta de error visual
+      }
+    });
+  }
+
+  changePasswordFromCode(body: any): void {
+    this.forgotPasswordService.changePasswordFromCode(body).subscribe({
+      next: () => {
+        this.loading = false;
+        this.router.navigate(['auth/login']);
+      },
+      error: (err) => {
+        this.loading = false;
+        console.error('error: ', err);
+        this.form_status = 'Send email';
+
+        // Resetear el formulario form_2 y poner una aleta de error visual
+      }
+    });
   }
 
   togglePasswordVisibility(): void {
