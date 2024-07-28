@@ -41,22 +41,43 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
 and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 
-### Angular project commands
+### Initial install
+
+Once the repository is cloned, go in it and install the initial packages with the following commands:
 
 | command                              | What it does?                         |
-| -------------------------------------| :------------------------------------ |
+| ------------------------------------ | :------------------------------------ |
 | `npm install -g @angular/cli@latest` | Install Angular in its latest version |
-| `ng new project-name`                | Create the project                    |
-| `ng g c component-name`              | Create a component                    |
-| `ng g s service-name`                | Create a service                      |
-| `ng g cl class-name`                 | Create a class                        |
-| `ng g m module-name`                 | Create a module                       |
-| `ng g p pipe-name`                   | Create a pipe                         |
-| `ng g p translate-name`              | Create a translate pipe               |
-| `ng g d directive-name`              | Create a directive                    |
-| `ng g g guard-name`                  | Create a guard                        |
-| `ng g i interface-name`              | Create a interface                    |
-| `ng g e enum-name`                   | Create a enum                         |
+| `npm install`                        | Install node modules dependencies     |
+
+### Project packages
+
+| Packages                       | Version  |
+| ------------------------------ | :------- |
+| `angular-devkit/architect`     | 0.1801.1 |
+| `angular-devkit/build-angular` | 18.1.1   |
+| `angular-devkit/core`          | 18.1.1   |
+| `angular-devkit/schematics`    | 18.1.1   |
+| `schematics/angular`           | 18.1.1   |
+| `rxjs`                         | 7.8.1    |
+| `typescript`                   | 5.5.3    |
+| `zone.js`                      | 0.14.8   |
+
+### Angular project commands
+
+| command                 | What it does?           |
+| ----------------------- | :---------------------- |
+| `ng new project-name`   | Create the project      |
+| `ng g c component-name` | Create a component      |
+| `ng g s service-name`   | Create a service        |
+| `ng g cl class-name`    | Create a class          |
+| `ng g m module-name`    | Create a module         |
+| `ng g p pipe-name`      | Create a pipe           |
+| `ng g p translate-name` | Create a translate pipe |
+| `ng g d directive-name` | Create a directive      |
+| `ng g g guard-name`     | Create a guard          |
+| `ng g i interface-name` | Create a interface      |
+| `ng g e enum-name`      | Create a enum           |
 
 ### Server commands
 
