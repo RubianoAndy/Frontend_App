@@ -35,9 +35,15 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
 and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 
-# Commands
+#### Commands
 
-
+| command                               | What it does?                                 |
+| ------------------------------------- | :-------------------------------------------- |
+| `npm install -g @angular/cli@latest`  | Install Angular in its latest version         |
+| `ng new <project-name>`               | Create project                                |
+| `ng g c <component-name>`             | Create component                              |
+| `ng g s <service-name>`               | Create service                                |
+| `ng g p <translate-name>`             | Create a translate pipe                       |
 
 ## Development server
 
