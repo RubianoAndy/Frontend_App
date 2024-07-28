@@ -36,6 +36,8 @@
     &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
 </p>
 
+<hr>
+
 # FrontendApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
