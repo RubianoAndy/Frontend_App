@@ -47,7 +47,7 @@ and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 
 Once the repository is cloned, go in it and install the initial packages with the following commands:
 
-| command                              | What it does?                         |
+| Command                              | What it does?                         |
 | ------------------------------------ | :------------------------------------ |
 | `npm install -g @angular/cli@latest` | Install Angular in its latest version |
 | `npm install`                        | Install node modules dependencies     |
@@ -67,7 +67,7 @@ Once the repository is cloned, go in it and install the initial packages with th
 
 ### Angular project commands
 
-| command                 | What it does?           |
+| Command                 | What it does?           |
 | ----------------------- | :---------------------- |
 | `ng new project-name`   | Create the project      |
 | `ng g c component-name` | Create a component      |
@@ -83,7 +83,7 @@ Once the repository is cloned, go in it and install the initial packages with th
 
 ### Server commands
 
-| command    | What it does?                                              | Additional Information                                 |
+| Command    | What it does?                                              | Additional Information                                 |
 | -----------| :--------------------------------------------------------- | :----------------------------------------------------- |
 | `ng help`  | Get more help on the Angular CLI                           | More information in `https://angular.dev/tools/cli`    |
 | `ng e2e`   | Execute the end-to-end tests via a platform of your choice |                                                        |
