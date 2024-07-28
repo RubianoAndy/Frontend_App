@@ -2,7 +2,10 @@
     <img src="public/assets/images/Logo.png" width="150">
 </p>
 
-<div class="align-items: center;">
+<div align="center">
+    <p>
+        Follow me on social media:
+    </p>
     <!-- URL de descarga de íconos tamaño 48px X 48px https://iconos8.es/icons/set/social-media -->
     <a style="text-decoration: none;" href="https://www.facebook.com/RubianoAndy" target="_blank">
         <img src="public/assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
