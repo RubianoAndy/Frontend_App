@@ -85,7 +85,7 @@ All packages can be upgraded without any further complications.
 
 ### Server commands
 
-| Command    | What it does?                                              | Additional Information                                 |
+| Command    | What it does?                                              | Additional information                                 |
 | -----------| :--------------------------------------------------------- | :----------------------------------------------------- |
 | `ng help`  | Get more help on the Angular CLI                           | More information in `https://angular.dev/tools/cli`    |
 | `ng e2e`   | Execute the end-to-end tests via a platform of your choice |                                                        |
