@@ -65,6 +65,8 @@ Once the repository is cloned, go in it and install the initial packages with th
 | `typescript`                   | 5.5.3    |
 | `zone.js`                      | 0.14.8   |
 
+All packages can be upgraded without any further complications.
+
 ### Angular project commands
 
 | Command                 | What it does?           |
