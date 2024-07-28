@@ -48,6 +48,15 @@ export class TranslatePipe implements PipeTransform {
       'identification number': 'Identification number',
       'birth date': 'birth date',
       'mobile': 'Mobile',
+
+      'get to know the world of carnivorous plants': 'Get to know the world of carnivorous plants!',
+
+      'auth_description' : 
+        `We are a company specialized in carnivorous plants. 
+        We are dedicated to their reproduction and commercialization, 
+        offering a wide variety of species. In addition, we create informative 
+        and educational content about these fascinating plants. 
+        Follow us on our social networks to keep up to date with our news and tips!`,
     },
 
     'es': {
@@ -83,6 +92,15 @@ export class TranslatePipe implements PipeTransform {
       'identification number': 'Número de identificación',
       'birth date': 'Fecha de nacimiento',
       'mobile': 'Celular',
+
+      'get to know the world of carnivorous plants': '¡Conoce el mundo de las plantas carnívoras!',
+
+      'auth_description' : 
+        `Somos una empresa especializada en plantas carnívoras. 
+        Nos dedicamos a su reproducción y comercialización, 
+        ofreciendo una amplia variedad de especies. 
+        Además, creamos contenido informativo y educativo sobre estas fascinantes plantas. 
+        ¡Síguenos en nuestras redes sociales para estar al día con nuestras novedades y consejos!`,
     }
   };
 
