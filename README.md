@@ -1,6 +1,40 @@
+<p align="center">
+    <img src="public/assets/images/Logo.png" width="150">
+</p>
+
+<div class="flex justify-center space-x-4">
+    <!-- URL de descarga de íconos tamaño 48px X 48px https://iconos8.es/icons/set/social-media -->
+    <a href="https://www.facebook.com/RubianoAndy" target="_blank">
+        <img src="public/assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://www.instagram.com/RubianoAndy" target="_blank">
+        <img src="public/assets/social media/Instagram.png" alt="Instagram" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://www.youtube.com/@RubianoAndy" target="_blank">
+        <img src="public/assets/social media/YouTube.png" alt="YouTube" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://www.x.com/RubianoAndy" target="_blank">
+        <img src="public/assets/social media/X.png" alt="X (Twitter)" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://www.linkedin.com/company/andyrubiano" target="_blank">
+        <img src="public/assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://www.tiktok.com/@RubianoAndy" target="_blank">
+        <img src="public/assets/social media/TikTok.png" alt="TikTok" style="width: 30px; height: auto;">
+    </a>
+    <a href="https://wa.me/573178737226" target="_blank">
+        <img src="public/assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
+    </a>
+</div>
+
 # FrontendApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
+and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
+
+# Commands
+
+
 
 ## Development server
 
