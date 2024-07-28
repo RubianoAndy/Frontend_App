@@ -1,5 +1,11 @@
 <p align="center">
-    <img src="public/assets/images/Logo.png" width="150">
+    <a href="https://YouTube.com/@RubianoAndy" target="_blank">
+        <img src="public/assets/images/Logo.png" width="150">
+    </a>
+</p>
+
+<p>
+    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
 </p>
 
 <div align="center">
@@ -35,7 +41,7 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
 and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 
-## Angular project commands
+### Angular project commands
 
 | command                              | What it does?                         |
 | -------------------------------------| :------------------------------------ |
@@ -52,7 +58,7 @@ and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 | `ng g i interface-name`              | Create a interface                    |
 | `ng g e enum-name`                   | Create a enum                         |
 
-## Server commands
+### Server commands
 
 | command    | What it does?                                              | Additional Information                                 |
 | -----------| :--------------------------------------------------------- | :----------------------------------------------------- |
