@@ -4,10 +4,6 @@
     </a>
 </p>
 
-<p>
-    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
-</p>
-
 <div align="center">
     <p>
         Follow me on social media:
@@ -35,6 +31,10 @@
         <img src="public/assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
     </a>
 </div>
+
+<p align="center">
+    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
+</p>
 
 # FrontendApp
 
@@ -67,3 +67,9 @@ and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
 | `ng test`  | Execute the unit tests                                     | Test via via Karma in `https://karma-runner.github.io` |
 | `ng build` | Build the project                                          |                                                        |
 | `ng serve` | Run the server                                             | Navigate to `http://localhost:4200/`                   |
+
+<hr>
+
+<p align="center">
+    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
+</p>
