@@ -49,14 +49,15 @@ export class TranslatePipe implements PipeTransform {
       'birth date': 'birth date',
       'mobile': 'Mobile',
 
-      'get to know the world of carnivorous plants': 'Get to know the world of carnivorous plants!',
+      'we are committed to the environment': 'We are committed to the environment!',
 
       'auth_description' : 
-        `We are a company specialized in carnivorous plants. 
-        We are dedicated to their reproduction and commercialization, 
-        offering a wide variety of species. In addition, we create informative 
-        and educational content about these fascinating plants. 
-        Follow us on our social networks to keep up to date with our news and tips!`,
+        `We are a business group specialising in innovation and creating environmentally friendly technology. 
+        We are dedicated to creating sustainable solutions, including chemical-free water treatment plants, 
+        solar photovoltaic power systems and software development. We also specialise in the reproduction and 
+        commercialisation of carnivorous plants, offering a wide variety of species. In addition, we create 
+        informative and educational content about these fascinating plants. Follow us on our social networks 
+        to stay up to date on our news and products!`,
     },
 
     'es': {
@@ -93,14 +94,14 @@ export class TranslatePipe implements PipeTransform {
       'birth date': 'Fecha de nacimiento',
       'mobile': 'Celular',
 
-      'get to know the world of carnivorous plants': '¡Conoce el mundo de las plantas carnívoras!',
+      'we are committed to the environment': '¡Estamos comprometidos con el medio ambiente!',
 
       'auth_description' : 
-        `Somos una empresa especializada en plantas carnívoras. 
-        Nos dedicamos a su reproducción y comercialización, 
-        ofreciendo una amplia variedad de especies. 
-        Además, creamos contenido informativo y educativo sobre estas fascinantes plantas. 
-        ¡Síguenos en nuestras redes sociales para estar al día con nuestras novedades y consejos!`,
+        `Somos un grupo empresarial especializado en la innovación y creación de tecnología amigable con el medio ambiente. 
+        Nos dedicamos a crear soluciones sostenibles, incluyendo plantas de tratamiento de agua sin agentes químicos, 
+        sistemas de energía solar fotovoltaica y desarrollo de software. También nos especializamos en la reproducción y 
+        comercialización de plantas carnívoras, ofreciendo una amplia variedad de especies. Además, creamos contenido informativo 
+        y educativo sobre estas fascinantes plantas. ¡Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y productos!`,
     }
   };
 
