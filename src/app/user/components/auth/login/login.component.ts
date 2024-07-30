@@ -5,6 +5,11 @@ import { NgClass, NgIf } from '@angular/common';
 import { AuthService } from '../../../services/auth/auth.service';
 import { TranslatePipe } from '../../../../../translate/translate.pipe';
 
+/*
+// Para google, consultar index.html
+declare var google: any;
+*/
+
 @Component({
   selector: 'app-login',
   standalone: true,
@@ -38,6 +43,7 @@ export default class LoginComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.googleInitialize();
     this.createForm();
   }
 
@@ -81,4 +87,43 @@ export default class LoginComponent implements OnInit {
       }
     });
   }
+  
+  /* private googleInitialize() {
+    google.accounts.id.initialize({
+      client_id: '408421446410-7incluce8okp0gcgg15g6v5l43pltt95.apps.googleusercontent.com',
+      callback: (resp: any) => this.handleLogin(resp)
+    });
+
+    google.accounts.id.renderButton(
+      document.getElementById("google-btn"), 
+      {
+        theme: 'filled_blue',
+        size: 'large',
+        shape: 'rectangle',
+        width: 350
+      }
+    );
+  } */
+
+  /* handleLogin(response: any) {
+    if(response){
+      const payload = this.decodeToken(response.credential);
+
+      // Petición para enviar el JWT Token al Backend
+    }
+  } */
+
+  /* private decodeToken(token: string) {
+    try {
+      const base64Url = token.split('.')[1];
+      const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
+      const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
+        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
+      }).join(''));
+      return JSON.parse(jsonPayload);
+    } catch (error) {
+      console.error('Error decoding token', error);
+      return null;
+    }
+  } */
 }
