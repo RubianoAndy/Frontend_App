@@ -5,11 +5,6 @@
     background-repeat: no-repeat; /* Evita que la imagen se repita */
 }
 
-.center-items {
-    align-items: center;
-    justify-content: center;
-}
-
 .authentication-bg {
     background-image: url('../../../../../public/assets/images/auth wallpaper/Wallpaper texture.jpg');
     background-size: cover; /* Ajusta la imagen para cubrir el contenedor */
