@@ -30,4 +30,4 @@ const routes: Routes = [
     RouterModule,
   ],
 })
-export class AuthRoutesModule {}
+export class AuthRoutes {}
