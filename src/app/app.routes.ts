@@ -3,7 +3,7 @@ import { authGuard } from './user/guards/auth/auth.guard';
 
 export const routes: Routes = [
     // { path: '', loadComponent: () => import('./webpage/components/web/web.component') },
-    { path: 'auth', loadChildren: () => import('./user/components/auth/auth.module').then((m) => m.AuthModule) },
+    { path: 'auth', loadChildren: () => import('./user/components/auth/auth.routes.module').then((m) => m.AuthRoutesModule) },
     { path: 'user', loadChildren: () => import('./user/components/dashboard/dashboard.module').then((m) => m.DashboardModule), canActivate: [authGuard] },
     { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

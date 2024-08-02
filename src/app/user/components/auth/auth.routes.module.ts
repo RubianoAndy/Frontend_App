@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 
 import { AuthComponent } from './auth.component';
 import { authenticatedGuard } from '../../guards/authenticated/authenticated.guard';
@@ -19,7 +20,15 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule],
+  imports: [
+    RouterModule.forChild(routes),
+    // AngularSvgIconModule.forRoot(), // Descomentar si es necesario
+  ],
+  providers: [
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+  exports: [
+    RouterModule,
+  ],
 })
-export class AuthRoutingModule {}
+export class AuthRoutesModule {}
