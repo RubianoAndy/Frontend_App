@@ -22,7 +22,6 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forChild(routes),
-    // AngularSvgIconModule.forRoot(), // Descomentar si es necesario
   ],
   providers: [
     provideHttpClient(withInterceptorsFromDi()),
