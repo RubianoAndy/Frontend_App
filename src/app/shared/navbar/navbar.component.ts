@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { TranslatePipe } from '../../../translate/translate.pipe';
 @Component({
@@ -7,6 +7,7 @@ import { TranslatePipe } from '../../../translate/translate.pipe';
   standalone: true,
   imports: [
     RouterLink,
+    RouterLinkActive,
     TranslatePipe
   ],
   templateUrl: './navbar.component.html',
