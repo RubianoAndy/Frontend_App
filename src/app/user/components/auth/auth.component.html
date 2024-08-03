@@ -1,54 +1,51 @@
-<div class="flex flex-col min-h-screen">
-  <div class="flex-1 flex">
-    <div class="auth-bg hidden md:flex md:w-2/3 items-end p-8 text-center text-white">
-      <div class="space-y-4 bg-black bg-opacity-50 p-4">
-        <h1 class="text-4xl font-bold">{{ 'we are committed to the environment' | translate: language }}</h1>
-        <p class="text-base font-light">
-          {{ 'auth_description' | translate: language }}
-        </p>
+<div class="flex h-screen">
+  <div class="auth-bg hidden md:flex md:w-2/3 items-end p-8 text-center text-white">
+    <div class="space-y-4 bg-black p-4">
+      <h1 class="text-4xl font-bold">{{ 'we are committed to the environment' | translate: language }}</h1>
 
-        <div class="flex justify-center space-x-4">
-          <!-- URL de descarga de íconos tamaño 48px X 48px https://iconos8.es/icons/set/social-media -->
-          <a href="https://www.facebook.com/RubianoAndy" target="_blank">
-            <img src="assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
-          </a>
-          
-          <a href="https://www.instagram.com/RubianoAndy" target="_blank">
-            <img src="assets/social media/Instagram.png" alt="Instagram" style="width: 30px; height: auto;">
-          </a>
-          
-          <a href="https://www.youtube.com/@RubianoAndy" target="_blank">
-            <img src="assets/social media/YouTube.png" alt="YouTube" style="width: 30px; height: auto;">
-          </a>
-          
-          <a href="https://www.x.com/RubianoAndy" target="_blank">
-            <img src="assets/social media/X.png" alt="X (Twitter)" style="width: 30px; height: auto;">
-          </a>
-          
-          <a href="https://www.linkedin.com/company/andyrubiano" target="_blank">
-            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
-          </a>
+      <p class="text-base font-light">
+        {{ 'auth_description' | translate: language }}
+      </p>
 
-          <a href="https://www.tiktok.com/@RubianoAndy" target="_blank">
-            <img src="assets/social media/TikTok.png" alt="TikTok" style="width: 30px; height: auto;">
-          </a>
-          
-          <a href="https://wa.me/573178737226" target="_blank">
-            <img src="assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="authentication-bg flex flex-col w-full md:w-1/3 text-white">
-      <div class="flex flex-col items-center justify-center h-full p-4">
-        <a href="https://YouTube.com/@RubianoAndy" target="_blank">
-          <img class="h-auto w-72 mb-3" src="assets/images/Logo.png" alt="Andy Rubiano logo">
+      <div class="flex justify-center space-x-4">
+        <!-- URL de descarga de íconos tamaño 48px X 48px https://iconos8.es/icons/set/social-media -->
+        <a href="https://www.facebook.com/RubianoAndy" target="_blank">
+          <img src="assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
         </a>
-        
-        <router-outlet></router-outlet>
+
+        <a href="https://www.instagram.com/RubianoAndy" target="_blank">
+          <img src="assets/social media/Instagram.png" alt="Instagram" style="width: 30px; height: auto;">
+        </a>
+
+        <a href="https://www.youtube.com/@RubianoAndy" target="_blank">
+          <img src="assets/social media/YouTube.png" alt="YouTube" style="width: 30px; height: auto;">
+        </a>
+
+        <a href="https://www.x.com/RubianoAndy" target="_blank">
+          <img src="assets/social media/X.png" alt="X (Twitter)" style="width: 30px; height: auto;">
+        </a>
+
+        <a href="https://www.linkedin.com/company/andyrubiano" target="_blank">
+          <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
+        </a>
+
+        <a href="https://www.tiktok.com/@RubianoAndy" target="_blank">
+          <img src="assets/social media/TikTok.png" alt="TikTok" style="width: 30px; height: auto;">
+        </a>
+
+        <a href="https://wa.me/573178737226" target="_blank">
+          <img src="assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
+        </a>
       </div>
     </div>
+  </div>
+
+  <div class="authentication-bg flex flex-col items-center justify-center w-full md:w-1/3 text-white">
+    <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="mb-4">
+      <img class="h-auto w-72" src="assets/images/Logo.png" alt="Andy Rubiano logo">
+    </a>
+
+    <router-outlet></router-outlet>
   </div>
 
   <!-- <footer class="bg-transparent dark:bg-transparent w-full text-center py-4">
