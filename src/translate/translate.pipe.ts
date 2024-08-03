@@ -58,6 +58,10 @@ export class TranslatePipe implements PipeTransform {
         commercialisation of carnivorous plants, offering a wide variety of species. In addition, we create 
         informative and educational content about these fascinating plants. Follow us on our social networks 
         to stay up to date on our news and products!`,
+
+      'home': 'Home',
+      'about': 'About',
+      'contact': 'Contact',
     },
 
     'es': {
@@ -102,6 +106,10 @@ export class TranslatePipe implements PipeTransform {
         sistemas de energía solar fotovoltaica y desarrollo de software. También nos especializamos en la reproducción y 
         comercialización de plantas carnívoras, ofreciendo una amplia variedad de especies. Además, creamos contenido informativo 
         y educativo sobre estas fascinantes plantas. ¡Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y productos!`,
+
+      'home': 'Inicio',
+      'about': 'Nosotros',
+      'contact': 'Contáctanos',
     }
   };
 

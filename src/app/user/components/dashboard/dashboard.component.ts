@@ -1,6 +1,6 @@
 import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
-import { Router, RouterLink, RouterOutlet } from '@angular/router';
+import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { TranslatePipe } from '../../../../translate/translate.pipe';
 import { environment } from '../../../../environments/environment';
@@ -10,6 +10,7 @@ import { environment } from '../../../../environments/environment';
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLinkActive,
     RouterLink,
     NgClass,
     NgIf,
