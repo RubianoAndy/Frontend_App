@@ -7,23 +7,41 @@ export class DarkModeService {
   private isDarkMode = false;
 
   constructor() {
-    this.isDarkMode = localStorage.getItem('darkMode') === 'true';
-    this.applyTheme();
+    this.initializeDarkMode();
   }
 
-  toggleTheme(): void {
-    this.isDarkMode = !this.isDarkMode;
-    localStorage.setItem('darkMode', this.isDarkMode.toString());
-    this.applyTheme();
+  private initializeDarkMode(): void {
+    const darkMode = localStorage.getItem('darkMode');
+    const hasReloaded = localStorage.getItem('hasReloaded');
+
+    if (!darkMode) {
+      localStorage.setItem('darkMode', 'true'); // Por defecto en modo oscuro
+    }
+
+    if (!hasReloaded) {
+      localStorage.setItem('hasReloaded', 'true');
+      window.location.reload();
+    } else {
+      localStorage.removeItem('hasReloaded');
+      this.applyMode();
+    }
   }
 
-  applyTheme(): void {
+  applyMode(): void {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
     const html = document.documentElement;
-    if (this.isDarkMode) {
+
+    if (isDarkMode) {
       html.classList.add('dark');
     } else {
       html.classList.remove('dark');
     }
+  }
+
+  toggleMode(): void {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    localStorage.setItem('darkMode', (!isDarkMode).toString());
+    this.applyMode();
   }
 
   isDarkModeEnabled(): boolean {

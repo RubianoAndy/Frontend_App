@@ -16,23 +16,5 @@ export class AppComponent {
   constructor(
     private darkModeService: DarkModeService,
   ) {
-    // this.darkModeService.applyTheme();
-    this.getMode();
-  }
-
-  getMode(): void {
-    const darkMode = localStorage.getItem('darkMode');
-    const hasReloaded = localStorage.getItem('hasReloaded');
-
-    if (!darkMode)
-      localStorage.setItem('darkMode', 'true'); // Por defecto en modo oscuro
-
-    if (!hasReloaded) {
-      localStorage.setItem('hasReloaded', 'true');
-      window.location.reload();
-    } else
-      localStorage.removeItem('hasReloaded');
-
-    this.darkModeService.applyTheme();
   }
 }
