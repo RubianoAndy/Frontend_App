@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
 import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { environment } from '../../../../environments/environment';
 
 @Component({
   selector: 'app-navbar',
@@ -16,4 +17,8 @@ import { TranslatePipe } from '../../../../translate/translate.pipe';
 })
 export class NavbarComponent {
   language: 'en' | 'es' = 'es';
+
+  goToLogin() {
+    window.open('http://localhost:4200/auth/login', '_blank');
+  }
 }
