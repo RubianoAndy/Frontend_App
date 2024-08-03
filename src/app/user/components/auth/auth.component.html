@@ -1,8 +1,12 @@
-<div class="flex h-screen">
-  <div class="auth-bg hidden md:flex md:w-2/3 items-end p-8 text-center text-white">
+<div class="flex h-screen relative">
+  <img src="assets/images/auth wallpaper/Auth.jpg" alt="Auth Background" class="absolute inset-0 w-full h-full object-cover md:w-2/3 hidden md:block z-0">
+
+  <img src="assets/images/auth wallpaper/Wallpaper texture.jpg" alt="Authentication Background" class="absolute inset-0 w-full h-full object-cover md:w-1/3 md:left-2/3 z-0">
+  
+  <div class="hidden md:flex md:w-2/3 items-end p-8 text-center text-white z-10">
     <div class="space-y-4 bg-black bg-opacity-50 p-4">
       <h1 class="text-4xl font-bold">{{ 'we are committed to the environment' | translate: language }}</h1>
-
+      
       <p class="text-base font-light">
         {{ 'auth_description' | translate: language }}
       </p>
@@ -40,11 +44,11 @@
     </div>
   </div>
   
-  <div class="authentication-bg flex flex-col items-center justify-center w-full md:w-1/3 text-white">
+  <div class="flex flex-col items-center justify-center w-full md:w-1/3 text-white z-10">
     <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="mb-4">
-      <img class="h-auto w-72" src="assets/images/Logo.png" alt="Andy Rubiano logo">
+      <img class="h-auto w-64" src="assets/images/Logo.png" alt="Andy Rubiano logo">
     </a>
-
+    
     <router-outlet></router-outlet>
   </div>
 
