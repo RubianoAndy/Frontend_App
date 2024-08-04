@@ -8,9 +8,7 @@
             
             <hr class="w-full lg:mt-10 my-4"/>
 
-            <app-faq-question></app-faq-question>
-
-            <app-faq-question></app-faq-question>
+            <app-faq-question *ngFor="let item of questions; index as i" [question_number]="i + 1" [question]="item.question" [answer]="item.answer"></app-faq-question>
 
         </div>
     </div>

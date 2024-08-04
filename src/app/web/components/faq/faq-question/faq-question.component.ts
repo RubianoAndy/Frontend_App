@@ -1,5 +1,5 @@
+import { Component, Input } from '@angular/core';
 import { NgClass } from '@angular/common';
-import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-faq-question',
@@ -11,6 +11,10 @@ import { Component } from '@angular/core';
   styleUrl: './faq-question.component.css'
 })
 export class FaqQuestionComponent {
+  @Input() question_number!: number;
+  @Input() question!: string;
+  @Input() answer!: string;
+
   isMenuOpen = false;
 
   toggleMenu() {
