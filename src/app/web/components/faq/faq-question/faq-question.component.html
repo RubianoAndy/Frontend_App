@@ -1,0 +1,22 @@
+<div class="w-full md:px-6">
+    <div id="mainHeading" class="flex justify-between items-center w-full">
+        <div class="">
+            <p class="flex justify-center items-center font-medium text-base leading-6 md:leading-4 text-gray-800">
+                <span class="lg:mr-6 mr-4 lg:text-2xl md:text-xl text-lg leading-6 md:leading-5 lg:leading-4 font-semibold text-gray-800">Q1.</span> How do I know if a product is available in boutiques?
+            </p>
+        </div>
+        <button (click)="toggleMenu()" aria-label="toggler" class="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800 px-4">
+            <span class="transform">
+                <i class="fa-solid" [ngClass]="{'fa-angle-down': !isOpen(), 'fa-angle-up': isOpen()}"></i>
+            </span>
+        </button>
+    </div>
+
+    <div id="menu" [ngClass]="{'faq-question': true, 'open': isOpen()}" class="mt-2 w-full">
+        <p class="text-base leading-6 text-gray-600 font-normal">
+            Remember you can query the status of your orders any time in My orders in the My account section. If you are not registered at Mango.com, you can access directly in the Orders section. In this case, you will have to enter your e-mail address and order number.
+        </p>
+    </div>
+</div>
+
+<hr class="w-full lg:mt-10 my-4"/>
