@@ -62,6 +62,8 @@ export class TranslatePipe implements PipeTransform {
       'home': 'Home',
       'about': 'About',
       'contact': 'Contact',
+
+      'faq': 'FAQ\'s',
     },
 
     'es': {
@@ -110,6 +112,8 @@ export class TranslatePipe implements PipeTransform {
       'home': 'Inicio',
       'about': 'Nosotros',
       'contact': 'Contáctanos',
+
+      'faq': 'Preguntas frecuentes',
     }
   };
 

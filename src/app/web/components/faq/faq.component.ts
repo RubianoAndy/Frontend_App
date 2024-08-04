@@ -3,6 +3,7 @@ import { NgFor } from '@angular/common';
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { FaqQuestionComponent } from './faq-question/faq-question.component';
+import { TranslatePipe } from '../../../../translate/translate.pipe';
 
 @Component({
   selector: 'app-faq',
@@ -12,11 +13,14 @@ import { FaqQuestionComponent } from './faq-question/faq-question.component';
     NavbarComponent,
     FooterComponent,
     FaqQuestionComponent,
+    TranslatePipe
   ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
 })
 export default class FaqComponent {
+  language: 'en' | 'es' = 'es';
+
   questions = [
     { 
       question: 'How do I know if a product is available in boutiques?', 
