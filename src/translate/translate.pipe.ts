@@ -63,6 +63,10 @@ export class TranslatePipe implements PipeTransform {
       'about': 'About',
       'contact': 'Contact',
 
+      'legal framework': 'Legal',
+      'privacy policy': 'Privacy Policy',
+      'terms and conditions': 'Terms and conditions',
+
       'faq': 'FAQ\'s',
     },
 
@@ -112,6 +116,10 @@ export class TranslatePipe implements PipeTransform {
       'home': 'Inicio',
       'about': 'Nosotros',
       'contact': 'Contáctanos',
+
+      'legal framework': 'Marco legal',
+      'privacy policy': 'Política de privacidad',
+      'terms and conditions': 'Términos y condiciones',
 
       'faq': 'Preguntas frecuentes',
     }
