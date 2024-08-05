@@ -51,13 +51,12 @@ export class TranslatePipe implements PipeTransform {
 
       'we are committed to the environment': 'We are committed to the environment!',
 
-      'auth_description' : 
+      'company_description' : 
         `We are a business group specialising in innovation and creating environmentally friendly technology. 
         We are dedicated to creating sustainable solutions, including chemical-free water treatment plants, 
         solar photovoltaic power systems and software development. We also specialise in the reproduction and 
         commercialisation of carnivorous plants, offering a wide variety of species. In addition, we create 
-        informative and educational content about these fascinating plants. Follow us on our social networks 
-        to stay up to date on our news and products!`,
+        informative and educational content about these fascinating plants.`,
 
       'home': 'Home',
       'about': 'About',
@@ -114,12 +113,12 @@ export class TranslatePipe implements PipeTransform {
 
       'we are committed to the environment': '¡Estamos comprometidos con el medio ambiente!',
 
-      'auth_description' : 
+      'company_description' : 
         `Somos un grupo empresarial especializado en la innovación y creación de tecnología amigable con el medio ambiente. 
         Nos dedicamos a crear soluciones sostenibles, incluyendo plantas de tratamiento de agua sin agentes químicos, 
         sistemas de energía solar fotovoltaica y desarrollo de software. También nos especializamos en la reproducción y 
         comercialización de plantas carnívoras, ofreciendo una amplia variedad de especies. Además, creamos contenido informativo 
-        y educativo sobre estas fascinantes plantas. ¡Síguenos en nuestras redes sociales para estar al tanto de nuestras novedades y productos!`,
+        y educativo sobre estas fascinantes plantas.`,
 
       'home': 'Inicio',
       'about': 'Nosotros',

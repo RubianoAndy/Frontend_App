@@ -2,11 +2,68 @@
 
 <app-banner [url]="bannerUrl"></app-banner>
 
-<div class="max-w-screen-xl mx-auto">
+<div> <!-- class="max-w-screen-xl mx-auto" -->
     <div class="pt-4 text-center">
         <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ 'about' | translate: language }}</h1>
     </div>
 
+    <div class="max-w-screen-xl mx-auto py-4">
+        <p class="text-lg text-justify">
+            {{ 'company_description' | translate: language }}
+        </p>
+    </div>
+
+    <div class="flex justify-center w-full p-4 bg-gray-200">
+        <div class="w-full max-w-screen-lg">
+            <ul class="grid sm:grid-cols-2 gap-8 justify-items-center">
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">1.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Research</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">We love numbers! We collect data and insights, analyze them then take the time to learn about your objectives, ask the right questions to understand your business.</p>
+                    </div>
+                </li>
+
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">2.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Strategey</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">Solutions are born from proper research, hard work, and strong strategy. We build data-driven roadmaps for every project to make pave the way to success.</p>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">3.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Design</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">We design the right solution for your business. We craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.</p>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">4.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Development</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">We build the right solution for your business. We craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.</p>
+                    </div>
+                </li>
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">5.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Deployment</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">We build the right solution for your business. We craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.</p>
+                    </div>
+                </li>
+
+                <li class="flex">
+                    <div class="px-4 text-5xl font-extralight text-green-500">6.</div>
+                    <div>
+                        <div class="text-xl font-bold text-green-700">Deployment</div>
+                        <p class="max-w-xs py-2 text-sm text-black text-justify">We build the right solution for your business. We craft beautiful, intuitive, and user-friendly interfaces that are easy to use and easy to maintain.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+      
     <div class="pt-4 text-center">
         <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ 'our team' | translate: language }}</h1>
     </div>
