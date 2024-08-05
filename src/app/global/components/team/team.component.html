@@ -1,21 +1,25 @@
 <img class="rounded-t-lg" [src]="member.picture" alt="" />
 
 <div class="p-5">
-    <h2 class="mb-2 text-2xl font-bold tracking-tight text-green-700">
+    <h2 class="mb-2 text-2xl font-bold text-center text-green-700">
         {{ member.name }}
     </h2>
 
-    <p class="mb-3 font-bold text-white">
+    <p class="mb-3 font-normal text-white text-center">
         {{ 'position' | translate: language }}: {{ member.position | translate: language }}
     </p>
 
-    <p class="mb-3 font-normal text-white text-justify">
-        {{ member.description | translate: language }}
-    </p>
-
-    <div class="flex mt-4 justify-center sm:mt-0">
-        <a [href]="member.linkedin" target="_blank">
-            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 40px; height: auto;">
+    <div class="flex mt-4 sm:justify-center sm:mt-0">
+        <a *ngIf="member.facebook" [href]="member.facebook" target="_blank">
+            <img src="assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
+        </a>
+        
+        <a *ngIf="member.linkedin" [href]="member.linkedin" target="_blank">
+            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
+        </a>
+        
+        <a *ngIf="member.whatsapp" [href]="member.whatsapp" target="_blank">
+            <img src="assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
         </a>
     </div>
 </div>
