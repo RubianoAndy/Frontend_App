@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-banner',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './banner.component.css'
 })
 export class BannerComponent {
+  @Input() url!: string;
   
 }
