@@ -13,6 +13,6 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
   styleUrl: './about.component.css'
 })
 export default class AboutComponent {
-  bannerURL: string= 'assets/images/landingpage/Banner/Homepage.jpg';
+  bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
 }
