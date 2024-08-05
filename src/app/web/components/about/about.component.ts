@@ -1,11 +1,13 @@
 import { Component } from '@angular/core';
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
+import { BannerComponent } from '../../../global/components/banner/banner.component';
 
 @Component({
   selector: 'app-about',
   standalone: true,
   imports: [
-    NavbarComponent
+    NavbarComponent,
+    BannerComponent,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
