@@ -74,6 +74,8 @@ export class TranslatePipe implements PipeTransform {
       'chief executive manager': 'CEO',
       'chief financial officer': 'CFO',
       'chief operating officer': 'COO',
+
+      'our team': 'Our amazing team',
     },
 
     'es': {
@@ -134,6 +136,8 @@ export class TranslatePipe implements PipeTransform {
       'chief executive manager': 'CEO',
       'chief financial officer': 'CFO',
       'chief operating officer': 'COO',
+
+      'our team': 'Nuestro gran equipo',
     }
   };
 

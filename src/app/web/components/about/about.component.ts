@@ -4,6 +4,7 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
 import { NgFor } from '@angular/common';
+import { TranslatePipe } from '../../../../translate/translate.pipe';
 
 @Component({
   selector: 'app-about',
@@ -14,11 +15,14 @@ import { NgFor } from '@angular/common';
     BannerComponent,
     TeamComponent,
     NgFor,
+    TranslatePipe,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
 export default class AboutComponent {
+  language: 'en' | 'es' = 'es';
+  
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
   team = [
