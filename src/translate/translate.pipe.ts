@@ -68,6 +68,16 @@ export class TranslatePipe implements PipeTransform {
       'terms and conditions': 'Terms and conditions',
 
       'faq': 'FAQ\'s',
+
+      'position': 'Position',
+      'president': 'President and CEO',
+      'chief executive manager': 'CEO',
+      'chief financial officer': 'CFO',
+      'chief operating officer': 'COO',
+
+      'electronic engineer with experience in software development, electronic product design and power electronics' : 'Electronic engineer with experience in software development, electronic product design and power electronics.',
+      'committed teacher and counselor with experience and knowledge in psychology and emotional behavior': 'Committed teacher and counselor with experience and knowledge in psychology and emotional behavior.',
+      'retired army and financial engineer with experience in budgeting and corporate social responsibility': 'Retired army and financial engineer with experience in budgeting and corporate social responsibility.',
     },
 
     'es': {
@@ -122,6 +132,16 @@ export class TranslatePipe implements PipeTransform {
       'terms and conditions': 'Términos y condiciones',
 
       'faq': 'Preguntas frecuentes',
+
+      'position': 'Cargo',
+      'president': 'Presidente y CEO',
+      'chief executive manager': 'CEO',
+      'chief financial officer': 'CFO',
+      'chief operating officer': 'COO',
+
+      'electronic engineer with experience in software development, electronic product design and power electronics' : 'Ingeniero electrónico con experiencia en desarrollo de software, diseño de productos electrónicos y electrónica de potencia.',
+      'committed teacher and counselor with experience and knowledge in psychology and emotional behavior': 'Docente y consejera comprometida con experiencia y conocimientos en psicología y comportamiento emocional.',
+      'retired army and financial engineer with experience in budgeting and corporate social responsibility': 'Ingeniero financista retirado del ejército con experiencia en presupuestos y responsabilidad social empresarial.',
     }
   };
 

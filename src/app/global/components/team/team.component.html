@@ -1,0 +1,21 @@
+<img class="rounded-t-lg" [src]="member.picture" alt="" />
+
+<div class="p-5">
+    <h2 class="mb-2 text-2xl font-bold tracking-tight text-green-700">
+        {{ member.name }}
+    </h2>
+
+    <p class="mb-3 font-bold text-white">
+        {{ 'position' | translate: language }}: {{ member.position | translate: language }}
+    </p>
+
+    <p class="mb-3 font-normal text-white text-justify">
+        {{ member.description | translate: language }}
+    </p>
+
+    <div class="flex mt-4 justify-center sm:mt-0">
+        <a [href]="member.linkedin" target="_blank">
+            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 40px; height: auto;">
+        </a>
+    </div>
+</div>
