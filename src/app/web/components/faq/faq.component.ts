@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { NgFor } from '@angular/common';
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
+import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { FaqQuestionComponent } from './faq-question/faq-question.component';
 import { TranslatePipe } from '../../../../translate/translate.pipe';
@@ -11,6 +12,7 @@ import { TranslatePipe } from '../../../../translate/translate.pipe';
   imports: [
     NgFor,
     NavbarComponent,
+    BannerComponent,
     FooterComponent,
     FaqQuestionComponent,
     TranslatePipe
@@ -20,6 +22,8 @@ import { TranslatePipe } from '../../../../translate/translate.pipe';
 })
 export default class FaqComponent {
   language: 'en' | 'es' = 'es';
+  
+  bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
   questions = [
     { 
