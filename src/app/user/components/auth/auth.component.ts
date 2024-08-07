@@ -29,18 +29,16 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.languageSubscription = this.translateService.currentLanguage$.subscribe(language => {
-      if (language === 'pt') {
+      if (language === 'pt')
         this.logo = environment.logo_brazil;
-      } else {
+      else
         this.logo = environment.logo;
-      }
     });
   }
 
   ngOnDestroy(): void {
-    if (this.languageSubscription) {
+    if (this.languageSubscription)
       this.languageSubscription.unsubscribe();
-    }
   }
 
   getTranslation(key: string): string {
