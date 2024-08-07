@@ -13,10 +13,10 @@ export class TranslatePipe implements PipeTransform {
   constructor (
     private translateservice: TranslateService,
   ) {
-    this.translateservice.currentLanguage$.subscribe(language => {
+    /* this.translateservice.currentLanguage$.subscribe(language => {
       this.currentLanguage = language;
       this.translations = this.translateservice.getTranslations(language);
-    });
+    }); */
   }
 
   transform(value: string): string {

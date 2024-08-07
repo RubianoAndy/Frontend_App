@@ -5,7 +5,7 @@ interface Translations {
   [key: string]: string;
 }
 
-interface LanguageTranslations {
+interface TranslationsMap {
   [languageCode: string]: Translations;
 }
 
@@ -13,12 +13,11 @@ interface LanguageTranslations {
   providedIn: 'root'
 })
 export class TranslateService {
-  private currentLanguageSubject = new BehaviorSubject<'en' | 'es'>('es');
-  
-  currentLanguage$ = this.currentLanguageSubject.asObservable();
+  private currentLanguage = new BehaviorSubject<string>('es');
+  currentLanguage$ = this.currentLanguage.asObservable();
 
-  private translations: LanguageTranslations = {
-    'en': {
+  private translations: TranslationsMap = {
+    en: {
       'all rights reserved': 'All rights reserved',
 
       'hello': 'Hello!',
@@ -80,7 +79,7 @@ export class TranslateService {
       'our team': 'Our amazing team',
     },
 
-    'es': {
+    es: {
       'all rights reserved': 'Todos los derechos reservados',
 
       'hello': '¡Hola!',
@@ -143,11 +142,13 @@ export class TranslateService {
     }
   };
 
-  setLanguage(language: 'en' | 'es'): void {
-    this.currentLanguageSubject.next(language);
+  setLanguage(language: string) {
+    this.currentLanguage.next(language);
   }
 
-  getTranslations(language: 'en' | 'es'): Translations {
-    return this.translations[language];
+  translate(key: string): string {
+    const language = this.currentLanguage.getValue();
+    const translation = this.translations[language]?.[key];
+    return translation || key;
   }
 }

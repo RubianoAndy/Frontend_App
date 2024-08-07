@@ -26,7 +26,6 @@ export class NavbarComponent {
   constructor (
     private translateService: TranslateService,
   ) {
-
   }
 
   goToLogin() {
@@ -34,7 +33,11 @@ export class NavbarComponent {
   }
 
   changeLanguage(event: any) {
-    var language = event.target.value;
-    console.log('Idioma seleccionado: ' + language);
+    const language = event.target.value;
+    this.translateService.setLanguage(language);
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
   }
 }
