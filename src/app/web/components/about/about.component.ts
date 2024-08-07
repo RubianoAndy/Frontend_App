@@ -4,7 +4,7 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
 import { NgFor } from '@angular/common';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-about',

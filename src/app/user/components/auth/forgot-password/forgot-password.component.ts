@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslatePipe } from '../../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgClass, NgIf } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';

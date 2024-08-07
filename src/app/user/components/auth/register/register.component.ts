@@ -3,7 +3,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { RegisterService } from '../../../services/register/register.service';
-import { TranslatePipe } from '../../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-register',

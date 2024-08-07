@@ -1,8 +1,7 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 
-import { TranslatePipe } from '../../../../translate/translate.pipe';
-import { environment } from '../../../../environments/environment';
+import { TranslatePipe } from '../../pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-navbar',

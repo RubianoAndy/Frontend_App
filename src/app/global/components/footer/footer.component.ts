@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { environment } from '../../../../environments/environment';
 import { RouterLink } from '@angular/router';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-footer',

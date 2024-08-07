@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { NgIf } from '@angular/common';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-team',

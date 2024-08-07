@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 import { environment } from '../../../../environments/environment';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-auth',

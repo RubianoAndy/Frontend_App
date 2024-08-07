@@ -2,7 +2,7 @@ import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
 import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 import { environment } from '../../../../environments/environment';
 
 @Component({

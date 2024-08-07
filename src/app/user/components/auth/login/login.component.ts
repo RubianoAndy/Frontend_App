@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } 
 import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { AuthService } from '../../../services/auth/auth.service';
-import { TranslatePipe } from '../../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 
 /*
 // Para google, consultar index.html

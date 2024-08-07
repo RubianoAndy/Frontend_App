@@ -4,7 +4,7 @@ import { NavbarComponent } from '../../../global/components/navbar/navbar.compon
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { FaqQuestionComponent } from './faq-question/faq-question.component';
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-faq',

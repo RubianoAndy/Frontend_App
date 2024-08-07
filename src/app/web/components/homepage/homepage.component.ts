@@ -4,7 +4,7 @@ import { BannerHomeComponent } from '../../../global/components/banner-home/bann
 import { FeaturesComponent } from '../../../global/components/features/features.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 
-import { TranslatePipe } from '../../../../translate/translate.pipe';
+import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-homepage',
