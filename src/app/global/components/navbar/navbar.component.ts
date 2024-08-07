@@ -26,6 +26,7 @@ export class NavbarComponent {
   constructor (
     private translateService: TranslateService,
   ) {
+    this.translateService.setLanguage('es');
   }
 
   goToLogin() {
