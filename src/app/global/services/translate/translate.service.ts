@@ -23,12 +23,22 @@ export class TranslateService {
     es: es,
   };
 
+  constructor() {
+    const savedLanguage = localStorage.getItem('language') || 'es';
+    this.setLanguage(savedLanguage);
+  }
+
+  getCurrentLanguage(): string {
+    return this.currentLanguage.getValue();
+  }
+
   setLanguage(language: string) {
     this.currentLanguage.next(language);
+    localStorage.setItem('language', language);
   }
 
   translate(key: string): string {
-    const language = this.currentLanguage.getValue();
+    const language = this.getCurrentLanguage();
     const translation = this.translations[language]?.[key];
     return translation || key;
   }

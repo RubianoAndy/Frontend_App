@@ -1,13 +1,13 @@
 <div class="relative inline-block text-left">
-    <button (click)="toggleDropdown()" class="bg-gray-200 border border-gray-300 text-black text-sm rounded-lg block w-full p-2 dark:bg-black dark:border-gray-600 dark:text-white">
-      <div class="flex items-center">
-        <img [src]="getLanguage().icon" alt="Icon" class="w-6 h-6 mr-2"> {{ getTranslation(getLanguage().label) }}
-      </div>
-    </button>
-  
-    <div *ngIf="isOpen" class="absolute right-0 mt-2 w-48 bg-gray-200 border border-gray-300 rounded-lg shadow-lg dark:bg-black dark:border-gray-600">
-      <div *ngFor="let language of languages" (click)="selectLanguage(language.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300 dark:text-white dark:hover:bg-green-700">
-        <img [src]="language.icon" alt="Icon" class="w-6 h-6 mr-2"> {{ getTranslation(language.label) }}
-      </div>
+  <button (click)="toggleDropdown()" class="bg-gray-200 border border-gray-300 text-black text-sm rounded-lg block w-full p-2 dark:bg-black dark:border-gray-600 dark:text-white">
+    <div class="flex items-center">
+      <img [src]="getLanguage().icon" alt="Icon" class="w-6 h-6 mr-2"> {{ getTranslation(getLanguage().label) }}
     </div>
+  </button>
+
+  <div *ngIf="isOpen" class="absolute right-0 mt-2 w-48 bg-gray-200 border border-gray-300 rounded-lg shadow-lg dark:bg-black dark:border-gray-600">
+    <div *ngFor="let language of languages" (click)="selectLanguage(language.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300 dark:text-white dark:hover:bg-green-700">
+      <img [src]="language.icon" alt="Icon" class="w-6 h-6 mr-2"> {{ getTranslation(language.label) }}
+    </div>
+  </div>
 </div>

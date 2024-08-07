@@ -1,6 +1,7 @@
-import { Component, EventEmitter, Output  } from '@angular/core';
+import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '../../services/translate/translate.service';
 import { NgFor, NgIf } from '@angular/common';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-language-switcher',
@@ -10,23 +11,34 @@ import { NgFor, NgIf } from '@angular/common';
     NgIf,
   ],
   templateUrl: './language-switcher.component.html',
-  styleUrl: './language-switcher.component.css'
+  styleUrls: ['./language-switcher.component.css']
 })
-export class LanguageSwitcherComponent {
+export class LanguageSwitcherComponent implements OnInit, OnDestroy {
   @Output() languageChange = new EventEmitter<string>();
 
   isOpen = false;
   selectedLanguage = 'es';
 
   languages = [
-    {label: 'spanish', value: 'es', icon: 'assets/flags/Spain.png' },
-    {label: 'english', value: 'en', icon: 'assets/flags/United States.png'},
+    { label: 'spanish', value: 'es', icon: 'assets/flags/Spain.png' },
+    { label: 'english', value: 'en', icon: 'assets/flags/United States.png' },
   ];
 
-  constructor (
-    private translateService: TranslateService,
-  ) {
-    
+  private languageSubscription: Subscription | undefined;
+
+  constructor(private translateService: TranslateService) {}
+
+  ngOnInit(): void {
+    this.selectedLanguage = this.translateService.getCurrentLanguage();
+    this.languageSubscription = this.translateService.currentLanguage$.subscribe(language => {
+      this.selectedLanguage = language;
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.languageSubscription) {
+      this.languageSubscription.unsubscribe();
+    }
   }
 
   getTranslation(key: string): string {
@@ -38,7 +50,6 @@ export class LanguageSwitcherComponent {
   }
 
   selectLanguage(language: string) {
-    this.selectedLanguage = language;
     this.translateService.setLanguage(language);
     this.languageChange.emit(language);
     this.isOpen = false;
