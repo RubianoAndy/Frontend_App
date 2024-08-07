@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
+
+import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { AuthService } from '../../../services/auth/auth.service';
-import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 
 /*
 // Para google, consultar index.html
@@ -19,7 +20,6 @@ declare var google: any;
     RouterLink,
     NgClass,
     NgIf,
-    TranslatePipe,
   ],
   templateUrl: './login.component.html',
   styleUrl: './login.component.css'
@@ -34,6 +34,8 @@ export default class LoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
+
+    private translateService: TranslateService,
 
     private authService: AuthService,
   ) {
@@ -124,4 +126,8 @@ export default class LoginComponent implements OnInit {
       return null;
     }
   } */
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

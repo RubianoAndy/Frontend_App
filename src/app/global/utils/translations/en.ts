@@ -32,7 +32,7 @@ export const en = {
     'first lastname': 'First lastname',
     'second lastname': 'Second lastname',
     'identification number': 'Identification number',
-    'birth date': 'birth date',
+    'birth date': 'Birth date',
     'mobile': 'Mobile',
 
     'we are committed to the environment': 'We are committed to the environment!',

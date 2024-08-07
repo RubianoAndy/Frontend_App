@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
+
+import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { RegisterService } from '../../../services/register/register.service';
-import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 
 @Component({
   selector: 'app-register',
@@ -14,21 +15,19 @@ import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe
     RouterLink,
     NgClass,
     NgIf,
-    TranslatePipe,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export default class RegisterComponent implements OnInit {  
   loading: boolean = false;
-
   form!: FormGroup;
-
   isPasswordVisible: boolean = false;
 
   constructor (
     private formBuilder: FormBuilder,
     private router: Router,
+    private translateService: TranslateService,
 
     private registerService: RegisterService,
   ) {
@@ -108,5 +107,9 @@ export default class RegisterComponent implements OnInit {
         console.error('Login failed', err);
       }
     });
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
   }
 }
