@@ -2,7 +2,7 @@ export const pt = {
     'all rights reserved': 'Todos os direitos reservados',
 
     'spanish': 'Espanhol',
-    'english': 'inglês',
+    'english': 'Inglês',
     'portuguese': 'Português',
 
     'hello': '¡Olá!',
