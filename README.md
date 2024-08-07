@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://YouTube.com/@RubianoAndy" target="_blank">
-        <img src="public/assets/images/Logo.png" width="150">
+        <img src="public/assets/logos/Logo.png" width="150">
     </a>
 </p>
 
