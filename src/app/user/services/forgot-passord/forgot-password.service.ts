@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
-import { environment } from '../../../utils/environments/environment';
+import { environment } from '../../../global/utils/environments/environment';
 import { Router } from '@angular/router';
 
 @Injectable({

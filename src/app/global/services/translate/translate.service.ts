@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
-import { en } from '../../../utils/translations/en';
-import { es } from '../../../utils/translations/es';
+import { en } from '../../utils/translations/en';
+import { es } from '../../utils/translations/es';
 
 interface Translations {
   [key: string]: string;

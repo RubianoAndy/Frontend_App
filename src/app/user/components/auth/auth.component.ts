@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
-import { environment } from '../../../utils/environments/environment';
+import { environment } from '../../../global/utils/environments/environment';
 import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 
 @Component({
