@@ -3,7 +3,7 @@ import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
-import { environment } from '../../../../environments/environment';
+import { environment } from '../../../utils/environments/environment';
 
 @Component({
   selector: 'app-dashboard',
