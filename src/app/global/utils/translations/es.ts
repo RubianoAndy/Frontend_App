@@ -3,6 +3,7 @@ export const es = {
 
     'spanish': 'Español',
     'english': 'Inglés',
+    'portuguese': 'Portugués',
 
     'hello': '¡Hola!',
     'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',

@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 import { en } from '../../utils/translations/en';
 import { es } from '../../utils/translations/es';
+import { pt } from '../../utils/translations/pt';
 
 interface Translations {
   [key: string]: string;
@@ -19,6 +20,7 @@ export class TranslateService {
   currentLanguage$ = this.currentLanguage.asObservable();
 
   private translations: TranslationsMap = {
+    pt: pt,
     en: en,
     es: es,
   };

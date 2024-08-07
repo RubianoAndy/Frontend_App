@@ -1,12 +1,13 @@
 import { Component, EventEmitter, Output, OnInit, OnDestroy } from '@angular/core';
 import { TranslateService } from '../../services/translate/translate.service';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-language-switcher',
   standalone: true,
   imports: [
+    NgClass,
     NgFor,
     NgIf,
   ],
@@ -20,8 +21,10 @@ export class LanguageSwitcherComponent implements OnInit, OnDestroy {
   selectedLanguage = 'es';
 
   languages = [
-    { label: 'spanish', value: 'es', icon: 'assets/flags/Spain.png' },
+    { label: 'portuguese', value: 'pt', icon: 'assets/flags/Brazil.png' },
     { label: 'english', value: 'en', icon: 'assets/flags/United States.png' },
+    { label: 'spanish', value: 'es', icon: 'assets/flags/Spain.png' },
+    
   ];
 
   private languageSubscription: Subscription | undefined;
