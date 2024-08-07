@@ -8,33 +8,38 @@
       <ul class="flex flex-col font-medium p-4 md:p-0 mt-4 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0">
         <li>
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="block py-2 px-3 md:p-0 text-white md:hover:text-blue-500">
-            {{ 'home' | translate: language }}
+            {{ 'home' | translate }}
           </a>
         </li>
         
         <li>
           <a routerLink="/about" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="block py-2 px-3 md:p-0 text-white md:hover:text-blue-500">
-            {{ 'about' | translate: language }}
+            {{ 'about' | translate }}
           </a>
         </li>
         
         <li>
           <a routerLink="/contact" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="block py-2 px-3 md:p-0 text-white md:hover:text-blue-500">
-            {{ 'contact' | translate: language }}
+            {{ 'contact' | translate }}
           </a>
         </li>
       </ul>
     </div>
 
     <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
-      <button type="button" (click)="goToLogin()" class="text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">
-        <i class="fa-solid fa-user"></i> {{ 'login' | translate: language }}
+      <select id="language" (change)="changeLanguage($event)" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+        <option [selected]="language.selected" [value]="language.value" *ngFor="let language of languages"> {{ language.label }}</option>
+      </select>
+    
+      <button type="button" (click)="goToLogin()" class="flex items-center text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">
+        <i class="fa-solid fa-user mr-2"></i> <!-- Ajuste de margen derecho -->
+        {{ 'login' | translate }}
       </button>
-        
+    
       <!-- <button type="button" routerLink="/auth/register" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
           <i class="fa-solid fa-user-plus"></i> Sign up
       </button> -->
-        
+    
       <button data-collapse-toggle="navbar-cta" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-white rounded-lg md:hidden hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-600" aria-controls="navbar-cta" aria-expanded="false">
         <span class="sr-only">Open main menu</span>
         <i class="fa-solid fa-bars text-2xl"></i>

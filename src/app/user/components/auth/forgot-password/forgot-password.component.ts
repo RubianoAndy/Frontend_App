@@ -19,9 +19,7 @@ import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-p
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.css'
 })
-export default class ForgotPasswordComponent implements OnInit{
-  language: 'en' | 'es' = 'es';
-  
+export default class ForgotPasswordComponent implements OnInit{  
   loading: boolean = false;
 
   form_status: string = 'Send email'; // 'Send code and password'

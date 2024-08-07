@@ -14,8 +14,6 @@ import { TranslatePipe } from '../../pipes/translate/translate.pipe';
   styleUrl: './footer.component.css'
 })
 export class FooterComponent {
-  language: 'en' | 'es' = 'es';
-
   page = environment.site_name;
   currentYear = environment.currentYear;
 }

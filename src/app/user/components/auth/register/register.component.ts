@@ -19,9 +19,7 @@ import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export default class RegisterComponent implements OnInit {
-  language: 'en' | 'es' = 'es';
-  
+export default class RegisterComponent implements OnInit {  
   loading: boolean = false;
 
   form!: FormGroup;

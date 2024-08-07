@@ -15,8 +15,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   styleUrl: './auth.component.css'
 })
 export class AuthComponent implements OnInit {
-  language: 'en' | 'es' = 'es';
-  
   currentYear: number = environment.currentYear;
   page: string = environment.site_name;
 

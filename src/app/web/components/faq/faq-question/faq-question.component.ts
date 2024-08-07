@@ -17,8 +17,6 @@ export class FaqQuestionComponent {
   @Input() question!: string;
   @Input() answer!: string;
 
-  language: 'en' | 'es' = 'es';
-
   isMenuOpen = false;
 
   toggleMenu() {

@@ -20,9 +20,7 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export default class AboutComponent {
-  language: 'en' | 'es' = 'es';
-  
+export default class AboutComponent {  
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
   team = [

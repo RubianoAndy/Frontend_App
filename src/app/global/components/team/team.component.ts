@@ -14,6 +14,4 @@ import { TranslatePipe } from '../../pipes/translate/translate.pipe';
 })
 export class TeamComponent {
   @Input() member: any;
-
-  language: 'en' | 'es' = 'es';
 }

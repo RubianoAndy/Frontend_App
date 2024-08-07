@@ -17,8 +17,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   styleUrl: './contact.component.css'
 })
 export default class ContactComponent {
-  language: 'en' | 'es' = 'es';
-
   bannerUrl: string= 'assets/images/landingpage/Banner/Contact.jpg';
 
 }

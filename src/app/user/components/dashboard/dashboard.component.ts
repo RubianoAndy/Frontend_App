@@ -33,8 +33,6 @@ export class DashboardComponent {
 
   loading: boolean = false;
 
-  language: 'en' | 'es' = 'es';
-
   constructor (
     private authService: AuthService,
     private router: Router,

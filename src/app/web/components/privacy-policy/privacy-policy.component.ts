@@ -17,8 +17,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   styleUrl: './privacy-policy.component.css'
 })
 export default class PrivacyPolicyComponent {
-  language: 'en' | 'es' = 'es';
-  
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
 }

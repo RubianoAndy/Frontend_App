@@ -17,8 +17,5 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   styleUrl: './terms-and-conditions.component.css'
 })
 export default class TermsAndConditionsComponent {
-  language: 'en' | 'es' = 'es';
-  
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
-
 }

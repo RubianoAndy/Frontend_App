@@ -25,8 +25,6 @@ declare var google: any;
   styleUrl: './login.component.css'
 })
 export default class LoginComponent implements OnInit {
-  language: 'en' | 'es' = 'es';
-  
   loading: boolean = false;
 
   form!: FormGroup;

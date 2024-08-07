@@ -1,20 +1,20 @@
 <form class="space-y-2" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="text-center mb-4">
-        <h2 class="mb-1 text-3xl font-semibold text-foreground">{{ 'hello' | translate: language }}</h2>
-        <p class="text-sm text-muted-foreground">{{ 'enter the credentials to access your account' | translate: language }}</p>
+        <h2 class="mb-1 text-3xl font-semibold text-foreground">{{ 'hello' | translate }}</h2>
+        <p class="text-sm text-muted-foreground">{{ 'enter the credentials to access your account' | translate }}</p>
     </div>
 
     <div class="flex">
         <div class="w-full">
-            <label for="email" class="text-sm text-start text-white">{{ 'email' | translate: language }} * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ 'name@email.com' | translate: language }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <label for="email" class="text-sm text-start text-white">{{ 'email' | translate }} * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
+            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ 'name@email.com' | translate }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
         </div>
     </div>
 
     <div class="flex">
         <div class="w-full relative">
-            <label for="password" class="text-start text-white">{{ 'password' | translate: language }} * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="{{ 'password' | translate: language }}" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+            <label for="password" class="text-start text-white">{{ 'password' | translate }} * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
+            <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="{{ 'password' | translate }}" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
 
             <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-0 flex items-center px-3 mt-4">
                 <i [ngClass]="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" class="text-gray-500"></i>
@@ -24,26 +24,26 @@
 
     <div class="flex items-center space-x-4">
         <div class="w-1/2">
-            <button type="submit" [disabled]="form.invalid || loading" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-400 disabled:opacity-50">{{ 'login' | translate: language }}</button>
+            <button type="submit" [disabled]="form.invalid || loading" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-green-700 hover:bg-green-800 focus:ring-4 focus:ring-green-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-green-600 dark:hover:bg-green-700 dark:focus:ring-green-800 disabled:bg-green-400 disabled:opacity-50">{{ 'login' | translate }}</button>
         </div>
 
         <div class="w-1/2">
-            <button type="button" routerLink="/auth/register" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">{{ 'sign up' | translate: language }}</button>
+            <button type="button" routerLink="/auth/register" class="flex flex-1 w-full justify-center focus:outline-none text-white bg-red-700 hover:bg-red-800 focus:ring-4 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 dark:bg-red-600 dark:hover:bg-red-700 dark:focus:ring-red-800">{{ 'sign up' | translate }}</button>
         </div>
     </div>
 
     <div class="flex">
-        <a routerLink="/auth/forgot-password" class="text-white hover:underline ml-auto font-semibold">{{ 'forgot password' | translate: language }}</a>
+        <a routerLink="/auth/forgot-password" class="text-white hover:underline ml-auto font-semibold">{{ 'forgot password' | translate }}</a>
     </div>
 
     <!-- <div class="text-center"> -->
         <!-- <div class="my-4 flex items-center before:mt-0.5 before:flex-1 before:border-t before:border-muted after:mt-0.5 after:flex-1 after:border-t after:border-muted">
-            <p class="mx-4 mb-0 text-center text-sm text-muted-foreground">{{ 'or' | translate: language }}</p>
+            <p class="mx-4 mb-0 text-center text-sm text-muted-foreground">{{ 'or' | translate }}</p>
         </div> -->
 
         <!-- <div>
             <a class="flex flex-1 w-full items-center justify-center text-white cursor-pointer bg-gray-800 hover:bg-gray-900 focus:outline-none focus:ring-4 focus:ring-gray-300 font-medium rounded-full text-sm px-5 py-2 me-2 mb-2 dark:bg-gray-800 dark:hover:bg-gray-700 dark:focus:ring-gray-700 dark:border-gray-700">
-                <img class="h-5 mr-2" src="assets/images/logos/logo-google.png" alt=""> {{ 'login with google' | translate: language }}
+                <img class="h-5 mr-2" src="assets/images/logos/logo-google.png" alt=""> {{ 'login with google' | translate }}
             </a>
         </div> -->
 

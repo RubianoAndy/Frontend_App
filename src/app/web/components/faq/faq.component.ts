@@ -21,8 +21,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
   styleUrl: './faq.component.css'
 })
 export default class FaqComponent {
-  language: 'en' | 'es' = 'es';
-  
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
   questions = [
