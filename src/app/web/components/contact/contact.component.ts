@@ -1,8 +1,10 @@
 import { Component } from '@angular/core';
+
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
-import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
+
+import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-contact',
@@ -11,7 +13,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
     NavbarComponent,
     BannerComponent,
     FooterComponent,
-    TranslatePipe,
   ],
   templateUrl: './contact.component.html',
   styleUrl: './contact.component.css'
@@ -19,4 +20,13 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 export default class ContactComponent {
   bannerUrl: string= 'assets/images/landingpage/Banner/Contact.jpg';
 
+  constructor (
+    private translateService: TranslateService,
+  ) {
+    
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

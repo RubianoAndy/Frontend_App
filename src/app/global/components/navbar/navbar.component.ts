@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
-
-import { TranslatePipe } from '../../pipes/translate/translate.pipe';
 import { NgFor } from '@angular/common';
 import { TranslateService } from '../../services/translate/translate.service';
 
@@ -12,7 +10,6 @@ import { TranslateService } from '../../services/translate/translate.service';
     NgFor,
     RouterLink,
     RouterLinkActive,
-    TranslatePipe
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
