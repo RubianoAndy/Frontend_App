@@ -1,6 +1,9 @@
 export const en = {
     'all rights reserved': 'All rights reserved',
 
+    'spanish': 'Spanish',
+    'english': 'English',
+
     'hello': 'Hello!',
     'enter the credentials to access your account': 'Enter the credentials to access your account',
     'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',

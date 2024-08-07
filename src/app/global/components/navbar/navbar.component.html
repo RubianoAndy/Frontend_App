@@ -26,15 +26,13 @@
       </ul>
     </div>
 
-    <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">
-      <select id="language" (change)="changeLanguage($event)" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-2 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
-        <option [selected]="language.selected" [value]="language.value" *ngFor="let language of languages"> {{ language.label }}</option>
-      </select>
-    
+    <div class="flex md:order-2 space-x-3 md:space-x-2 rtl:space-x-reverse">  
       <button type="button" (click)="goToLogin()" class="flex items-center text-white focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-4 py-2 text-center bg-green-600 hover:bg-green-700 focus:ring-green-800">
         <i class="fa-solid fa-user mr-2"></i> <!-- Ajuste de margen derecho -->
         {{ getTranslation('login') }}
       </button>
+
+      <app-language-switcher></app-language-switcher>
     
       <!-- <button type="button" routerLink="/auth/register" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
           <i class="fa-solid fa-user-plus"></i> Sign up
