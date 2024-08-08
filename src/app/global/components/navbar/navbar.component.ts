@@ -44,10 +44,6 @@ export class NavbarComponent implements OnInit, OnDestroy {
       this.languageSubscription.unsubscribe();
   }
 
-  goToLogin() {
-    window.open('http://localhost:4200/auth/login', '_blank');
-  }
-
   getTranslation(key: string): string {
     return this.translateService.translate(key);
   }

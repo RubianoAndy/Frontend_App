@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { environment } from '../../../global/utils/environments/environment';
@@ -11,6 +11,7 @@ import { TranslateService } from '../../../global/services/translate/translate.s
   standalone: true,
   imports: [
     RouterOutlet,
+    RouterLink,
     LanguageSwitcherComponent,
   ],
   templateUrl: './auth.component.html',
