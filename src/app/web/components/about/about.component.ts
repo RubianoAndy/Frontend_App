@@ -1,10 +1,14 @@
 import { Component } from '@angular/core';
+import { NgFor } from '@angular/common';
+
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
-import { NgFor } from '@angular/common';
+import { CompanyCardComponent } from '../../../global/components/company-card/company-card.component';
+
 import { TranslateService } from '../../../global/services/translate/translate.service';
+import { environment } from '../../../global/utils/environments/environment';
 
 @Component({
   selector: 'app-about',
@@ -14,6 +18,7 @@ import { TranslateService } from '../../../global/services/translate/translate.s
     FooterComponent,
     BannerComponent,
     TeamComponent,
+    CompanyCardComponent,
     NgFor,
   ],
   templateUrl: './about.component.html',
@@ -46,6 +51,24 @@ export default class AboutComponent {
       linkedin: null,
       facebook: null,
       whatsapp: 'https://wa.me/573115342408',
+    }
+  ];
+
+  companies = [
+    {
+      logo: environment.logo_engineering,
+      name: 'engineering, development and innovation division',
+      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+    },
+    {
+      logo: environment.logo_social,
+      name: 'corporate social responsibility and environment division',
+      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+    },
+    {
+      logo: environment.logo_plants_white,
+      name: 'study, conservation and reproduction of carnivorous plants division',
+      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
     }
   ];
 
