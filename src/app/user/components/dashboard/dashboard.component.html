@@ -13,7 +13,9 @@
                 </button>
             </div>
             
-            <div class="flex items-center">
+            <div class="flex items-center space-x-4">
+                <app-language-switcher></app-language-switcher>
+                
                 <div class="relative">
                     <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" (click)="toggleMenuDropdown()">
                         <!-- <span class="sr-only">Open user menu</span> -->
@@ -89,7 +91,7 @@
     </div>
 
     <footer class="footer">
-        &copy; {{ currentYear }} <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">{{ page }}</a>. {{ 'all rights reserved' | translate }}.
+        &copy; {{ currentYear }} <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">{{ page }}</a>. {{ getTranslation('all rights reserved') }}.
     </footer>
 </div>
   

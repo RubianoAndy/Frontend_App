@@ -4,7 +4,7 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
 import { NgFor } from '@angular/common';
-import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
+import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-about',
@@ -15,7 +15,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
     BannerComponent,
     TeamComponent,
     NgFor,
-    TranslatePipe,
   ],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
@@ -49,4 +48,14 @@ export default class AboutComponent {
       whatsapp: 'https://wa.me/573115342408',
     }
   ];
+
+  constructor (
+    private translateService: TranslateService,
+  ) {
+
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

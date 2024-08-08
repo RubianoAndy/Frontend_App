@@ -2,14 +2,14 @@
 
 <app-banner [url]="bannerUrl"></app-banner>
 
-<div> <!-- class="max-w-screen-xl mx-auto" -->
+<div> <!-- class="mx-auto" -->
     <div class="pt-4 text-center">
-        <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ 'about' | translate }}</h1>
+        <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ getTranslation('about') }}</h1>
     </div>
 
-    <div class="max-w-screen-xl mx-auto py-4">
+    <div class="flex mx-auto p-4 md:px-10">
         <p class="text-lg text-justify">
-            {{ 'company_description' | translate }}
+            {{ getTranslation('company_description') }}
         </p>
     </div>
 
@@ -64,11 +64,11 @@
         </div>
     </div>
       
-    <div class="pt-4 text-center">
-        <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ 'our team' | translate }}</h1>
+    <div class="flex py-4 justify-center">
+        <h1 class="text-3xl lg:text-4xl text-black font-semibold">{{ getTranslation('our team') }}</h1>
     </div>
 
-    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-2 px-4 py-4">
+    <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-2 p-4">
         <div *ngFor="let member of team" class="w-full md:w-1/4 border bg-black border-gray-700 rounded-lg shadow ">
             <app-team [member]="member"></app-team>
         </div>

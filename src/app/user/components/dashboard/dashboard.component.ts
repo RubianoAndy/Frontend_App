@@ -1,9 +1,12 @@
 import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
-import { AuthService } from '../../services/auth/auth.service';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
-import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
 import { environment } from '../../../global/utils/environments/environment';
+
+
+import { AuthService } from '../../services/auth/auth.service';
+import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
+import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,7 +17,7 @@ import { environment } from '../../../global/utils/environments/environment';
     RouterLink,
     NgClass,
     NgIf,
-    TranslatePipe,
+    LanguageSwitcherComponent
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
@@ -37,6 +40,8 @@ export class DashboardComponent {
     private authService: AuthService,
     private router: Router,
     private renderer: Renderer2,
+
+    private translateService: TranslateService,
   ) {
 
   }
@@ -86,5 +91,9 @@ export class DashboardComponent {
         console.error('Logout failed', err);
       }
     });
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
   }
 }
