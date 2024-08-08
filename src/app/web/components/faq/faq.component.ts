@@ -4,7 +4,7 @@ import { NavbarComponent } from '../../../global/components/navbar/navbar.compon
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { FaqQuestionComponent } from './faq-question/faq-question.component';
-import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
+import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-faq',
@@ -15,7 +15,6 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
     BannerComponent,
     FooterComponent,
     FaqQuestionComponent,
-    TranslatePipe
   ],
   templateUrl: './faq.component.html',
   styleUrl: './faq.component.css'
@@ -33,4 +32,14 @@ export default class FaqComponent {
       answer: 'You can return your product within 30 days of purchase. Please refer to our return policy for more details.'
     },
   ];
+
+  constructor (
+    private translateService: TranslateService,
+  ) {
+
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

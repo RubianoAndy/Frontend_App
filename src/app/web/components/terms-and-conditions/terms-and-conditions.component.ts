@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
-import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
+import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-terms-and-conditions',
@@ -11,11 +11,20 @@ import { TranslatePipe } from '../../../global/pipes/translate/translate.pipe';
     NavbarComponent,
     BannerComponent,
     FooterComponent,
-    TranslatePipe,
   ],
   templateUrl: './terms-and-conditions.component.html',
   styleUrl: './terms-and-conditions.component.css'
 })
 export default class TermsAndConditionsComponent {
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
+
+  constructor (
+    private translateService: TranslateService,
+  ) {
+
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

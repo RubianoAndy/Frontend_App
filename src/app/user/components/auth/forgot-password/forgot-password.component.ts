@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { TranslatePipe } from '../../../../global/pipes/translate/translate.pipe';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgClass, NgIf } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
 import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-password.service';
+import { TranslateService } from '../../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -14,7 +14,6 @@ import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-p
     RouterLink,
     NgClass,
     NgIf,
-    TranslatePipe
   ],
   templateUrl: './forgot-password.component.html',
   styleUrl: './forgot-password.component.css'
@@ -34,7 +33,8 @@ export default class ForgotPasswordComponent implements OnInit{
     private formBuilder: FormBuilder,
     private router: Router,
     
-    private forgotPasswordService: ForgotPasswordService
+    private translateService: TranslateService,
+    private forgotPasswordService: ForgotPasswordService,
   ) {
 
   }
@@ -175,5 +175,9 @@ export default class ForgotPasswordComponent implements OnInit{
       prevInput.value = '';  // Borrar el valor anterior
       event.preventDefault();
     }
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
   }
 }
