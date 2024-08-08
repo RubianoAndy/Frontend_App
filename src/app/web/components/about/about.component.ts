@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NgFor } from '@angular/common';
 
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
@@ -6,6 +6,8 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
 import { CompanyCardComponent } from '../../../global/components/company-card/company-card.component';
+
+import { Subscription } from 'rxjs';
 
 import { TranslateService } from '../../../global/services/translate/translate.service';
 import { environment } from '../../../global/utils/environments/environment';
@@ -24,7 +26,11 @@ import { environment } from '../../../global/utils/environments/environment';
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
-export default class AboutComponent {  
+export default class AboutComponent implements OnInit, OnDestroy {
+  logo = environment.logo;
+
+  private languageSubscription: Subscription | undefined;
+
   bannerUrl: string= 'assets/images/landingpage/Banner/About.jpg';
 
   team = [
@@ -54,6 +60,12 @@ export default class AboutComponent {
     }
   ];
 
+  company_leader = {
+    logo: this.logo,
+    name: 'international company',
+    description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+  };
+
   companies = [
     {
       logo: environment.logo_engineering,
@@ -76,6 +88,22 @@ export default class AboutComponent {
     private translateService: TranslateService,
   ) {
 
+  }
+
+  ngOnInit(): void {
+    this.languageSubscription = this.translateService.currentLanguage$.subscribe(language => {
+      if (language === 'pt')
+        this.logo = environment.logo_brazil;
+      else
+        this.logo = environment.logo;
+
+      this.company_leader.logo = this.logo;
+    });
+  }
+
+  ngOnDestroy(): void {
+    if (this.languageSubscription)
+      this.languageSubscription.unsubscribe();
   }
 
   getTranslation(key: string): string {
