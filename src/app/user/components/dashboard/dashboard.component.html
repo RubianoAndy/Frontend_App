@@ -15,7 +15,7 @@
             
             <div class="flex items-center space-x-4">
                 <app-language-switcher></app-language-switcher>
-                
+
                 <div class="relative">
                     <button type="button" class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600" aria-expanded="false" (click)="toggleMenuDropdown()">
                         <!-- <span class="sr-only">Open user menu</span> -->
@@ -30,7 +30,7 @@
                         <ul class="py-1" role="none">
                             <li>
                                 <a routerLink="/user/account" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-600 dark:hover:text-white" role="menuitem">
-                                    <i class="fa-solid fa-gear me-2"></i> Account
+                                    <i class="fa-solid fa-gear me-2"></i> {{ getTranslation('settings') }}
                                 </a>
                             </li>
 
@@ -53,7 +53,7 @@
             <li>
                 <a routerLink="/user" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="flex items-center p-2 text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700 group">
                     <i class="fa-solid fa-house"></i>
-                    <span class="flex-1 ms-3 whitespace-nowrap">Dashboard</span>
+                    <span class="flex-1 ms-3 whitespace-nowrap">{{ getTranslation('home') }}</span>
                 </a>
             </li>
 

@@ -48,6 +48,7 @@ export const pt = {
     'home': 'Página inicial',
     'about': 'Nós',
     'contact': 'Contate-nos',
+    'settings': 'Configurações',
 
     'legal framework': 'Enquadramento jurídico',
     'privacy policy': 'Política de privacidade',

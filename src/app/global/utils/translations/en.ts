@@ -48,6 +48,7 @@ export const en = {
     'home': 'Home',
     'about': 'About',
     'contact': 'Contact',
+    'settings': 'Settings',
 
     'legal framework': 'Legal',
     'privacy policy': 'Privacy Policy',
