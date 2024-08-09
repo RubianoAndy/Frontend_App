@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
+
 import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
+import { PrivacyPolicyInfoComponent } from './privacy-policy-info/privacy-policy-info.component';
+
 import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
@@ -11,6 +14,7 @@ import { TranslateService } from '../../../global/services/translate/translate.s
     NavbarComponent,
     BannerComponent,
     FooterComponent,
+    PrivacyPolicyInfoComponent
   ],
   templateUrl: './privacy-policy.component.html',
   styleUrl: './privacy-policy.component.css'
