@@ -7,6 +7,7 @@ import { environment } from '../../../global/utils/environments/environment';
 import { AuthService } from '../../services/auth/auth.service';
 import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
 import { TranslateService } from '../../../global/services/translate/translate.service';
+import { DarkModeToggleComponent } from '../../../global/components/dark-mode-toggle/dark-mode-toggle.component';
 
 @Component({
   selector: 'app-dashboard',
@@ -17,7 +18,8 @@ import { TranslateService } from '../../../global/services/translate/translate.s
     RouterLink,
     NgClass,
     NgIf,
-    LanguageSwitcherComponent
+    LanguageSwitcherComponent,
+    DarkModeToggleComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'

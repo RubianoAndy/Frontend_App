@@ -1,0 +1,13 @@
+<button (click)="toggleDarkMode()" 
+[ngClass]="{'bg-gray-800 text-white': isDarkMode, 'bg-gray-300 text-black': !isDarkMode}"
+    class="p-2 rounded-lg focus:outline-none">
+    <div *ngIf="isDarkMode; else notDarkMode">
+        <i class="fa-solid fa-moon"></i>
+    </div>
+
+    <ng-template #notDarkMode>
+        <i class="fa-solid fa-sun"></i>
+    </ng-template>
+
+    <!-- <i [ngClass]="{'fa-solid fa-moon': isDarkMode, 'fa-solid fa-sun': !isDarkMode}"></i> -->
+</button>

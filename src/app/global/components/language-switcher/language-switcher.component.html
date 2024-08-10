@@ -1,5 +1,5 @@
 <div class="relative inline-block text-left">
-  <button (click)="toggleDropdown()" class="bg-gray-200 border border-gray-300 text-black text-sm rounded-lg block w-full p-2 dark:bg-black dark:border-gray-600 dark:text-white">
+  <button (click)="toggleDropdown()" class="bg-gray-300 text-black text-sm rounded-lg block w-full p-2 dark:bg-gray-800 dark:text-white">
     <div class="flex items-center">
       <img [src]="getLanguage().icon" alt="Icon" class="w-6 h-6 mr-2"> {{ getTranslation(getLanguage().label) }} <i class="ml-2 fa-solid" [ngClass]="{'fa-angle-down': !isOpen, 'fa-angle-up': isOpen}"></i>
     </div>
