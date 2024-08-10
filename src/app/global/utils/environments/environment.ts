@@ -9,5 +9,5 @@ export const environment = {
   logo_engineering: 'assets/logos/Logo engineering and development.png',
   logo_social: 'assets/logos/Logo corporate social responsibility.png',
   logo_plants_white: 'assets/logos/Logo carnivorous plants division white.png',
-
+  logo_plants_black: 'assets/logos/Logo carnivorous plants division black.png',
 };

@@ -7,12 +7,15 @@
         <h1 class="text-center lg:text-4xl text-3xl lg:leading-9 leading-7 text-black font-semibold">{{ getTranslation('privacy policy') }}</h1>
     </div>
 
+    <div class="flex justify-center md:space-x-10 py-4">
+        <img [src]="logo" alt="Logo" style="width: 150px; height: auto;">
+        <img [src]="logo_engineering" alt="Logo" class="hidden md:block" style="width: 150px; height: auto;">
+        <img [src]="logo_social" alt="Logo" class="hidden md:block" style="width: 150px; height: auto;">
+        <img [src]="logo_plants_black" alt="Logo" class="hidden md:block" style="width: 150px; height: auto;">
+    </div>
+
     <div class="max-w-screen-xl mx-auto">
         <app-privacy-policy-info></app-privacy-policy-info>
-
-        <div class="flex justify-center pb-4">
-            <img src="assets/logos/Logo.png" class="h-24" alt="Andy Rubiano logo"/>
-        </div>
     </div>
 </div>
 
