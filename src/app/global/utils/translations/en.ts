@@ -1,4 +1,9 @@
 export const en = {
+    'international company': 'International company',
+    'engineering, development and innovation division': 'Engineering, development and innovation division',
+    'corporate social responsibility and environment division': 'Corporate social responsibility and environment division',
+    'study, conservation and reproduction of carnivorous plants division': 'Study, conservation and reproduction of carnivorous plants division',
+
     'all rights reserved': 'All rights reserved',
 
     'spanish': 'Spanish',
