@@ -51,7 +51,6 @@ export const en = {
     'settings': 'Settings',
 
     'legal framework': 'Legal',
-    'privacy policy': 'Privacy Policy',
     'terms and conditions': 'Terms and conditions',
 
     'faq': 'FAQ\'s',
@@ -63,4 +62,50 @@ export const en = {
     'chief operating officer': 'COO',
 
     'our team': 'Our amazing team',
+
+    'privacy policy': 'Privacy Policy',
+    'privacy_policy_1' : 
+        `At Andy Rubiano™ - International Company, we value your privacy and are committed to protecting any personal 
+        information you share with us. This Privacy Policy describes how we collect, use, and protect your information 
+        when you visit our website and use our services`,
+    'privacy_policy_2' : 
+        `We collect personal information that you provide directly to us such as your name, identification number, date 
+        of birth, email address, phone number, and any other data you choose to share with us. We also obtain data 
+        automatically through technologies such as cookies when you interact with our website. All of the information 
+        we collect is used to:`,
+    'provide, operate, and maintain our services': 'Provide, operate, and maintain our services',
+    'improve and personalize your experience on our website': 'Improve and personalize your experience on our website',
+    'communicate with you, including answering your questions, sending updates, and providing customer support': 'Communicate with you, including answering your questions, sending updates, and providing customer support',
+    'understand and analyze how you use our website and services': 'Understand and analyze how you use our website and services',
+    'comply with any legal or regulatory obligations': 'Comply with any legal or regulatory obligations',
+    'we do not share, sell, or rent your personal information to third parties except in the following circumstances': 'We do not share, sell, or rent your personal information to third parties except in the following circumstances',
+    'with your explicit consent': 'With your explicit consent',
+    'with third-party vendors who assist us in operating our website, products and services, provided that such vendors adhere to our privacy policies': 'With third-party vendors who assist us in operating our website, products and services, provided that such vendors adhere to our privacy policies',
+    'if necessary to comply with the law, respond to a government request or protect our rights and property': 'If necessary to comply with the law, respond to a government request or protect our rights and property',
+    'information security': 'Information security',
+    'information_security_1' : 
+        `We implement reasonable security measures to protect your personal information from unauthorized access, 
+        alteration, disclosure or destruction, however, no data transmission over the Internet is completely secure, 
+        so we cannot guarantee the absolute security of your information`,
+    'cookies': 'Cookies',
+    'cookies_1': 
+        `We use cookies and similar technologies to improve your experience on our website. You can set your browser 
+        to refuse cookies or to notify you when they are being used. Please note that some parts of our website may 
+        not function properly if you disable cookies`,
+    'links to other sites': 'Links to other sites',
+    'other_sites':
+        `Our website may contain links to third party websites and we are not responsible for the privacy practices 
+        or the content of such third party websites. We encourage you to review the privacy policies of any website 
+        you visit`,
+    'changes to this privacy policy': 'Changes to this privacy policy',
+    'privacy_policy_changes_1': 
+        `We reserve the right to update this privacy policy at any time, but we shall notify you of any changes by 
+        posting them on this page, so we encourage you to review it periodically to stay informed of how we protect 
+        your information`,
+    
+    
+    'contact_information': 
+        `If you have any questions or concerns about this privacy policy, please feel free to contact us through 
+        our available communication channels by clicking`,
+    'here': 'here',
 };

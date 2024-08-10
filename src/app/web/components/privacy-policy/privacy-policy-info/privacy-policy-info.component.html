@@ -1,77 +1,61 @@
 <div class="space-y-4 text-lg text-justify">
     <p class="text-lg text-justify">
-        En [Nombre de la Empresa], valoramos tu privacidad y nos comprometemos a proteger cualquier información personal 
-        que compartas con nosotros. Esta Política de Privacidad describe cómo recopilamos, usamos, y protegemos tu 
-        información cuando visitas nuestra página web y utilizas nuestros servicios.
+        {{ getTranslation('privacy_policy_1') }}.
     </p>
 
     <p>
-        Recopilamos información personal que nos proporcionas directamente, como tu nombre, número de identificación, 
-        fecha de nacimiento, dirección de correo electrónico, número de teléfono y cualquier otra información que elijas 
-        compartir con nosotros. También recopilamos información automáticamente a través de tecnologías como cookies 
-        cuando interactúas con nuestra página web. La información que recopilamos se utiliza para:
+        {{ getTranslation('privacy_policy_2') }}:
     </p>
 
     <ul class="list-disc pl-5">
-        <li> Proporcionar, operar, y mantener nuestros servicios. </li>
-        <li> Mejorar y personalizar tu experiencia en nuestro sitio web. </li>
-        <li> Comunicarnos contigo, incluyendo responder a tus preguntas, enviar actualizaciones, y ofrecer soporte al cliente. </li>
-        <li> Entender y analizar cómo utilizas nuestro sitio web y servicios. </li>
-        <li> Cumplir con cualquier obligación legal o regulatoria. </li>
+        <li> {{ getTranslation('provide, operate, and maintain our services') }}. </li>
+        <li> {{ getTranslation('improve and personalize your experience on our website') }}. </li>
+        <li> {{ getTranslation('communicate with you, including answering your questions, sending updates, and providing customer support') }}. </li>
+        <li> {{ getTranslation('understand and analyze how you use our website and services') }}. </li>
+        <li> {{ getTranslation('comply with any legal or regulatory obligations') }}. </li>
     </ul>
 
     <p>
-        No compartimos, vendemos, o alquilamos tu información personal a terceros, excepto en las siguientes circunstancias:.
+        {{ getTranslation('we do not share, sell, or rent your personal information to third parties except in the following circumstances') }}:
     </p>
 
     <ul class="list-disc pl-5">
-        <li> Con tu consentimiento explícito. </li>
+        <li> {{ getTranslation('with your explicit consent') }}. </li>
         <li> 
-            Con proveedores de servicios de terceros que nos ayudan a operar nuestra página web y servicios, siempre 
-            que dichos proveedores cumplan con nuestras políticas de privacidad. 
+            {{ getTranslation('with third-party vendors who assist us in operating our website, products and services, provided that such vendors adhere to our privacy policies') }}. 
         </li>
         <li>
-            Si es necesario para cumplir con la ley, responder a una solicitud gubernamental, o proteger nuestros derechos 
-            y propiedad. 
+            {{ getTranslation('if necessary to comply with the law, respond to a government request or protect our rights and property') }}. 
         </li>
     </ul>
 
-    <h2 class="text-2xl font-semibold">Seguridad de la Información</h2>
+    <h2 class="text-2xl font-semibold">{{ getTranslation('information security') }}</h2>
 
     <p>
-        Implementamos medidas de seguridad razonables para proteger tu información personal contra accesos no autorizados, 
-        alteraciones, divulgaciones o destrucción. Sin embargo, ninguna transmisión de datos a través de Internet es 
-        completamente segura, por lo que no podemos garantizar la seguridad absoluta de tu información.
+        {{ getTranslation('information_security_1') }}.
     </p>
 
-    <h2 class="text-2xl font-semibold">Cookies</h2>
+    <h2 class="text-2xl font-semibold"> {{ getTranslation('cookies') }} </h2>
 
     <p>
-        Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestra página web. Puedes configurar tu 
-        navegador para rechazar cookies o para que te notifique cuando se estén utilizando. Ten en cuenta que algunas 
-        partes de nuestro sitio web pueden no funcionar correctamente si desactivas las cookies.
+        {{ getTranslation('cookies_1') }}.
     </p>
 
-    <h2 class="text-2xl font-semibold">Enlaces a otros sitios</h2>
+    <h2 class="text-2xl font-semibold"> {{ getTranslation('links to other sites') }} </h2>
 
     <p>
-        Nuestro sitio web puede contener enlaces a sitios web de terceros. No somos responsables de las prácticas de 
-        privacidad ni del contenido de dichos sitios. Te recomendamos revisar las políticas de privacidad de cualquier sitio 
-        web que visites.
+        {{ getTranslation('other_sites') }}.
     </p>
 
-    <h2 class="text-2xl font-semibold">Cambios a esta Política de privacidad</h2>
+    <h2 class="text-2xl font-semibold">{{ getTranslation('changes to this privacy policy') }}</h2>
 
     <p>
-        Nos reservamos el derecho de actualizar esta Política de Privacidad en cualquier momento. Te notificaremos sobre 
-        cualquier cambio publicando a través de esta página, te recomendamos revisarla periódicamente para estar informado de 
-        cómo protegemos tu información.
+        {{ getTranslation('privacy_policy_changes_1') }}.
     </p>
 
-    <h2 class="text-2xl font-semibold">Contacto</h2>
+    <h2 class="text-2xl font-semibold"> {{ getTranslation('contact') }} </h2>
 
     <p>
-        Si tienes alguna pregunta o inquietud sobre esta Política de Privacidad o nuestras prácticas de privacidad, no dudes 
-        en contactarnos en [correo electrónico de contacto].
+        {{ getTranslation('contact_information') }} <a class="text-blue-700 hover:underline" routerLink="/contact">{{ getTranslation('here') }}</a>.
     </p>
 </div>

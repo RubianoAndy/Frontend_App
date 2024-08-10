@@ -51,7 +51,6 @@ export const pt = {
     'settings': 'Configurações',
 
     'legal framework': 'Enquadramento jurídico',
-    'privacy policy': 'Política de privacidade',
     'terms and conditions': 'Termos e condições',
 
     'faq': 'Perguntas frequentes',
@@ -63,4 +62,50 @@ export const pt = {
     'chief operating officer': 'COO',
 
     'our team': 'Nossa grande equipe',
+
+    'privacy policy': 'Política de privacidade',
+    'privacy_policy_1' : 
+        `Na Andy Rubiano™ - empresa internacional, valorizamos a sua privacidade e estamos comprometidos em proteger 
+        qualquer informação pessoal que você compartilhe conosco. Esta Política de Privacidade descreve como coletamos, 
+        usamos e protegemos suas informações quando você visita nosso site e usa nossos serviços`,
+    'privacy_policy_2' : 
+        `Coletamos informações pessoais que você nos fornece diretamente, como nome, número de identificação, data de 
+        nascimento, endereço de e-mail, número de telefone e quaisquer outros dados que você decida compartilhar conosco. 
+        Também coletamos dados automaticamente por meio de tecnologias como cookies quando você interage com nosso site. 
+        Tudo o que coletamos é usado para`,
+    'provide, operate, and maintain our services': 'Fornecer, operar e manter nossos serviços',
+    'improve and personalize your experience on our website': 'Melhore e personalize a sua experiência no nosso site',
+    'communicate with you, including answering your questions, sending updates, and providing customer support': 'Comunicar-se com você, inclusive respondendo às suas perguntas, enviando atualizações e oferecendo suporte ao cliente',
+    'understand and analyze how you use our website and services': 'Compreender e analisar como você usa nosso site e serviços',
+    'comply with any legal or regulatory obligations': 'Cumprir quaisquer obrigações legais ou regulamentares',
+    'we do not share, sell, or rent your personal information to third parties except in the following circumstances': 'Não compartilhamos, vendemos ou alugamos suas informações pessoais a terceiros, exceto nas seguintes circunstâncias',
+    'with your explicit consent': 'Com o seu consentimento explícito',
+    'with third-party vendors who assist us in operating our website, products and services, provided that such vendors adhere to our privacy policies': 'Com fornecedores terceiros que nos ajudam a operar o nosso website, produtos e serviços, desde que tais fornecedores cumpram as nossas políticas de privacidade',
+    'if necessary to comply with the law, respond to a government request or protect our rights and property': 'Se necessário para cumprir a lei, responder a uma solicitação governamental ou proteger nossos direitos e propriedade',
+    'information security': 'Segurança da informação',
+    'information_security_1' : 
+        `Implementamos medidas de segurança razoáveis ​​para proteger as suas informações pessoais contra acesso não 
+        autorizado, alteração, divulgação ou destruição, no entanto, nenhuma transmissão de dados através da Internet 
+        é completamente segura e não podemos garantir a segurança absoluta das suas informações`,
+    'cookies': 'Cookies',
+    'cookies_1': 
+        `Utilizamos cookies e tecnologias semelhantes para melhorar a sua experiência no nosso site. Você pode 
+        configurar seu navegador para rejeitar cookies ou para notificá-lo quando eles estiverem sendo usados. Observe 
+        que algumas partes do nosso site podem não funcionar corretamente se você desativar os cookies`,
+    'links to other sites': 'Enlaces a otros sitios',
+    'other_sites':
+        `Nosso site pode conter links para sites de terceiros e não somos responsáveis ​​pelas práticas de privacidade 
+        ou pelo conteúdo de tais sites. Recomendamos que você revise as políticas de privacidade de qualquer site 
+        que visitar`,
+    'changes to this privacy policy': 'Alterações nesta política de privacidade',
+    'privacy_policy_changes_1': 
+        `Reservamo-nos o direito de atualizar esta política de privacidade a qualquer momento, mas iremos notificá-lo de 
+        quaisquer alterações publicando através desta página, recomendamos que você a revise periodicamente para estar 
+        informado de como protegemos suas informações`,
+    
+    
+    'contact_information': 
+        `Se você tiver alguma dúvida ou preocupação sobre esta política de privacidade, não hesite em nos contatar através dos 
+        nossos canais de comunicação disponíveis clicando`,
+    'here': 'aqui',
 };
