@@ -2,9 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
-import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
-
 import { environment } from '../../../global/utils/environments/environment';
+import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
 import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
@@ -13,7 +12,7 @@ import { TranslateService } from '../../../global/services/translate/translate.s
   imports: [
     RouterOutlet,
     RouterLink,
-    NavbarComponent,
+    LanguageSwitcherComponent,
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css'
