@@ -33,7 +33,7 @@
 </div>
 
 <p align="center">
-    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
+    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - International company</a>. All rights reserved.
 </p>
 
 <hr>
@@ -96,5 +96,5 @@ All packages can be upgraded without any further complications.
 <hr>
 
 <p align="center">
-    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - Plantas carnívoras</a>. All rights reserved.
+    &copy; 2024 <a href="https://YouTube.com/@RubianoAndy" target="_blank" class="hover:underline">Andy Rubiano™ - International company</a>. All rights reserved.
 </p>
