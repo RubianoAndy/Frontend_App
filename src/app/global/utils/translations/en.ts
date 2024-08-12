@@ -19,6 +19,7 @@ export const en = {
 
     'login': 'Login',
     'sign up': 'Sign up',
+    'access': 'Access',
 
     'by clicking': 'By clicking',
     'you agree to our': 'you agree to our',

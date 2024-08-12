@@ -19,6 +19,7 @@ export const es = {
 
     'login': 'Ingresa',
     'sign up': 'Regístrate',
+    'access': 'Ingresar',
 
     'by clicking': 'Al hacer clic en',
     'you agree to our': 'aceptas nuestos',

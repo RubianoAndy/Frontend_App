@@ -1,7 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { environment } from '../../utils/environments/environment';
-import { NgFor } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Subscription } from 'rxjs';
 
 import { LanguageSwitcherComponent } from '../language-switcher/language-switcher.component';
@@ -11,15 +11,19 @@ import { TranslateService } from '../../services/translate/translate.service';
   selector: 'app-navbar',
   standalone: true,
   imports: [
-    NgFor,
     RouterLink,
     RouterLinkActive,
+    NgFor,
+    NgIf,
+    NgClass,
     LanguageSwitcherComponent,
   ],
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.css'
 })
 export class NavbarComponent implements OnInit, OnDestroy {
+  isMenuOpen = false;
+
   logo = environment.logo;
 
   private languageSubscription: Subscription | undefined;
@@ -52,5 +56,9 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   getTranslation(key: string): string {
     return this.translateService.translate(key);
+  }
+
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
   }
 }

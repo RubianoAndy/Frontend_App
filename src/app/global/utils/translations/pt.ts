@@ -19,6 +19,7 @@ export const pt = {
 
     'login': 'Conecte-se',
     'sign up': 'Cadastre-se',
+    'access': 'Entrada',
 
     'by clicking': 'Ao clicar em',
     'you agree to our': 'você concorda com nossos',
