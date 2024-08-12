@@ -1,1 +1,48 @@
-<p>terms-and-conditions-info works!</p>
+<div class="space-y-4 text-justify pb-4">
+    <p class="text-justify">
+        {{ getTranslation('terms_and_conditions_1') }}.
+    </p>
+
+    <h2 class="font-semibold">{{ getTranslation('use of the Website') }}</h2>
+
+    <p>
+        {{ getTranslation('the use of this website is subject to the following conditions') }}:
+    </p>
+
+    <ul class="list-disc pl-5">
+        <li> <b>{{ getTranslation('content') }}:</b> {{ getTranslation('web_use_1') }}. </li>
+        <li> <b>{{ getTranslation('permitted use') }}:</b> {{ getTranslation('web_use_2') }}. </li>
+        <li> <b>{{ getTranslation('record') }}:</b> {{ getTranslation('web_use_3') }}. </li>
+    </ul>
+
+    <h2 class="font-semibold"> {{ getTranslation('links to other sites') }} </h2>
+
+    <p>
+        {{ getTranslation('other_sites') }}.
+    </p>
+
+    <h2 class="font-semibold">{{ getTranslation('privacy policy') }}</h2>
+
+    <p>
+        {{ getTranslation('pp_in_tc_1') }} <a class="cursor-pointer text-blue-700 hover:underline" routerLink="/privacy-policy">{{ getTranslation('privacy policy') }}</a>. 
+        {{ getTranslation('pp_in_tc_2') }}.
+    </p>
+
+    <h2 class="font-semibold">{{ getTranslation('limitation of liability') }}</h2>
+
+    <p>
+        {{ getTranslation('liability_1') }}.
+    </p>
+
+    <h2 class="font-semibold">{{ getTranslation('changes to the terms and conditions') }}</h2>
+
+    <p>
+        {{ getTranslation('terms_and_conditions_changes_1') }}.
+    </p>
+
+    <h2 class="font-semibold"> {{ getTranslation('contact') }} </h2>
+
+    <p>
+        {{ getTranslation('contact_information') }} <a class="cursor-pointer text-blue-700 hover:underline" href="http://localhost:4200/contact" target="_blank">{{ getTranslation('here') }}</a>.
+    </p>
+</div>

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TranslateService } from '../../../../global/services/translate/translate.service';
 
 @Component({
   selector: 'app-terms-and-conditions-info',
@@ -9,4 +10,13 @@ import { Component } from '@angular/core';
 })
 export class TermsAndConditionsInfoComponent {
 
+  constructor (
+    private translateService: TranslateService,
+  ) {
+
+  }
+
+  getTranslation(key: string): string {
+    return this.translateService.translate(key);
+  }
 }

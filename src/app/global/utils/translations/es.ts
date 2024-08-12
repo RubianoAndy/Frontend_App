@@ -60,7 +60,6 @@ export const es = {
     'settings': 'Configuración',
 
     'legal framework': 'Marco legal',
-    'terms and conditions': 'Términos y condiciones',
 
     'faq': 'Preguntas frecuentes',
 
@@ -73,15 +72,18 @@ export const es = {
     'our team': 'Nuestro gran equipo',
 
     'privacy policy': 'Política de privacidad',
+
     'privacy_policy_1' : 
         `En Andy Rubiano™ - International company, valoramos tu privacidad y nos comprometemos a proteger cualquier 
         información personal que compartas con nosotros. Esta Política de privacidad describe cómo recopilamos, 
         usamos, y protegemos tu información cuando visitas nuestra página web y utilizas nuestros servicios`,
+
     'privacy_policy_2' : 
         `Recopilamos información personal que nos proporcionas directamente como tu nombre, número de identificación, 
         fecha de nacimiento, dirección de correo electrónico, número de teléfono y cualquier otro dato que elijas 
         compartir con nosotros. También obtenemos datos automáticamente a través de tecnologías como cookies 
         cuando interactúas con nuestra página web. Todo lo que recopilamos se utiliza para`,
+
     'provide, operate, and maintain our services': 'Proporcionar, operar, y mantener nuestros servicios',
     'improve and personalize your experience on our website': 'Mejorar y personalizar tu experiencia en nuestro sitio web',
     'communicate with you, including answering your questions, sending updates, and providing customer support': 'Comunicarnos contigo, incluyendo responder a tus preguntas, enviar actualizaciones y ofrecer soporte al cliente',
@@ -92,28 +94,86 @@ export const es = {
     'with third-party vendors who assist us in operating our website, products and services, provided that such vendors adhere to our privacy policies': 'Con proveedores externos que nos ayudan a operar nuestro sitio web, productos y servicios, siempre que dichos proveedores cumplan con nuestras políticas de privacidad',
     'if necessary to comply with the law, respond to a government request or protect our rights and property': 'Si es necesario para cumplir con la ley, responder a una solicitud gubernamental o proteger nuestros derechos y propiedad',
     'information security': 'Seguridad de la información',
+
     'information_security_1' : 
         `Implementamos medidas de seguridad razonables para proteger tu información personal contra accesos no autorizados, 
         alteraciones, divulgaciones o destrucción, sin embargo, ninguna transmisión de datos a través de Internet es 
         completamente segura, por lo que no podemos garantizar la seguridad absoluta de tu información`,
+
     'cookies': 'Cookies',
+
     'cookies_1': 
         `Utilizamos cookies y tecnologías similares para mejorar tu experiencia en nuestra página web. Puedes configurar tu 
         navegador para rechazar cookies o para que te notifique cuando se estén utilizando. Ten en cuenta que algunas 
         partes de nuestro sitio web pueden no funcionar correctamente si desactivas las cookies`,
+
     'links to other sites': 'Enlaces a otros sitios',
+
     'other_sites':
         `Nuestro sitio web puede contener enlaces a páginas de terceros y no somos responsables de las prácticas de 
         privacidad ni del contenido de dichos sitios. Te recomendamos revisar las políticas de privacidad de cualquier sitio 
         web que visites`,
-    'changes to this privacy policy': 'Cambios a esta política de privacidad',
+
+    'changes to this privacy policy': 'Modificaciones a esta política de privacidad',
+
     'privacy_policy_changes_1': 
         `Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento, pero te notificaremos sobre 
         cualquier cambio publicando a través de esta página, te recomendamos revisarla periódicamente para estar informado de 
         cómo protegemos tu información`,
     
     'contact_information': 
-        `Si tienes alguna pregunta o inquietud sobre esta política de privacidad, no dudes en contactarnos a través de nuestros 
-        canales de comunicación disponibles dando clic`,
+        `Si tienes alguna pregunta o inquietud, no dudes en contactarnos a través de nuestros canales de comunicación disponibles 
+        dando clic`,
+
     'here': 'aquí',
+
+    'terms and conditions': 'Términos y condiciones',
+
+    'terms_and_conditions_1' : 
+        `Bienvenido a Andy Rubiano™ - International company. Al acceder y utilizar este aplicativo, aceptas cumplir con los siguientes 
+        términos y condiciones (por favor, léelos detenidamente antes de usar nuestros servicios. Si no estás de acuerdo con alguna 
+        parte de estos términos, no deberías utilizar nuestro sitio web)`,
+        
+    'use of the Website': 'Uso del sitio web',
+    'the use of this website is subject to the following conditions': 'El uso de este sitio web está sujeto a las siguientes condiciones',
+
+    'content': 'Contenido',
+
+    'web_use_1' : 
+        `Todo el contenido disponible en este sitio web, incluidos textos, gráficos, logotipos, imágenes, y software, es propiedad de 
+        Andy Rubiano™ - International company o sus licenciantes y está protegido por las leyes de propiedad intelectual. No está permitido 
+        reproducir, distribuir, modificar, o usar dicho contenido sin el permiso expreso por escrito de Andy Rubiano™ - International company`,
+    
+    'permitted use': 'Uso permitido',
+
+    'web_use_2' : 
+        `Puedes utilizar este sitio web y su contenido únicamente para fines personales y no comerciales, por lo tanto, está prohibido emplear el 
+        aplicativo para cualquier actividad ilegal o para atentar contra los derechos de terceros`,
+
+    'record': 'Registro',
+
+    'web_use_3' : 
+        `Algunas áreas del sitio web pueden requerir un registro, por ende, debes proporcionar información veraz, precisa y completa y eres 
+        responsable de mantener la confidencialidad de tus datos de acceso`,
+
+    'pp_in_tc_1' : 
+        `Tu privacidad es importante para nosotros. Al utilizar nuestro sitio web, aceptas la recopilación y uso de tu información según lo 
+        descrito en nuestra`,
+    
+    'pp_in_tc_2' : 
+        `Recomendamos revisarla para entender cómo manejamos tu información personal`,
+    
+    'limitation of liability': 'Limitación de responsabilidad',
+
+    'liability_1' : 
+        `Andy Rubiano™ - International company no se hace responsable de ningún daño directo, indirecto, incidental o consecuente que resulte 
+        del uso o la incapacidad de uso este sitio web, incluidos, entre otros, la pérdida de datos o beneficios, incluso si la empresa ha sido 
+        advertida de la posibilidad de tales daños`,
+
+    'changes to the terms and conditions': 'Modificaciones a los términos y condiciones',
+
+    'terms_and_conditions_changes_1': 
+        `Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios se publicarán en esta página y 
+        serán efectivos inmediatamente después de su publicación. Tu uso continuado del sitio web después de la publicación de cualquier cambio 
+        constituye tu aceptación de las nuevas condiciones`,
 };
