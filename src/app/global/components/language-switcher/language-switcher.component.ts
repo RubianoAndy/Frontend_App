@@ -24,7 +24,6 @@ export class LanguageSwitcherComponent implements OnInit, OnDestroy {
     { label: 'portuguese', value: 'pt', icon: 'assets/flags/Brazil.png' },
     { label: 'english', value: 'en', icon: 'assets/flags/United States.png' },
     { label: 'spanish', value: 'es', icon: 'assets/flags/Spain.png' },
-    
   ];
 
   private languageSubscription: Subscription | undefined;
