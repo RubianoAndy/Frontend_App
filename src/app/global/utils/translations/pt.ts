@@ -20,6 +20,10 @@ export const pt = {
     'login': 'Conecte-se',
     'sign up': 'Cadastre-se',
 
+    'by clicking': 'Ao clicar em',
+    'you agree to our': 'você concorda com nossos',
+
+    'and': 'e',
     'or': 'Ou',
 
     'email': 'Email',
@@ -107,7 +111,6 @@ export const pt = {
         `Reservamo-nos o direito de atualizar esta política de privacidade a qualquer momento, mas iremos notificá-lo de 
         quaisquer alterações publicando através desta página, recomendamos que você a revise periodicamente para estar 
         informado de como protegemos suas informações`,
-    
     
     'contact_information': 
         `Se você tiver alguma dúvida ou preocupação sobre esta política de privacidade, não hesite em nos contatar através dos 

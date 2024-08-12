@@ -3,6 +3,9 @@ import { NgClass, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
+import { PrivacyPolicyInfoComponent } from '../../../../web/components/privacy-policy/privacy-policy-info/privacy-policy-info.component';
+import { TermsAndConditionsInfoComponent } from '../../../../web/components/terms-and-conditions/terms-and-conditions-info/terms-and-conditions-info.component';
+
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { RegisterService } from '../../../services/register/register.service';
 
@@ -13,13 +16,18 @@ import { RegisterService } from '../../../services/register/register.service';
     FormsModule,
     ReactiveFormsModule,
     RouterLink,
+    PrivacyPolicyInfoComponent,
+    TermsAndConditionsInfoComponent,
     NgClass,
     NgIf,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
-export default class RegisterComponent implements OnInit {  
+export default class RegisterComponent implements OnInit {
+  isModalOpen = false;
+  modalPart: string | undefined;
+
   loading: boolean = false;
   form!: FormGroup;
   isPasswordVisible: boolean = false;
@@ -50,8 +58,9 @@ export default class RegisterComponent implements OnInit {
       mobile: '',
 
       email: '',
-
       password: '',
+
+      consent: false,
     }
 
     this.form = this.formBuilder.group({
@@ -65,8 +74,9 @@ export default class RegisterComponent implements OnInit {
       mobile: [data.mobile, [ Validators.required, Validators.pattern('^[0-9]*$'), Validators.minLength(7), Validators.maxLength(10) ]],
 
       email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.maxLength(100) ]],
-
       password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
+
+      consent: [data.consent, [ Validators.required, Validators.requiredTrue ]],
     });
   }
 
@@ -84,6 +94,8 @@ export default class RegisterComponent implements OnInit {
       email: this.form.value.email,
       username: this.form.value.email,  // Se le asigna el correo al username que no genere problema en la base de datos
       password: this.form.value.password,
+
+      consent: this.form.value.consent,
     };
 
     if (this.form.valid && body) {
@@ -111,5 +123,15 @@ export default class RegisterComponent implements OnInit {
 
   getTranslation(key: string): string {
     return this.translateService.translate(key);
+  }
+
+  openModal(event: Event, modalPart: string): void {
+    this.modalPart = modalPart;
+    event.preventDefault(); // Evita la navegación por defecto del enlace
+    this.isModalOpen = true;
+  }
+
+  closeModal(): void {
+    this.isModalOpen = false;
   }
 }

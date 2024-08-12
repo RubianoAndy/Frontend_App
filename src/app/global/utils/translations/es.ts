@@ -20,6 +20,10 @@ export const es = {
     'login': 'Ingresa',
     'sign up': 'Regístrate',
 
+    'by clicking': 'Al hacer clic en',
+    'you agree to our': 'aceptas nuestos',
+
+    'and': 'y',
     'or': 'O',
 
     'email': 'Email',
@@ -107,7 +111,6 @@ export const es = {
         `Nos reservamos el derecho de actualizar esta política de privacidad en cualquier momento, pero te notificaremos sobre 
         cualquier cambio publicando a través de esta página, te recomendamos revisarla periódicamente para estar informado de 
         cómo protegemos tu información`,
-    
     
     'contact_information': 
         `Si tienes alguna pregunta o inquietud sobre esta política de privacidad, no dudes en contactarnos a través de nuestros 

@@ -29,6 +29,12 @@ export class AuthComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark')
+      document.documentElement.classList.add('dark');
+    else
+      document.documentElement.classList.remove('dark');
+    
     this.languageSubscription = this.translateService.currentLanguage$.subscribe(language => {
       if (language === 'pt')
         this.logo = environment.logo_brazil;

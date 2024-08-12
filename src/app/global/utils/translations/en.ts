@@ -20,6 +20,10 @@ export const en = {
     'login': 'Login',
     'sign up': 'Sign up',
 
+    'by clicking': 'By clicking',
+    'you agree to our': 'you agree to our',
+
+    'and': 'and',
     'or': 'or',
 
     'email': 'Email',
