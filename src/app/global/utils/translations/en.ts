@@ -112,7 +112,6 @@ export const en = {
         posting them on this page, so we encourage you to review it periodically to stay informed of how we protect 
         your information`,
     
-    
     'contact_information': 
         `If you have any questions or concerns about this privacy policy, please feel free to contact us through 
         our available communication channels by clicking`,
