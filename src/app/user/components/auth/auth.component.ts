@@ -2,8 +2,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { RouterLink, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
+import { NavbarComponent } from '../../../global/components/navbar/navbar.component';
+
 import { environment } from '../../../global/utils/environments/environment';
-import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
 import { TranslateService } from '../../../global/services/translate/translate.service';
 
 @Component({
@@ -12,21 +13,21 @@ import { TranslateService } from '../../../global/services/translate/translate.s
   imports: [
     RouterOutlet,
     RouterLink,
-    LanguageSwitcherComponent,
+    NavbarComponent,
   ],
   templateUrl: './auth.component.html',
   styleUrl: './auth.component.css'
 })
 export class AuthComponent implements OnInit, OnDestroy {
   logo = environment.logo;
-  currentYear: number = environment.currentYear;
-  page: string = environment.site_name;
+  // currentYear: number = environment.currentYear;
+  // page: string = environment.site_name;
 
   private languageSubscription: Subscription | undefined;
 
   constructor(
     private translateService: TranslateService,
-  ) {}
+  ) { }
 
   ngOnInit(): void {
     const theme = localStorage.getItem('theme');
