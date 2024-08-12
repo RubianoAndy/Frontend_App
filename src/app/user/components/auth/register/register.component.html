@@ -7,50 +7,50 @@
     <div class="flex gap-2">
         <div class="w-1/2">
             <label for="name_1" class="text-sm text-start text-white">{{ getTranslation('first name') }} * <span *ngIf="!form.controls['name_1'].valid && form.controls['name_1'].value" class="msg-error">(Este campo es obligatorio)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['name_1'].valid && form.controls['name_1'].touched}" id="name_1" formControlName="name_1" type="text" placeholder="{{ getTranslation('first name') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['name_1'].valid && form.controls['name_1'].touched}" id="name_1" formControlName="name_1" type="text" placeholder="{{ getTranslation('first name') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     
         <div class="w-1/2">
             <label for="name_2" class="text-sm text-start text-white">{{ getTranslation('second name') }} <span *ngIf="!form.controls['name_2'].valid && form.controls['name_2'].value" class="msg-error">(Este campo es obligatorio)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['name_2'].valid && form.controls['name_2'].touched}" id="name_2" formControlName="name_2" type="text" placeholder="{{ getTranslation('second name') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['name_2'].valid && form.controls['name_2'].touched}" id="name_2" formControlName="name_2" type="text" placeholder="{{ getTranslation('second name') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     </div>
 
     <div class="flex gap-2">
         <div class="w-1/2">
             <label for="lastname_1" class="text-sm text-start text-white">{{ getTranslation('first lastname') }} * <span *ngIf="!form.controls['lastname_1'].valid && form.controls['lastname_1'].value" class="msg-error">(Este campo es obligatorio)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['lastname_1'].valid && form.controls['lastname_1'].touched}" id="lastname_1" formControlName="lastname_1" type="text" placeholder="{{ getTranslation('first lastname') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['lastname_1'].valid && form.controls['lastname_1'].touched}" id="lastname_1" formControlName="lastname_1" type="text" placeholder="{{ getTranslation('first lastname') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     
         <div class="w-1/2">
             <label for="lastname_2" class="text-sm text-start text-white">{{ getTranslation('second lastname') }} <span *ngIf="!form.controls['lastname_2'].valid && form.controls['lastname_2'].value" class="msg-error">(Este campo es obligatorio)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['lastname_2'].valid && form.controls['lastname_2'].touched}" id="lastname_2" formControlName="lastname_2" type="text" placeholder="{{ getTranslation('second lastname') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['lastname_2'].valid && form.controls['lastname_2'].touched}" id="lastname_2" formControlName="lastname_2" type="text" placeholder="{{ getTranslation('second lastname') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     </div>
     
     <div class="flex gap-2">
         <div class="w-1/2">
             <label for="identification_number" class="text-sm text-start text-white">{{ getTranslation('identification number') }} *</label>
-            <input [ngClass]="{'bg-red-300': !form.controls['identification_number'].valid && form.controls['identification_number'].touched}" id="identification_number" formControlName="identification_number" type="text" placeholder="{{ getTranslation('identification number') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['identification_number'].valid && form.controls['identification_number'].touched}" id="identification_number" formControlName="identification_number" type="text" placeholder="{{ getTranslation('identification number') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     
         <div class="w-1/2">
             <label for="birth_date" class="text-sm text-start text-white">{{ getTranslation('birth date') }} *</label>
-            <input [ngClass]="{'bg-red-300': !form.controls['birth_date'].valid && form.controls['birth_date'].touched}" id="birth_date" formControlName="birth_date" type="date" placeholder="" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['birth_date'].valid && form.controls['birth_date'].touched}" id="birth_date" formControlName="birth_date" type="date" placeholder="" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     </div>
 
     <div class="flex">
         <div class="w-full">
             <label for="email" class="text-sm text-start text-white">{{ getTranslation('email') }} * <span *ngIf="(!form.controls['email'].valid && form.controls['email'].value!='')" class="msg-error">(Format name&#64;email.com)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ getTranslation('name@email.com') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['email'].valid && form.controls['email'].touched}" id="email" formControlName="email" type="email" placeholder="{{ getTranslation('name@email.com') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div>
     </div>
 
     <div class="flex gap-2">
         <!-- <div class="w-1/2">
             <label for="username" class="text-sm text-start text-white">Username *</label>
-            <input [ngClass]="{'bg-red-300': !form.controls['username'].valid && form.controls['username'].touched}" id="username" formControlName="username" type="text" placeholder="Username" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['username'].valid && form.controls['username'].touched}" id="username" formControlName="username" type="text" placeholder="Username" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div> -->
 
         <div class="w-1/2 relative">
@@ -65,11 +65,11 @@
                 </button>
                 <input id="mobile" type="phone" formControlName="mobile" [ngClass]="{'bg-red-300': !form.controls['mobile'].valid && form.controls['mobile'].touched}" placeholder="{{ getTranslation('mobile') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-e-lg"/>
                 
-                <div *ngIf="isOpen" class="absolute left-0 top-full mt-1 bg-gray-200 shadow-lg z-20">
-                  <div *ngFor="let prefixOption of prefixOptions" (click)="selectPrefix(prefixOption.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300">
-                    <img [src]="prefixOption.icon" alt="Icon" class="w-6 h-6 mr-2">
-                    <span>({{ prefixOption.label }})</span>
-                  </div>
+                <div *ngIf="isOpen" class="absolute left-0 top-full mt-1 bg-gray-200 shadow-lg z-20 max-h-60 overflow-y-auto">
+                    <div *ngFor="let prefixOption of prefixOptions" (click)="selectPrefix(prefixOption.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300">
+                      <img [src]="prefixOption.icon" alt="Icon" class="w-6 h-6 mr-2">
+                      <span>({{ prefixOption.label }})</span>
+                    </div>
                 </div>
               </div>
             </div>
@@ -77,7 +77,7 @@
 
         <div class="w-1/2 relative">
             <label for="password" class="text-start text-white">{{ getTranslation('password') }} * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
-            <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="{{ getTranslation('password') }}" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-2xl"/>
+            <input [ngClass]="{'bg-red-300': !form.controls['password'].valid && form.controls['password'].touched}" id="password" formControlName="password" [type]="isPasswordVisible ? 'text' : 'password'"  placeholder="{{ getTranslation('password') }}" class="flex items-center w-full px-5 pr-12 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 mb-2 placeholder:text-gray-500 rounded-lg"/>
 
             <button type="button" (click)="togglePasswordVisibility()" class="absolute inset-y-0 right-0 flex items-center px-3 mt-4">
                 <i [ngClass]="isPasswordVisible ? 'fa fa-eye-slash' : 'fa fa-eye'" class="text-gray-500"></i>

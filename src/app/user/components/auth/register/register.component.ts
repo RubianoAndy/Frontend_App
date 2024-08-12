@@ -39,9 +39,16 @@ export default class RegisterComponent implements OnInit {
   selectedPrefix = '+1';
 
   prefixOptions = [
-    { label: '+55', value: '+55', icon: 'assets/flags/Brazil.png' },
     { label: '+1', value: '+1', icon: 'assets/flags/United States.png' },
     { label: '+34', value: '+34', icon: 'assets/flags/Spain.png' },
+    { label: '+44', value: '+44', icon: 'assets/flags/United Kingdom.png' },
+    { label: '+51', value: '+51', icon: 'assets/flags/Peru.png' },
+    { label: '+52', value: '+52', icon: 'assets/flags/Mexico.png' },
+    { label: '+54', value: '+54', icon: 'assets/flags/Argentina.png' },
+    { label: '+55', value: '+55', icon: 'assets/flags/Brazil.png' },
+    { label: '+57', value: '+57', icon: 'assets/flags/Colombia.png' },
+    { label: '+351', value: '+351', icon: 'assets/flags/Portugal.png' },
+    { label: '+593', value: '+593', icon: 'assets/flags/Ecuador.png' },
   ];
 
   constructor (
