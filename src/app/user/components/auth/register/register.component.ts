@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { NgClass, NgIf } from '@angular/common';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 
@@ -20,17 +20,29 @@ import { RegisterService } from '../../../services/register/register.service';
     TermsAndConditionsInfoComponent,
     NgClass,
     NgIf,
+    NgFor,
   ],
   templateUrl: './register.component.html',
   styleUrl: './register.component.css'
 })
 export default class RegisterComponent implements OnInit {
+  @Output() prefixChange = new EventEmitter<string>();
+
   isModalOpen = false;
   modalPart: string | undefined;
 
   loading: boolean = false;
   form!: FormGroup;
   isPasswordVisible: boolean = false;
+
+  isOpen = false;
+  selectedPrefix = '+1';
+
+  prefixOptions = [
+    { label: '+55', value: '+55', icon: 'assets/flags/Brazil.png' },
+    { label: '+1', value: '+1', icon: 'assets/flags/United States.png' },
+    { label: '+34', value: '+34', icon: 'assets/flags/Spain.png' },
+  ];
 
   constructor (
     private formBuilder: FormBuilder,
@@ -85,6 +97,8 @@ export default class RegisterComponent implements OnInit {
 
       identification_number: this.form.value.identification_number,
       birth_date: this.form.value.birth_date,
+
+      prefix: this.selectedPrefix,
       mobile: this.form.value.mobile,
 
       email: this.form.value.email,
@@ -127,5 +141,23 @@ export default class RegisterComponent implements OnInit {
 
   closeModal(): void {
     this.isModalOpen = false;
+  }
+
+  toggleDropdown() {
+    this.isOpen = !this.isOpen;
+  }
+
+  selectPrefix(prefix: string) {
+    this.selectedPrefix = prefix;
+    this.prefixChange.emit(prefix);
+    this.isOpen = false;
+  }
+
+  getPrefix() {
+    const selectedPrefix = this.prefixOptions.find(prefix => prefix.value === this.selectedPrefix);
+    return {
+      icon: selectedPrefix ? selectedPrefix.icon : '',
+      label: selectedPrefix ? selectedPrefix.label : ''
+    };
   }
 }
