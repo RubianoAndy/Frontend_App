@@ -59,8 +59,6 @@ export default class RegisterComponent implements OnInit {
 
       email: '',
       password: '',
-
-      consent: false,
     }
 
     this.form = this.formBuilder.group({
@@ -75,8 +73,6 @@ export default class RegisterComponent implements OnInit {
 
       email: [data.email, [ Validators.required, Validators.email, Validators.minLength(6), Validators.maxLength(100) ]],
       password: [data.password, [ Validators.required, Validators.minLength(6), Validators.maxLength(20) ]],
-
-      consent: [data.consent, [ Validators.required, Validators.requiredTrue ]],
     });
   }
 
@@ -94,8 +90,6 @@ export default class RegisterComponent implements OnInit {
       email: this.form.value.email,
       username: this.form.value.email,  // Se le asigna el correo al username que no genere problema en la base de datos
       password: this.form.value.password,
-
-      consent: this.form.value.consent,
     };
 
     if (this.form.valid && body) {
