@@ -1,5 +1,6 @@
 export const environment = {
   production: false,
+  url: 'http://localhost:4200/',
   apiUrl: 'http://localhost:8000/api/backend/',
   currentYear: new Date().getFullYear(),
   site_name: 'Andy Rubiano™ - International company',

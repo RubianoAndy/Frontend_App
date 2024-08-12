@@ -1,6 +1,7 @@
 export const environment = {
   production: true,
-  apiUrl: 'http://localhost:8000/api/backend/', // Cambiar por la URL del servidor
+  url: 'http://localhost:4200/',
+  apiUrl: 'http://localhost:8000/api/backend/',
   currentYear: new Date().getFullYear(),
   site_name: 'Andy Rubiano™ - International company',
   
