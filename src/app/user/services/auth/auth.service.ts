@@ -35,9 +35,12 @@ export class AuthService {
 
   logout(): Observable<any> {
     const token = this.getToken();
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
 
-    return this.http.post<any>(this.apiUrl + 'logout/', {}, { headers }).pipe(
+    const body = {
+      token: token
+    };
+
+    return this.http.post<any>(this.apiUrl + 'logout/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(() => {
         localStorage.removeItem(this.token);
@@ -59,12 +62,12 @@ export class AuthService {
 
     if (!token)
       return false;
-    else
-      return true;  // Borrar el else si se tiene token tipo JWT
+    // else
+    //   return true;  // Borrar el else si se tiene token tipo JWT
 
     // Esta parte es para token de tipo JWT
-    /* const payload = JSON.parse(atob(token.split('.')[1]));  // Recupera el payload del token JWT
+    const payload = JSON.parse(atob(token.split('.')[1]));  // Recupera el payload del token JWT
     const expired = payload.exp * 1000;   // Para dejarlo en milisegundos
-    return Date.now() < expired; */
+    return Date.now() < expired;
   }
 }
