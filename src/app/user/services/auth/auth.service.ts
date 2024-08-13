@@ -10,7 +10,8 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
   private apiUrl = environment.apiUrl;
-  private token = 'token';
+  private accessTokenKey = 'access_token';
+  private refreshTokenKey = 'refresh_token';
   private profile = 'profile';
 
   constructor(
@@ -23,9 +24,13 @@ export class AuthService {
       // El tap se ejecuta depués de realizada la petición
       tap(response => {
         if (response) {
-          if (response.token)
-            localStorage.setItem(this.token, response.token);
-
+          if (response.access_token) {
+            localStorage.setItem(this.accessTokenKey, response.access_token);
+            if (response.refresh_token) {
+              localStorage.setItem(this.refreshTokenKey, response.refresh_token);
+              this.autoRefreshToken();
+            }
+          }
           if (response.profile)
             localStorage.setItem(this.profile, JSON.stringify(response.profile));
         }
@@ -34,39 +39,85 @@ export class AuthService {
   }
 
   logout(): Observable<any> {
-    const token = this.getToken();
+    const accessToken = this.getAccessToken();
+    const refreshToken = this.getRefreshToken();
 
     const body = {
-      token: token
+      access_token: accessToken,
+      refresh_token: refreshToken,
     };
 
     return this.http.post<any>(this.apiUrl + 'logout/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(() => {
-        localStorage.removeItem(this.token);
+        localStorage.removeItem(this.accessTokenKey);
+        localStorage.removeItem(this.refreshTokenKey);
         localStorage.removeItem(this.profile);
         this.router.navigate(['auth/login']);
       })
     );
   }
 
-  private getToken(): string | null {
+  private getAccessToken(): string | null {
     if (typeof(window) !== undefined)
-      return localStorage.getItem(this.token);
+      return localStorage.getItem(this.accessTokenKey);
     else
       return null;
   }
 
+  private getRefreshToken(): string | null {
+    if (typeof(window) !== undefined)
+      return localStorage.getItem(this.refreshTokenKey);
+    else
+      return null;
+  }
+
+  refreshToken(): Observable<any> {
+    const refreshToken = this.getRefreshToken();
+
+    const body = {
+      refresh_token: refreshToken,
+    };
+
+    return this.http.post<any>(this.apiUrl + 'refresh-token/', body).pipe(
+      // El tap se ejecuta depués de realizada la petición
+      tap(response => {
+        if (response) {
+          if (response.access_token) {
+            localStorage.setItem(this.accessTokenKey, response.access_token);
+            if (response.refresh_token) {
+              localStorage.setItem(this.refreshTokenKey, response.refresh_token);
+              this.autoRefreshToken();
+            }
+          }
+        }
+      })
+    );
+  }
+
+  autoRefreshToken(): void {
+    const token = this.getAccessToken();
+
+    if (!token)
+      return;
+
+    const payload = JSON.parse(atob(token.split('.')[1]));
+    const expired = payload.exp * 1000;   // Para dejarlo en milisegundos
+    
+    const timeout = expired - Date.now() - (60 * 1000);
+
+    setTimeout(() => {
+      this.refreshToken().subscribe()
+    }, timeout);
+  }
+
   isAuthenticated(): boolean {
-    const token = this.getToken();
+    const token = this.getAccessToken();
 
     if (!token)
       return false;
-    // else
-    //   return true;  // Borrar el else si se tiene token tipo JWT
 
-    // Esta parte es para token de tipo JWT
-    const payload = JSON.parse(atob(token.split('.')[1]));  // Recupera el payload del token JWT
+    const payload = JSON.parse(atob(token.split('.')[1]));
     const expired = payload.exp * 1000;   // Para dejarlo en milisegundos
     return Date.now() < expired;
   }
