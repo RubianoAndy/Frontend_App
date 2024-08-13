@@ -23,16 +23,15 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl + 'login/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(response => {
-        if (response) {
-          if (response.access_token) {
-            localStorage.setItem(this.accessTokenKey, response.access_token);
-            if (response.refresh_token) {
-              localStorage.setItem(this.refreshTokenKey, response.refresh_token);
+        if (response.access_token) {
+          localStorage.setItem(this.accessTokenKey, response.access_token);
+          if (response.refresh_token) {
+            localStorage.setItem(this.refreshTokenKey, response.refresh_token);
+            if (response.profile) {
+              localStorage.setItem(this.profile, JSON.stringify(response.profile));
               this.autoRefreshToken();
             }
           }
-          if (response.profile)
-            localStorage.setItem(this.profile, JSON.stringify(response.profile));
         }
       })
     );
@@ -82,13 +81,11 @@ export class AuthService {
     return this.http.post<any>(this.apiUrl + 'refresh-token/', body).pipe(
       // El tap se ejecuta depués de realizada la petición
       tap(response => {
-        if (response) {
-          if (response.access_token) {
-            localStorage.setItem(this.accessTokenKey, response.access_token);
-            if (response.refresh_token) {
-              localStorage.setItem(this.refreshTokenKey, response.refresh_token);
-              this.autoRefreshToken();
-            }
+        if (response.access_token) {
+          localStorage.setItem(this.accessTokenKey, response.access_token);
+          if (response.refresh_token) {
+            localStorage.setItem(this.refreshTokenKey, response.refresh_token);
+            this.autoRefreshToken();
           }
         }
       })
