@@ -20,6 +20,6 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.authService.isAuthenticated())
-      this.authService.autoRefreshToken();
+      this.authService.updateRefreshToken();
   }
 }

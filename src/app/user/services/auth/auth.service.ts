@@ -29,7 +29,7 @@ export class AuthService {
             localStorage.setItem(this.refreshTokenKey, response.refresh_token);
             if (response.profile) {
               localStorage.setItem(this.profile, JSON.stringify(response.profile));
-              this.autoRefreshToken();
+              this.updateRefreshToken();
             }
           }
         }
@@ -85,14 +85,14 @@ export class AuthService {
           localStorage.setItem(this.accessTokenKey, response.access_token);
           if (response.refresh_token) {
             localStorage.setItem(this.refreshTokenKey, response.refresh_token);
-            this.autoRefreshToken();
+            this.updateRefreshToken();
           }
         }
       })
     );
   }
 
-  autoRefreshToken(): void {
+  updateRefreshToken(): void {
     const token = this.getAccessToken();
 
     if (!token)
@@ -101,7 +101,7 @@ export class AuthService {
     const payload = JSON.parse(atob(token.split('.')[1]));
     const expired = payload.exp * 1000;   // Para dejarlo en milisegundos
     
-    const timeout = expired - Date.now() - (60 * 1000);
+    const timeout = expired - Date.now() - (5 * 60 * 1000);  // Se actualiza faltando 5 minutos
 
     setTimeout(() => {
       this.refreshToken().subscribe()
