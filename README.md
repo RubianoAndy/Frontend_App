@@ -41,7 +41,7 @@
 # FrontendApp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.1.1, [NodeJS](https://nodejs.org/en) version 20.15.1 
-and [Tailwind CSS](https://tailwindcss.com/) version 3.0.
+and [Tailwind CSS](https://tailwindcss.com/) version 3.4.9.
 
 ### Initial install
 
@@ -51,6 +51,8 @@ Once the repository is cloned, go in it and install the initial packages with th
 | ------------------------------------ | :------------------------------------ |
 | `npm install -g @angular/cli@latest` | Install Angular in its latest version |
 | `npm install`                        | Install node modules dependencies     |
+| `npm install -D tailwindcss`         | Install Tailwindcss dependencies      |
+| `npx tailwindcss init`               | Init Tailwindcss dependencies         |
 
 ### Project packages
 
