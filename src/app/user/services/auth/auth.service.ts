@@ -12,7 +12,7 @@ export class AuthService {
   private apiUrl = environment.apiUrl;
   private accessTokenKey = 'access_token';
   private refreshTokenKey = 'refresh_token';
-  private profile = 'profile';
+  private profileKey = 'profile';
 
   constructor(
     private http: HttpClient,
@@ -28,7 +28,7 @@ export class AuthService {
           if (response.refresh_token) {
             localStorage.setItem(this.refreshTokenKey, response.refresh_token);
             if (response.profile) {
-              localStorage.setItem(this.profile, JSON.stringify(response.profile));
+              localStorage.setItem(this.profileKey, JSON.stringify(response.profile));
               this.updateRefreshToken();
             }
           }
@@ -51,7 +51,7 @@ export class AuthService {
       tap(() => {
         localStorage.removeItem(this.accessTokenKey);
         localStorage.removeItem(this.refreshTokenKey);
-        localStorage.removeItem(this.profile);
+        localStorage.removeItem(this.profileKey);
         this.router.navigate(['auth/login']);
       })
     );
