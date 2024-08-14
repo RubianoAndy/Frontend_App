@@ -79,7 +79,6 @@ All packages can be upgraded without any further complications.
 | `ng g cl class-name`    | Create a class          |
 | `ng g m module-name`    | Create a module         |
 | `ng g p pipe-name`      | Create a pipe           |
-| `ng g p translate-name` | Create a translate pipe |
 | `ng g d directive-name` | Create a directive      |
 | `ng g g guard-name`     | Create a guard          |
 | `ng g i interface-name` | Create a interface      |
