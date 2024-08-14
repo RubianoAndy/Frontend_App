@@ -11,6 +11,7 @@ export const pt = {
     'portuguese': 'Português',
 
     'hello': '¡Olá!',
+    'welcome': 'Bem-vindo!',
     'enter the credentials to access your account': 'Insira as credenciais para acessar sua conta',
     'lets get started to this awesome advanture': '¡Vamos começar com esta incrível aventura!',
     'dont worry, it happens to all of us': '¡Não se preocupe, isso acontece com todos nós.!',
@@ -20,6 +21,9 @@ export const pt = {
     'login': 'Conecte-se',
     'sign up': 'Cadastre-se',
     'access': 'Entrada',
+
+    'error': 'Erro',
+    'invalid email or password': 'Email ou senha inválida',
 
     'by clicking': 'Ao clicar em',
     'you agree to our': 'você concorda com nossos',

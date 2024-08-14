@@ -11,6 +11,7 @@ export const es = {
     'portuguese': 'Portugués',
 
     'hello': '¡Hola!',
+    'welcome': '¡Bienvenido!',
     'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',
     'lets get started to this awesome advanture': '¡Comencemos con esta increíble aventura!',
     'dont worry, it happens to all of us': '¡No te preocupes, a todos nos pasa!',
@@ -20,6 +21,9 @@ export const es = {
     'login': 'Ingresa',
     'sign up': 'Regístrate',
     'access': 'Ingresar',
+
+    'error': 'Error',
+    'invalid email or password': 'Email o contraseña inválidos',
 
     'by clicking': 'Al hacer clic en',
     'you agree to our': 'aceptas nuestos',

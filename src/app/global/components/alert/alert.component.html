@@ -1,0 +1,29 @@
+<div *ngIf="showAlert" class="fixed top-4 right-4 max-w-md pointer-events-none z-50">
+    <div *ngIf="type == 'error'" class="flex items-start p-2 bg-red-50 border border-red-500 text-red-700 text-sm text-justify font-semibold rounded-lg">
+        <div class="flex-shrink-0 mr-3">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </div>
+        <div>
+            <div class="uppercase">
+                <b>{{ getTranslation(type) }}:</b>
+            </div>
+            <div>
+                {{ getTranslation(message) }}
+            </div>
+        </div>
+    </div>
+
+    <div *ngIf="type == 'message'" class="flex items-start p-2 bg-green-50 border border-green-500 text-green-700 text-sm text-justify font-semibold rounded-lg">
+        <div class="flex-shrink-0 mr-3">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <!-- <div class="uppercase">
+                <b>{{ getTranslation(type) }}</b>
+            </div> -->
+            <div>
+                {{ getTranslation(message) }}
+            </div>
+        </div>
+    </div>
+</div>

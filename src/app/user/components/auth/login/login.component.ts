@@ -5,6 +5,7 @@ import { NgClass, NgIf } from '@angular/common';
 
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { AuthService } from '../../../services/auth/auth.service';
+import { AlertService } from '../../../../global/services/alert.service';
 
 /*
 // Para google, consultar index.html
@@ -36,8 +37,8 @@ export default class LoginComponent implements OnInit {
     private router: Router,
 
     private translateService: TranslateService,
-
     private authService: AuthService,
+    private alertService: AlertService,
   ) {
 
   }
@@ -76,14 +77,25 @@ export default class LoginComponent implements OnInit {
   }
 
   login(body: any): void {
+    var alertBody = null;
     this.authService.login(body).subscribe({
-      next: () => {
+      next: (response) => {
+        alertBody = {
+          type: 'message',
+          message: response.message,
+        }
+
         this.loading = false;
+        this.alertService.showAlert(alertBody);
         this.router.navigate(['user']);
       },
-      error: (err) => {
+      error: (response) => {
+        alertBody = {
+          type: 'error',
+          message: response.error.message,
+        }
         this.loading = false;
-        console.error('Login failed', err);
+        this.alertService.showAlert(alertBody);
       }
     });
   }
