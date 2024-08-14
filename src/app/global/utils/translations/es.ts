@@ -23,6 +23,8 @@ export const es = {
     'access': 'Ingresar',
 
     'error': 'Error',
+    'login successful': 'Inicio de sesión exitoso',
+    'wrong credentials': 'Credenciales incorrectas',
     'invalid email or password': 'Email o contraseña inválidos',
 
     'by clicking': 'Al hacer clic en',

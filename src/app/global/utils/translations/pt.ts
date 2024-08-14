@@ -23,6 +23,8 @@ export const pt = {
     'access': 'Entrada',
 
     'error': 'Erro',
+    'login successful': 'Login bem-sucedido',
+    'wrong credentials': 'Credenciais erradas',
     'invalid email or password': 'Email ou senha inválida',
 
     'by clicking': 'Ao clicar em',

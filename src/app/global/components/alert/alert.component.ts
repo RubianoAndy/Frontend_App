@@ -13,9 +13,10 @@ import { TranslateService } from '../../services/translate/translate.service';
   styleUrl: './alert.component.css'
 })
 export class AlertComponent implements OnInit{
-  @Input() alertTime: number = 3;    // Tiempo en segundos
+  alertTime: number = 4;    // Tiempo en segundos
   message: string = '';
   type: string = '';
+  title: string = '';
   showAlert: boolean = false;
 
   constructor (
@@ -33,6 +34,7 @@ export class AlertComponent implements OnInit{
     this.alertService.alertMessage.subscribe(msg => {
       this.type = msg.type;
       this.message = msg.message;
+      this.title = msg.title;
       this.showAlert = true;
 
       setTimeout(() => {
@@ -43,5 +45,9 @@ export class AlertComponent implements OnInit{
 
   getTranslation(key: string): string {
     return this.translateService.translate(key);
+  }
+
+  closeAlert() {
+    this.showAlert = false;
   }
 }

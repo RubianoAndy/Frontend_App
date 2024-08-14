@@ -81,7 +81,8 @@ export default class LoginComponent implements OnInit {
     this.authService.login(body).subscribe({
       next: (response) => {
         alertBody = {
-          type: 'message',
+          type: 'okay',
+          title: 'welcome',
           message: response.message,
         }
 
@@ -92,6 +93,7 @@ export default class LoginComponent implements OnInit {
       error: (response) => {
         alertBody = {
           type: 'error',
+          title: 'wrong credentials',
           message: response.error.message,
         }
         this.loading = false;
