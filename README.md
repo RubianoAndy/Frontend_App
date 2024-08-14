@@ -52,7 +52,7 @@ Once the repository is cloned, go in it and install the initial packages with th
 | `npm install -g @angular/cli@latest` | Install Angular in its latest version |
 | `npm install`                        | Install node modules dependencies     |
 | `npm install -D tailwindcss`         | Install Tailwindcss dependencies      |
-| `npx tailwindcss init`               | Init Tailwindcss dependencies         |
+| `npx tailwindcss init`               | Init Tailwindcss                      |
 
 ### Project packages
 
