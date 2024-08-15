@@ -22,10 +22,17 @@ export const en = {
     'sign up': 'Sign up',
     'access': 'Access',
 
+    'warning': 'Warning',
     'error': 'Error',
     'login successful': 'Login successful',
     'wrong credentials': 'Wrong credentials',
     'invalid email or password': 'Invalid email or password',
+    'check your email': 'Check your email',
+    'code sent successfully': 'Code sent successfully',
+    'user does not exist': 'User does not exist',
+    'there are several users': 'There are several users',
+    'profile does not exist': 'Profile does not exist',
+    'there are several profiles': 'There are several profiles',
 
     'by clicking': 'By clicking',
     'you agree to our': 'you agree to our',

@@ -22,10 +22,17 @@ export const pt = {
     'sign up': 'Cadastre-se',
     'access': 'Entrada',
 
+    'warning': 'Aviso',
     'error': 'Erro',
     'login successful': 'Login bem-sucedido',
     'wrong credentials': 'Credenciais erradas',
     'invalid email or password': 'Email ou senha inválida',
+    'check your email': 'Verifique seu e-mail',
+    'code sent successfully': 'Código enviado com sucesso',
+    'user does not exist': 'Usuário não existe',
+    'there are several users': 'Existem vários usuários',
+    'profile does not exist': 'Perfil não existe',
+    'there are several profiles': 'Existem vários perfis',
 
     'by clicking': 'Ao clicar em',
     'you agree to our': 'você concorda com nossos',

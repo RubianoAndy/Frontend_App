@@ -78,6 +78,7 @@ export default class LoginComponent implements OnInit {
 
   login(body: any): void {
     var alertBody = null;
+
     this.authService.login(body).subscribe({
       next: (response) => {
         alertBody = {
@@ -86,8 +87,8 @@ export default class LoginComponent implements OnInit {
           message: response.message,
         }
 
-        this.loading = false;
         this.alertService.showAlert(alertBody);
+        this.loading = false;
         this.router.navigate(['user']);
       },
       error: (response) => {
@@ -96,8 +97,9 @@ export default class LoginComponent implements OnInit {
           title: 'wrong credentials',
           message: response.error.message,
         }
-        this.loading = false;
+
         this.alertService.showAlert(alertBody);
+        this.loading = false;
       }
     });
   }

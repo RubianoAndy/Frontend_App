@@ -2,8 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgClass, NgIf } from '@angular/common';
 import { Router, RouterLink } from '@angular/router';
+
 import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-password.service';
 import { TranslateService } from '../../../../global/services/translate/translate.service';
+import { AlertService } from '../../../../global/services/alert.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -35,6 +37,7 @@ export default class ForgotPasswordComponent implements OnInit{
     
     private translateService: TranslateService,
     private forgotPasswordService: ForgotPasswordService,
+    private alertService: AlertService,
   ) {
 
   }
@@ -113,15 +116,31 @@ export default class ForgotPasswordComponent implements OnInit{
   }
 
   generateCode(body: any): void {
+    var alertBody = null;
+
     this.forgotPasswordService.generateCode(body).subscribe({
       next: (response) => {
         this.user_id = response.user_id;
+
+        alertBody = {
+          type: 'okay',
+          title: 'check your email',
+          message: response.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
         this.form_status = 'Send code and password';
       },
-      error: (err) => {
+      error: (response) => {
+        alertBody = {
+          type: 'warning',
+          title: 'warning',
+          message: response.error.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
-        console.error('error: ', err);
 
         // Resetear el formulario form_1 y poner una aleta de error visual
       }

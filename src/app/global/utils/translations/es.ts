@@ -22,10 +22,17 @@ export const es = {
     'sign up': 'Regístrate',
     'access': 'Ingresar',
 
+    'warning': 'Advertencia',
     'error': 'Error',
     'login successful': 'Inicio de sesión exitoso',
     'wrong credentials': 'Credenciales incorrectas',
     'invalid email or password': 'Email o contraseña inválidos',
+    'check your email': 'Revisa tu email',
+    'code sent successfully': 'Código enviado satisfactoriamente',
+    'user does not exist': 'No existe el usuario',
+    'there are several users': 'Existen varios usuarios',
+    'profile does not exist': 'No existe perfil',
+    'there are several profiles': 'Existen varios perfiles',
 
     'by clicking': 'Al hacer clic en',
     'you agree to our': 'aceptas nuestos',

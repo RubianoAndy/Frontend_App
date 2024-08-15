@@ -4,13 +4,17 @@
             <div class="p-2">
                 <div class="flex items-start">
                     <div class="flex-shrink-0">
-                        <div *ngIf="type == 'okay'; else notOkay">
+                        <div *ngIf="type == 'okay'">
                             <i class="fa-solid fa-check text-green-500"></i>
                         </div>
-                    
-                        <ng-template #notOkay>
+
+                        <div *ngIf="type == 'warning'">
+                            <i class="fa-solid fa-triangle-exclamation text-yellow-500"></i>
+                        </div>
+
+                        <div *ngIf="type == 'error'">
                             <i class="fa-solid fa-x text-red-500"></i>
-                        </ng-template>
+                        </div>
                     </div>
 
                     <div class="ml-3 flex-1">
