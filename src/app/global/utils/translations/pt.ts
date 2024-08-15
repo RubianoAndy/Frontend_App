@@ -35,6 +35,9 @@ export const pt = {
     'there are several users': 'Existem vários usuários',
     'profile does not exist': 'Perfil não existe',
     'there are several profiles': 'Existem vários perfis',
+    'email is already registered': 'E-mail já está cadastrado',
+    'identification number is already registered': 'número de identificação já está cadastrado',
+    'user created successfully': 'Usuário criado com sucesso',
 
     'by clicking': 'Ao clicar em',
     'you agree to our': 'você concorda com nossos',

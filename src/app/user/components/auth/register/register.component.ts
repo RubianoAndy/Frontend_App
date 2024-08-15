@@ -8,6 +8,7 @@ import { TermsAndConditionsInfoComponent } from '../../../../web/components/term
 
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { RegisterService } from '../../../services/register/register.service';
+import { AlertService } from '../../../../global/services/alert.service';
 
 @Component({
   selector: 'app-register',
@@ -54,9 +55,10 @@ export default class RegisterComponent implements OnInit {
   constructor (
     private formBuilder: FormBuilder,
     private router: Router,
-    private translateService: TranslateService,
 
+    private translateService: TranslateService,
     private registerService: RegisterService,
+    private alertService: AlertService,
   ) {
 
   }
@@ -126,14 +128,29 @@ export default class RegisterComponent implements OnInit {
   }
 
   register(body: any): void {
+    var alertBody = null;
+
     this.registerService.register(body).subscribe({
-      next: () => {
+      next: (response) => {
+        alertBody = {
+          type: 'okay',
+          title: 'congratulations',
+          message: response.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
         this.router.navigate(['auth/login']);
       },
-      error: (err) => {
+      error: (response) => {
+        alertBody = {
+          type: 'error',
+          title: 'error',
+          message: response.error.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
-        console.error('Login failed', err);
       }
     });
   }
