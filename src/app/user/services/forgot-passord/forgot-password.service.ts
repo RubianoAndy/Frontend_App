@@ -17,10 +17,10 @@ export class ForgotPasswordService {
   ) { }
 
   generateCode(body: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl + 'generate_code/', body);
+    return this.http.post<any>(this.apiUrl + 'generate-code/', body);
   }
 
   changePasswordFromCode(body: any): Observable<any> {
-    return this.http.post<any>(this.apiUrl + 'change_password_from_code/', body);
+    return this.http.post<any>(this.apiUrl + 'change-password-from-code/', body);
   }
 }
