@@ -6,7 +6,7 @@ import { Subject } from 'rxjs';
 })
 export class AlertService {
   private alert = new Subject<any>();
-  alertMessage = this.alert.asObservable();
+  public alertMessage$ = this.alert.asObservable();
   
   constructor() { }
 

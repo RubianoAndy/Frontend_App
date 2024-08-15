@@ -17,7 +17,7 @@ interface TranslationsMap {
 })
 export class TranslateService {
   private currentLanguage = new BehaviorSubject<string>('es');
-  currentLanguage$ = this.currentLanguage.asObservable();
+  public currentLanguage$ = this.currentLanguage.asObservable();
 
   private translations: TranslationsMap = {
     pt: pt,

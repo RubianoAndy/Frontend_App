@@ -31,7 +31,7 @@ export class AlertComponent implements OnInit{
   }
 
   alert() {
-    this.alertService.alertMessage.subscribe(msg => {
+    this.alertService.alertMessage$.subscribe(msg => {
       this.type = msg.type;
       this.message = msg.message;
       this.title = msg.title;
