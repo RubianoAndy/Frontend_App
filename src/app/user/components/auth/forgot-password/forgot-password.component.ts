@@ -140,25 +140,38 @@ export default class ForgotPasswordComponent implements OnInit{
         }
 
         this.alertService.showAlert(alertBody);
+        this.form_1.reset();
         this.loading = false;
-
-        // Resetear el formulario form_1 y poner una aleta de error visual
       }
     });
   }
 
   changePasswordFromCode(body: any): void {
+    var alertBody = null;
+
     this.forgotPasswordService.changePasswordFromCode(body).subscribe({
-      next: () => {
+      next: (response) => {
+        alertBody = {
+          type: 'okay',
+          title: 'congratulations',
+          message: response.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
         this.router.navigate(['auth/login']);
       },
-      error: (err) => {
-        this.loading = false;
-        console.error('error: ', err);
-        this.form_status = 'Send email';
+      error: (response) => {
+        alertBody = {
+          type: 'error',
+          title: 'error',
+          message: response.error.message,
+        }
 
-        // Resetear el formulario form_2 y poner una aleta de error visual
+        this.alertService.showAlert(alertBody);
+        this.loading = false;
+        this.form_2.reset();
+        this.form_status = 'Send email';
       }
     });
   }

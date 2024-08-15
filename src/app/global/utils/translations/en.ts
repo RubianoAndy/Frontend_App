@@ -12,6 +12,8 @@ export const en = {
 
     'hello': 'Hello!',
     'welcome': 'Welcome!',
+    'congratulations': 'Parabéns!',
+    
     'enter the credentials to access your account': 'Enter the credentials to access your account',
     'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',
     'dont worry, it happens to all of us': 'Don\'t worry, it happens to all of us!',
@@ -50,6 +52,9 @@ export const en = {
     'login with google': 'Login with Google',
     'sign up with google': 'Sign up with Google',
     'send code': 'Send code',
+    'invalid code': 'Invalid code',
+    'code expired': 'Code expired',
+    'password changed successfully': 'Password changed successfully',
 
     'first name': 'First name',
     'second name': 'Second name',

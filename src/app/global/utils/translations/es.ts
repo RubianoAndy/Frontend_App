@@ -12,6 +12,8 @@ export const es = {
 
     'hello': '¡Hola!',
     'welcome': '¡Bienvenido!',
+    'congratulations': '¡Felicitaciones!',
+    
     'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',
     'lets get started to this awesome advanture': '¡Comencemos con esta increíble aventura!',
     'dont worry, it happens to all of us': '¡No te preocupes, a todos nos pasa!',
@@ -50,6 +52,9 @@ export const es = {
     'login with google': 'Ingresa con Google',
     'sign up with google': 'Regístrate con Google',
     'send code': 'Enviar código',
+    'invalid code': 'Código no válido',
+    'code expired': 'Código expirado',
+    'password changed successfully': 'Contraseña cambiada exitosamente',
 
     'first name': 'Primer nombre',
     'second name': 'Segundo nombre',
