@@ -111,6 +111,8 @@ export default class RegisterComponent implements OnInit {
       email: this.form.value.email,
       username: this.form.value.email,  // Se le asigna el correo al username que no genere problema en la base de datos
       password: this.form.value.password,
+
+      language: localStorage.getItem('language'),
     };
 
     if (this.form.valid && body) {

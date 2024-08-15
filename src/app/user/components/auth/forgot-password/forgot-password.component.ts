@@ -81,6 +81,7 @@ export default class ForgotPasswordComponent implements OnInit{
   onSubmitForm1() {
     var body = {
       email: this.form_1.value.email,
+      language: localStorage.getItem('language'),
     };
     
     if (this.form_1.valid && body) {
@@ -102,6 +103,7 @@ export default class ForgotPasswordComponent implements OnInit{
       user_id: this.user_id,  // (this.user_id != 0) ? this.user_id : null
       code: code,
       new_password: this.form_2.value.new_password,
+      language: localStorage.getItem('language'),
     };
 
     if (this.form_2.valid && body) {
