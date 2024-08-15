@@ -13,6 +13,7 @@ export const es = {
     'hello': '¡Hola!',
     'welcome': '¡Bienvenido!',
     'congratulations': '¡Felicitaciones!',
+    'have a good day': '¡Ten un excelente día!',
     
     'enter the credentials to access your account': 'Ingresa las credenciales para acceder a tu cuenta',
     'lets get started to this awesome advanture': '¡Comencemos con esta increíble aventura!',
@@ -27,6 +28,7 @@ export const es = {
     'warning': 'Advertencia',
     'error': 'Error',
     'login successful': 'Inicio de sesión exitoso',
+    'session closed successfully': 'Sesión cerrada exitosamente',
     'wrong credentials': 'Credenciales incorrectas',
     'invalid email or password': 'Email o contraseña inválidos',
     'check your email': 'Revisa tu email',

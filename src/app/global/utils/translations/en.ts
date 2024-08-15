@@ -13,6 +13,7 @@ export const en = {
     'hello': 'Hello!',
     'welcome': 'Welcome!',
     'congratulations': 'Congratulations!',
+    'have a good day': 'Have a good day!',
 
     'enter the credentials to access your account': 'Enter the credentials to access your account',
     'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',
@@ -27,6 +28,7 @@ export const en = {
     'warning': 'Warning',
     'error': 'Error',
     'login successful': 'Login successful',
+    'session closed successfully': 'Session closed successfully',
     'wrong credentials': 'Wrong credentials',
     'invalid email or password': 'Invalid email or password',
     'check your email': 'Check your email',

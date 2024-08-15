@@ -3,11 +3,12 @@ import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/rou
 import { NgClass, NgIf } from '@angular/common';
 import { environment } from '../../../global/utils/environments/environment';
 
+import { DarkModeToggleComponent } from '../../../global/components/dark-mode-toggle/dark-mode-toggle.component';
+import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
 
 import { AuthService } from '../../services/auth/auth.service';
-import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
 import { TranslateService } from '../../../global/services/translate/translate.service';
-import { DarkModeToggleComponent } from '../../../global/components/dark-mode-toggle/dark-mode-toggle.component';
+import { AlertService } from '../../../global/services/alert.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -39,11 +40,12 @@ export class DashboardComponent {
   loading: boolean = false;
 
   constructor (
-    private authService: AuthService,
     private router: Router,
     private renderer: Renderer2,
 
+    private authService: AuthService,
     private translateService: TranslateService,
+    private alertService: AlertService,
   ) {
 
   }
@@ -65,32 +67,28 @@ export class DashboardComponent {
     this.isDropdownOpen[menu] = !this.isDropdownOpen[menu];
   }
 
-  // toggleSidebar() {
-  //   const sidebar = this.sidebar.nativeElement;
-  //   const isHidden = sidebar.classList.contains('-translate-x-full');
-    
-  //   if (isHidden) {
-  //     sidebar.classList.remove('-translate-x-full');
-  //     sidebar.classList.add('translate-x-0');
-  //   } else {
-  //     sidebar.classList.add('-translate-x-full');
-  //     sidebar.classList.remove('translate-x-0');
-  //   }
-  // }
-
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
 
   logout() {
+    var alertBody = null;
+
     this.authService.logout().subscribe({
-      next: () => {
+      next: (response) => {
+        alertBody = {
+          type: 'okay',
+          title: 'have a good day',
+          message: response.message,
+        }
+
+        this.alertService.showAlert(alertBody);
         this.loading = false;
         // this.router.navigate(['auth/login']);
       },
       error: (err) => {
         this.loading = false;
-        console.error('Logout failed', err);
+        // console.error('Logout failed', err);
       }
     });
   }

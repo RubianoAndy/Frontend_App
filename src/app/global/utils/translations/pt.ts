@@ -13,6 +13,7 @@ export const pt = {
     'hello': '¡Olá!',
     'welcome': 'Bem-vindo!',
     'congratulations': 'Parabéns!',
+    'have a good day': 'Tenha um bom dia!',
 
     'enter the credentials to access your account': 'Insira as credenciais para acessar sua conta',
     'lets get started to this awesome advanture': '¡Vamos começar com esta incrível aventura!',
@@ -27,6 +28,7 @@ export const pt = {
     'warning': 'Aviso',
     'error': 'Erro',
     'login successful': 'Login bem-sucedido',
+    'session closed successfully': 'Sessão encerrada com sucesso',
     'wrong credentials': 'Credenciais erradas',
     'invalid email or password': 'Email ou senha inválida',
     'check your email': 'Verifique seu e-mail',
