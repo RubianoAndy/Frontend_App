@@ -23,7 +23,7 @@ import { AlertService } from '../../../../global/services/alert.service';
 export default class ForgotPasswordComponent implements OnInit{  
   loading: boolean = false;
 
-  form_status: string = 'Send email'; // 'Send code and password'
+  form_type: string = 'form_1'; // 'form_2'
   form_1!: FormGroup;
   form_2!: FormGroup;
 
@@ -130,7 +130,7 @@ export default class ForgotPasswordComponent implements OnInit{
 
         this.alertService.showAlert(alertBody);
         this.loading = false;
-        this.form_status = 'Send code and password';
+        this.form_type = 'form_2';
       },
       error: (response) => {
         alertBody = {
@@ -171,7 +171,7 @@ export default class ForgotPasswordComponent implements OnInit{
         this.alertService.showAlert(alertBody);
         this.loading = false;
         this.form_2.reset();
-        this.form_status = 'Send email';
+        this.form_type = 'form_1';
       }
     });
   }

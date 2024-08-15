@@ -12,8 +12,8 @@ export const en = {
 
     'hello': 'Hello!',
     'welcome': 'Welcome!',
-    'congratulations': 'Parabéns!',
-    
+    'congratulations': 'Congratulations!',
+
     'enter the credentials to access your account': 'Enter the credentials to access your account',
     'lets get started to this awesome advanture': 'Let\'s get started to this awesome advanture!',
     'dont worry, it happens to all of us': 'Don\'t worry, it happens to all of us!',

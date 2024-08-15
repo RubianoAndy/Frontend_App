@@ -12,8 +12,8 @@ export const pt = {
 
     'hello': '¡Olá!',
     'welcome': 'Bem-vindo!',
-    'congratulations': 'congratulations!',
-    
+    'congratulations': 'Parabéns!',
+
     'enter the credentials to access your account': 'Insira as credenciais para acessar sua conta',
     'lets get started to this awesome advanture': '¡Vamos começar com esta incrível aventura!',
     'dont worry, it happens to all of us': '¡Não se preocupe, isso acontece com todos nós.!',
