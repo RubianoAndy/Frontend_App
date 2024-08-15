@@ -8,7 +8,7 @@ import { TermsAndConditionsInfoComponent } from '../../../../web/components/term
 
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { RegisterService } from '../../../services/register/register.service';
-import { AlertService } from '../../../../global/services/alert.service';
+import { AlertService } from '../../../../global/services/alert/alert.service';
 
 @Component({
   selector: 'app-register',

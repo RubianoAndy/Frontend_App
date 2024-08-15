@@ -5,7 +5,7 @@ import { Router, RouterLink } from '@angular/router';
 
 import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-password.service';
 import { TranslateService } from '../../../../global/services/translate/translate.service';
-import { AlertService } from '../../../../global/services/alert.service';
+import { AlertService } from '../../../../global/services/alert/alert.service';
 
 @Component({
   selector: 'app-forgot-password',

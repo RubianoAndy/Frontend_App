@@ -5,7 +5,7 @@ import { NgClass, NgIf } from '@angular/common';
 
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { AuthService } from '../../../services/auth/auth.service';
-import { AlertService } from '../../../../global/services/alert.service';
+import { AlertService } from '../../../../global/services/alert/alert.service';
 
 /*
 // Para google, consultar index.html

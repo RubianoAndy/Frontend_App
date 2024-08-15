@@ -8,7 +8,7 @@ import { LanguageSwitcherComponent } from '../../../global/components/language-s
 
 import { AuthService } from '../../services/auth/auth.service';
 import { TranslateService } from '../../../global/services/translate/translate.service';
-import { AlertService } from '../../../global/services/alert.service';
+import { AlertService } from '../../../global/services/alert/alert.service';
 
 @Component({
   selector: 'app-dashboard',

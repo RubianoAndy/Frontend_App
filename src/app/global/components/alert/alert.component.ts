@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { AlertService } from '../../services/alert.service';
+import { AlertService } from '../../services/alert/alert.service';
 import { NgIf } from '@angular/common';
 import { TranslateService } from '../../services/translate/translate.service';
 
