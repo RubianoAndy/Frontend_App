@@ -25,6 +25,18 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    const theme = localStorage.getItem('theme');
+
+    if (theme) {
+      if (theme === 'dark')
+        document.documentElement.classList.add('dark');
+      else
+        document.documentElement.classList.remove('dark');
+    } else {
+      localStorage.setItem('theme', 'dark');
+      document.documentElement.classList.add('dark');
+    }
+    
     if (this.authService.isAuthenticated())
       this.authService.updateRefreshToken();
   }
