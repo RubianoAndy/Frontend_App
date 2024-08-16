@@ -1,9 +1,11 @@
 .faq-question {
-    overflow: hidden;
-    transition: max-height 0.3s ease-out;
     max-height: 0;
+    opacity: 0;
+    transition: max-height 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    overflow: hidden;
 }
-  
+
 .faq-question.open {
-    max-height: 200px;
+    max-height: 300px;
+    opacity: 1;
 }
