@@ -1,4 +1,4 @@
-import { Component, ElementRef, Renderer2, ViewChild  } from '@angular/core';
+import { Component, ElementRef, OnInit, Renderer2, ViewChild  } from '@angular/core';
 import { Router, RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NgClass, NgIf } from '@angular/common';
 import { environment } from '../../../global/utils/environments/environment';
@@ -9,6 +9,7 @@ import { LanguageSwitcherComponent } from '../../../global/components/language-s
 import { AuthService } from '../../services/auth/auth.service';
 import { TranslateService } from '../../../global/services/translate/translate.service';
 import { AlertService } from '../../../global/services/alert/alert.service';
+import { LoadingService } from '../../../global/services/loading/loading.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -25,9 +26,10 @@ import { AlertService } from '../../../global/services/alert/alert.service';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css'
 })
-export class DashboardComponent {
+export class DashboardComponent implements OnInit{
   @ViewChild('dropdownMenu', { static: true }) dropdownMenu!: ElementRef;
   @ViewChild('sidebar', { static: false }) sidebar!: ElementRef;
+  // startComponentTime: number = 2;
 
   currentYear: number = environment.currentYear;
   page: string = environment.site_name;
@@ -37,8 +39,6 @@ export class DashboardComponent {
   isDropdownOpen: { [key: string]: boolean } = {};
   isSidebarOpen = true;
 
-  loading: boolean = false;
-
   constructor (
     private router: Router,
     private renderer: Renderer2,
@@ -46,8 +46,17 @@ export class DashboardComponent {
     private authService: AuthService,
     private translateService: TranslateService,
     private alertService: AlertService,
+    private loadingService: LoadingService,
   ) {
 
+  }
+
+  ngOnInit(): void {
+    /* this.loadingService.show();
+
+    setTimeout(() => {
+      this.loadingService.hide();
+    }, 1000 * this.startComponentTime); */
   }
 
   toggleMenuDropdown() {
@@ -72,6 +81,7 @@ export class DashboardComponent {
   }
 
   logout() {
+    this.loadingService.show();
     var alertBody = null;
 
     this.authService.logout().subscribe({
@@ -83,12 +93,12 @@ export class DashboardComponent {
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         // this.router.navigate(['auth/login']);
       },
-      error: (err) => {
-        this.loading = false;
-        // console.error('Logout failed', err);
+      error: (response) => {
+        this.loadingService.hide();
+        // console.error('Logout failed', response);
       }
     });
   }

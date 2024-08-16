@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-import { AuthService } from './user/services/auth/auth.service';
+
 import { AlertComponent } from './global/components/alert/alert.component';
+import { LoadingComponent } from './global/components/loading/loading.component';
+
+import { AuthService } from './user/services/auth/auth.service';
 
 @Component({
   selector: 'app-root',
   standalone: true,
   imports: [
+    RouterOutlet,
     AlertComponent,
-    RouterOutlet
+    LoadingComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

@@ -3,8 +3,11 @@ import { RouterLink, RouterOutlet } from '@angular/router';
 import { Subscription } from 'rxjs';
 
 import { environment } from '../../../global/utils/environments/environment';
+
 import { LanguageSwitcherComponent } from '../../../global/components/language-switcher/language-switcher.component';
+
 import { TranslateService } from '../../../global/services/translate/translate.service';
+import { LoadingService } from '../../../global/services/loading/loading.service';
 
 @Component({
   selector: 'app-auth',
@@ -19,6 +22,9 @@ import { TranslateService } from '../../../global/services/translate/translate.s
 })
 export class AuthComponent implements OnInit, OnDestroy {
   logo = environment.logo;
+  
+  startComponentTime: number = 1;
+
   // currentYear: number = environment.currentYear;
   // page: string = environment.site_name;
 
@@ -26,10 +32,13 @@ export class AuthComponent implements OnInit, OnDestroy {
 
   constructor(
     private translateService: TranslateService,
+    private loadingService: LoadingService,
   ) { }
 
   ngOnInit(): void {
     const theme = localStorage.getItem('theme');
+    this.loadingService.show();
+
     if (theme === 'dark')
       document.documentElement.classList.add('dark');
     else
@@ -41,6 +50,10 @@ export class AuthComponent implements OnInit, OnDestroy {
       else
         this.logo = environment.logo;
     });
+
+    setTimeout(() => {
+      this.loadingService.hide();
+    }, 1000 * this.startComponentTime);
   }
 
   ngOnDestroy(): void {

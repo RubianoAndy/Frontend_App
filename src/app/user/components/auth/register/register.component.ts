@@ -9,6 +9,7 @@ import { TermsAndConditionsInfoComponent } from '../../../../web/components/term
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { RegisterService } from '../../../services/register/register.service';
 import { AlertService } from '../../../../global/services/alert/alert.service';
+import { LoadingService } from '../../../../global/services/loading/loading.service';
 
 @Component({
   selector: 'app-register',
@@ -32,7 +33,6 @@ export default class RegisterComponent implements OnInit {
   isModalOpen = false;
   modalPart: string | undefined;
 
-  loading: boolean = false;
   form!: FormGroup;
   isPasswordVisible: boolean = false;
 
@@ -59,6 +59,7 @@ export default class RegisterComponent implements OnInit {
     private translateService: TranslateService,
     private registerService: RegisterService,
     private alertService: AlertService,
+    private loadingService: LoadingService,
   ) {
 
   }
@@ -117,10 +118,8 @@ export default class RegisterComponent implements OnInit {
       language: localStorage.getItem('language'),
     };
 
-    if (this.form.valid && body) {
-      this.loading = true;
+    if (this.form.valid && body)
       this.register(body);
-    }
   }
 
   togglePasswordVisibility(): void {
@@ -128,6 +127,7 @@ export default class RegisterComponent implements OnInit {
   }
 
   register(body: any): void {
+    this.loadingService.show();
     var alertBody = null;
 
     this.registerService.register(body).subscribe({
@@ -139,7 +139,7 @@ export default class RegisterComponent implements OnInit {
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         this.router.navigate(['auth/login']);
       },
       error: (response) => {
@@ -150,7 +150,7 @@ export default class RegisterComponent implements OnInit {
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
       }
     });
   }

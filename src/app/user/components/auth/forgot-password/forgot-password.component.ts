@@ -6,6 +6,7 @@ import { Router, RouterLink } from '@angular/router';
 import { ForgotPasswordService } from '../../../services/forgot-passord/forgot-password.service';
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { AlertService } from '../../../../global/services/alert/alert.service';
+import { LoadingService } from '../../../../global/services/loading/loading.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -21,8 +22,6 @@ import { AlertService } from '../../../../global/services/alert/alert.service';
   styleUrl: './forgot-password.component.css'
 })
 export default class ForgotPasswordComponent implements OnInit{  
-  loading: boolean = false;
-
   form_type: string = 'form_1'; // 'form_2'
   form_1!: FormGroup;
   form_2!: FormGroup;
@@ -38,6 +37,7 @@ export default class ForgotPasswordComponent implements OnInit{
     private translateService: TranslateService,
     private forgotPasswordService: ForgotPasswordService,
     private alertService: AlertService,
+    private loadingService: LoadingService,
   ) {
 
   }
@@ -87,10 +87,8 @@ export default class ForgotPasswordComponent implements OnInit{
       language: localStorage.getItem('language'),
     };
     
-    if (this.form_1.valid && body) {
-      this.loading = true;
+    if (this.form_1.valid && body)
       this.generateCode(body);
-    }
   }
 
   onSubmitForm2() {
@@ -109,13 +107,12 @@ export default class ForgotPasswordComponent implements OnInit{
       language: localStorage.getItem('language'),
     };
 
-    if (this.form_2.valid && body) {
-      this.loading = true;
+    if (this.form_2.valid && body)
       this.changePasswordFromCode(body);
-    }
   }
 
   generateCode(body: any): void {
+    this.loadingService.show();
     var alertBody = null;
 
     this.forgotPasswordService.generateCode(body).subscribe({
@@ -129,7 +126,7 @@ export default class ForgotPasswordComponent implements OnInit{
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         this.form_type = 'form_2';
       },
       error: (response) => {
@@ -140,13 +137,14 @@ export default class ForgotPasswordComponent implements OnInit{
         }
 
         this.alertService.showAlert(alertBody);
+        this.loadingService.hide();
         this.form_1.reset();
-        this.loading = false;
       }
     });
   }
 
   changePasswordFromCode(body: any): void {
+    this.loadingService.show();
     var alertBody = null;
 
     this.forgotPasswordService.changePasswordFromCode(body).subscribe({
@@ -158,7 +156,7 @@ export default class ForgotPasswordComponent implements OnInit{
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         this.router.navigate(['auth/login']);
       },
       error: (response) => {
@@ -169,7 +167,7 @@ export default class ForgotPasswordComponent implements OnInit{
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         this.form_2.reset();
         this.form_type = 'form_1';
       }

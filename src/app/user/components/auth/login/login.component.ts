@@ -6,6 +6,7 @@ import { NgClass, NgIf } from '@angular/common';
 import { TranslateService } from '../../../../global/services/translate/translate.service';
 import { AuthService } from '../../../services/auth/auth.service';
 import { AlertService } from '../../../../global/services/alert/alert.service';
+import { LoadingService } from '../../../../global/services/loading/loading.service';
 
 /*
 // Para google, consultar index.html
@@ -26,8 +27,6 @@ declare var google: any;
   styleUrl: './login.component.css'
 })
 export default class LoginComponent implements OnInit {
-  loading: boolean = false;
-
   form!: FormGroup;
 
   isPasswordVisible: boolean = false;
@@ -39,6 +38,7 @@ export default class LoginComponent implements OnInit {
     private translateService: TranslateService,
     private authService: AuthService,
     private alertService: AlertService,
+    private loadingService: LoadingService,
   ) {
 
   }
@@ -66,10 +66,8 @@ export default class LoginComponent implements OnInit {
       password: this.form.value.password
     };
 
-    if (this.form.valid && body) {
-      this.loading = true;
+    if (this.form.valid && body)
       this.login(body);
-    }
   }
 
   togglePasswordVisibility(): void {
@@ -77,6 +75,7 @@ export default class LoginComponent implements OnInit {
   }
 
   login(body: any): void {
+    this.loadingService.show();
     var alertBody = null;
 
     this.authService.login(body).subscribe({
@@ -88,7 +87,7 @@ export default class LoginComponent implements OnInit {
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
         this.router.navigate(['user']);
       },
       error: (response) => {
@@ -99,7 +98,7 @@ export default class LoginComponent implements OnInit {
         }
 
         this.alertService.showAlert(alertBody);
-        this.loading = false;
+        this.loadingService.hide();
       }
     });
   }
