@@ -28,6 +28,13 @@ export class NavbarComponent implements OnInit, OnDestroy {
 
   private languageSubscription: Subscription | undefined;
 
+  navbarOptions = [
+    { url: '/', title: 'home'},
+    { url: '/about', title: 'about'},
+    { url: '/contact', title: 'contact'},
+    { url: '/faq', title: 'faq'},
+  ];
+
   constructor (
     private translateService: TranslateService,
   ) {
