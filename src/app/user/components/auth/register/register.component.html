@@ -1,4 +1,4 @@
-<form class="space-y-2 p-4 " [formGroup]="form" (ngSubmit)="onSubmit()">
+<form class="space-y-2" [formGroup]="form" (ngSubmit)="onSubmit()">
     <div class="text-center">
         <h2 class="mb-1 text-3xl font-semibold text-foreground">{{ getTranslation('sign up') }}</h2>
         <p class="text-sm text-muted-foreground">{{ getTranslation('lets get started to this awesome advanture') }}</p>
@@ -53,27 +53,27 @@
             <input [ngClass]="{'bg-red-300': !form.controls['username'].valid && form.controls['username'].touched}" id="username" formControlName="username" type="text" placeholder="Username" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-lg"/>
         </div> -->
 
-        <div class="w-1/2 relative">
+        <div class="w-full md:w-1/2 relative">
             <label for="mobile" class="text-sm text-start text-white">{{ getTranslation('mobile') }} *</label>
             <div class="flex items-center">
-              <div class="relative flex items-center">
-                <button type="button" (click)="toggleDropdown()" class="flex items-center py-1.5 px-2 text-sm font-medium text-center text-black bg-white border border-gray-300 rounded-s-lg hover:bg-gray-200 min-w-max">
-                  <div class="flex items-center space-x-2">
-                    <img [src]="getPrefix().icon" alt="Icon" class="w-6 h-6">
-                    <span class="truncate">({{ getPrefix().label }})</span>
-                  </div>
-                </button>
-                <input id="mobile" type="phone" formControlName="mobile" [ngClass]="{'bg-red-300': !form.controls['mobile'].valid && form.controls['mobile'].touched}" placeholder="{{ getTranslation('mobile') }}" class="flex items-center w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-e-lg"/>
-                
-                <div *ngIf="isOpen" class="absolute left-0 top-full mt-1 bg-gray-200 shadow-lg z-20 max-h-60 overflow-y-auto">
-                    <div *ngFor="let prefixOption of prefixOptions" (click)="selectPrefix(prefixOption.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300">
-                      <img [src]="prefixOption.icon" alt="Icon" class="w-6 h-6 mr-2">
-                      <span>({{ prefixOption.label }})</span>
+                <div class="relative flex items-center w-full">
+                    <button type="button" (click)="toggleDropdown()" class="flex items-center py-1.5 px-2 text-sm font-medium text-center text-black bg-white border border-gray-300 rounded-s-lg hover:bg-gray-200 min-w-max">
+                        <div class="flex items-center space-x-2">
+                            <img [src]="getPrefix().icon" alt="Icon" class="w-6 h-6">
+                            <span class="truncate">({{ getPrefix().label }})</span>
+                        </div>
+                    </button>
+                    <input id="mobile" type="phone" formControlName="mobile" [ngClass]="{'bg-red-300': !form.controls['mobile'].valid && form.controls['mobile'].touched}" placeholder="{{ getTranslation('mobile') }}" class="flex-grow w-full px-5 py-2 text-sm text-black font-medium outline-none focus:bg-gray-300 placeholder:text-gray-500 rounded-e-lg"/>
+                    
+                    <div *ngIf="isOpen" class="absolute left-0 top-full mt-1 bg-gray-200 shadow-lg z-20 max-h-60 overflow-y-auto">
+                        <div *ngFor="let prefixOption of prefixOptions" (click)="selectPrefix(prefixOption.value)" class="cursor-pointer flex items-center p-2 text-sm text-gray-900 hover:bg-gray-300">
+                            <img [src]="prefixOption.icon" alt="Icon" class="w-6 h-6 mr-2">
+                            <span>({{ prefixOption.label }})</span>
+                        </div>
                     </div>
                 </div>
-              </div>
             </div>
-        </div>
+        </div>        
 
         <div class="w-1/2 relative">
             <label for="password" class="text-start text-white">{{ getTranslation('password') }} * <span *ngIf="(!form.controls['password'].valid && form.controls['password'].value!='')" class="msg-error">(Mínimo 6 caracteres)</span></label>
