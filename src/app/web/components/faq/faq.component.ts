@@ -47,6 +47,26 @@ export default class FaqComponent {
       question: 'what are the advantages of using electrolysis in water treatment compared to traditional methods', 
       answer: 'faq_aswer_6',
     },
+    { 
+      question: 'what are carnivorous plants and how do they obtain their nutrients', 
+      answer: 'faq_aswer_7',
+    },
+    { 
+      question: 'how do carnivorous plants reproduce', 
+      answer: 'faq_aswer_8',
+    },
+    { 
+      question: 'why are carnivorous plants important in ecosystems', 
+      answer: 'faq_aswer_9',
+    },
+    { 
+      question: 'what types of environments can carnivorous plants be found in', 
+      answer: 'faq_aswer_10',
+    },
+    { 
+      question: 'what is the biggest threat to carnivorous plants today', 
+      answer: 'faq_aswer_11',
+    },
   ];
 
   constructor (

@@ -129,11 +129,49 @@ export const en = {
     'what are the advantages of using electrolysis in water treatment compared to traditional methods': 'What are the advantages of using electrolysis in water treatment compared to traditional methods?',
 
     'faq_aswer_6':
-        `Using electrolysis in water treatment offers several advantages over traditional methods that use chemicals. First, it 
-        eliminates the need to add chemicals to the process, which reduces waste and environmental impact. Furthermore, 
-        electrolysis is a highly efficient and controllable method that can be tailored to different types of contaminants and 
-        specific treatment needs. This results in a safer, more economical, and more environmentally friendly process for water purification`,
+        `The use of electrolysis in water treatment offers several advantages over traditional methods that use chemicals since it eliminates 
+        the need to add chemicals to the process, which reduces waste and environmental impact. In addition, electrolysis is a highly efficient 
+        and controllable method that can be adapted to different types of contaminants and specific treatment needs. This results in a safer, 
+        more economical and environmentally friendly process for water purification`,
 
+    'what are carnivorous plants and how do they obtain their nutrients': 'What are carnivorous plants and how do they obtain their nutrients?',
+
+    'faq_aswer_7':
+        `Carnivorous plants, or better known as insectivorous plants, are living beings that have developed the ability to obtain nutrients
+        from the attraction, capture and digestion of insects and other small animals, especially in environments where the soil is poor
+        in essential nutrients such as nitrogen. They use various strategies such as sticky traps, pitfall traps and suction traps,
+        to capture their prey. Once trapped, the plants secrete digestive enzymes to break down the prey and absorb the necessary nutrients`,
+    
+    'how do carnivorous plants reproduce': 'How do carnivorous plants reproduce?',
+
+    'faq_aswer_8':
+        `Carnivorous plants reproduce both sexually and asexually. In sexual reproduction, they produce flowers that, after being pollinated,
+        generate seeds that can be dispersed to germinate in new locations. In asexual reproduction, through shoots, suckers,
+        stolons, buds or cuttings, creating clones of the mother plant. This method is common in environments where the conditions for seed germination
+        are unfavorable`,
+
+    'why are carnivorous plants important in ecosystems': 'Why are carnivorous plants important in ecosystems?',
+
+    'faq_aswer_9':
+        `Carnivorous plants play a crucial role in ecosystems, especially in areas where soils are poor in nutrients. They help
+        control insect populations, acting as natural pest regulators, and contribute to biodiversity, since their presence
+        promotes the coexistence of other species and maintains the ecological balance in the habitats where they are found`,
+
+    'what types of environments can carnivorous plants be found in': 'What types of environments can carnivorous plants be found in?',
+
+    'faq_aswer_10':
+        `Carnivorous plants are usually found in environments with nutrient-poor soils such as swamps, peat bogs, and wet areas.
+        These places usually have a high level of humidity and adequate sunlight, but the soil lacks nitrogen and other essential nutrients,
+        which has caused them to evolve to survive by capturing insects and small animals to make up for the nutrient deficiency in the soil`,
+
+    'what is the biggest threat to carnivorous plants today': 'What is the biggest threat to carnivorous plants today?',
+
+    'faq_aswer_11':
+        `The greatest threat to carnivorous plants is the destruction and alteration of their natural habitats due to urbanization, agriculture, 
+        and climate change. Many species of carnivorous plants are endangered due to the loss of the specific ecosystems in which they thrive, 
+        and overexploitation for the exotic plant trade also contributes to their decline. Protecting their habitats and regulating trade is 
+        crucial to ensuring the conservation of these fascinating and ecologically important plants`,
+    
     'position': 'Position',
     'president': 'President and CEO',
     'chief executive manager': 'CEO',

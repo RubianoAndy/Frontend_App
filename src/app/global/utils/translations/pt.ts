@@ -130,10 +130,48 @@ export const pt = {
 
     'faq_aswer_6':
         `O uso da eletrólise no tratamento de água oferece diversas vantagens em relação aos métodos tradicionais que utilizam produtos
-        produtos químicos. Primeiro, elimina a necessidade de adicionar produtos químicos ao processo, reduzindo o desperdício e o impacto
-        ambiental. Além disso, a eletrólise é um método altamente eficiente e controlável que pode ser adaptado a diferentes tipos de
+        químicos, pois elimina a necessidade de adicionar produtos químicos ao processo, reduzindo o desperdício e o impacto
+        ambiental, além disso, a eletrólise é um método altamente eficiente e controlável que pode ser adaptado a diferentes tipos de
         contaminantes e necessidades específicas de tratamento. Isso resulta em um processo mais seguro, econômico e ecológico para purificação de água`,
+    
+    'what are carnivorous plants and how do they obtain their nutrients': 'O que são plantas carnívoras e como obtêm seus nutrientes?',
 
+    'faq_aswer_7':
+        `As plantas carnívoras, ou melhor chamadas de plantas insetívoras, são seres vivos que desenvolveram a capacidade de obter nutrientes.
+        provenientes da atração, captura e digestão de insetos e outros pequenos animais, principalmente em ambientes onde o solo é pobre
+        em nutrientes essenciais como o nitrogênio. Eles usam várias estratégias, como armadilhas pegajosas, armadilhas de queda e armadilhas de sucção,
+        para capturar suas presas. Uma vez presas, as plantas secretam enzimas digestivas para decompor a presa e absorver os nutrientes necessários`,
+    
+    'how do carnivorous plants reproduce': 'Como as plantas carnívoras se reproduzem?',
+
+    'faq_aswer_8':
+        `As plantas carnívoras se reproduzem sexualmente e assexuadamente. Na reprodução sexuada, produzem flores que, após serem polinizadas,
+        Eles geram sementes que podem ser dispersas para germinar em novos locais. Na reprodução assexuada, através de brotos, descendentes,
+        estolhos, gemas ou estacas, criando clones da planta mãe. Este método é comum em ambientes onde as condições para germinação
+        de sementes são desfavoráveis`,
+
+    'why are carnivorous plants important in ecosystems': 'Por que as plantas carnívoras são importantes nos ecossistemas?',
+
+    'faq_aswer_9':
+        `As plantas carnívoras desempenham um papel crucial nos ecossistemas, especialmente em áreas onde os solos são pobres em nutrientes. Eles ajudam
+        controlar a população de insetos, atuando como reguladores naturais de pragas, além disso, contribuem para a biodiversidade, desde a sua presença;
+        promove a coexistência de outras espécies e mantém o equilíbrio ecológico nos habitats onde são encontradas`,
+
+    'what types of environments can carnivorous plants be found in': 'Em que tipos de ambientes as plantas carnívoras podem ser encontradas?',
+
+    'faq_aswer_10':
+        `As plantas carnívoras são geralmente encontradas em ambientes com solos pobres em nutrientes, como pântanos, turfeiras e áreas úmidas.
+        Esses locais costumam ter alta umidade e luz solar adequada, mas o solo carece de nitrogênio e outros nutrientes essenciais,
+        o que os fez evoluir para sobreviver capturando insetos e pequenos animais para suprir a deficiência de nutrientes do solo`,
+
+    'what is the biggest threat to carnivorous plants today': 'Qual é a maior ameaça às plantas carnívoras hoje?',
+
+    'faq_aswer_11':
+        `A maior ameaça às plantas carnívoras é a destruição e alteração dos seus habitats naturais devido à urbanização,
+        agricultura e alterações climáticas. Muitas espécies de plantas carnívoras estão ameaçadas devido à perda de ecossistemas
+        Além disso, a sobreexploração para o comércio de plantas exóticas também contribui para o seu declínio.
+        Proteger os seus habitats e regular o comércio é crucial para garantir a conservação destas plantas fascinantes e ecologicamente importantes`,
+    
     'position': 'Posição',
     'president': 'Presidente e CEO',
     'chief executive manager': 'CEO',
