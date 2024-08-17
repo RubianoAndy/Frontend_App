@@ -87,6 +87,53 @@ export const en = {
 
     'faq': 'FAQ\'s',
 
+    'how does your company contribute to sustainability and the use of clean energy': 'How does your company contribute to sustainability and the use of clean energy?',
+
+    'faq_aswer_1':
+        `We are committed to promoting sustainability through the development of solutions based on clean energy and
+        the use of water resources. We offer consulting and services in the implementation of renewable
+        energy technologies such as solar panels and wind energy systems, as well as water treatment plants
+        without using chemicals. We also work on optimizing our clients' energy consumption through
+        smart technologies that reduce environmental impact`,
+
+    'what is the process for custom software development with your company': 'What is the process for custom software development with your company?',
+
+    'faq_aswer_2':
+        `The process for developing custom software with us begins with an initial consultation to understand your
+        requirements and goals. We then create a detailed project plan and develop a prototype for your review.
+        After fine-tuning the prototype based on your feedback, we proceed to full development and deployment.
+        Finally, we offer ongoing support and maintenance to ensure the software continues to function optimally`,
+
+    'what kind of support and maintenance do you offer for your technology solutions': 'What kind of support and maintenance do you offer for your technology solutions?',
+
+    'faq_aswer_3':
+        `We offer ongoing technical support and maintenance for all our technology solutions. This includes bug 
+        fixing, software updating, and performance optimization. Our support team is available to resolve any issues 
+        that may arise and to make adjustments based on your company's changing needs`,
+    
+    'how does your company ensure data security in its software solutions': 'How does your company ensure data security in its software solutions?',
+
+    'faq_aswer_4':
+        `Data security is a priority for us. We implement advanced security measures in our software solutions, 
+        including data encryption, user authentication, and continuous threat monitoring. We conduct regular 
+        security audits and follow industry best practices to protect our customers' sensitive information.`,
+    
+    'how do water treatment plants work': 'How do water treatment plants work?',
+
+    'faq_aswer_5':
+        `Our water treatment plants are designed to purify water using advanced electrolysis processes and
+        redox reactions. Electrolysis allows contaminants to be broken down into harmless components without the
+        need for added chemicals, while redox reactions remove impurities and heavy metals. This approach is
+        not only effective, but is also safer and more sustainable for the environment.`,
+
+    'what are the advantages of using electrolysis in water treatment compared to traditional methods': 'What are the advantages of using electrolysis in water treatment compared to traditional methods?',
+
+    'faq_aswer_6':
+        `Using electrolysis in water treatment offers several advantages over traditional methods that use chemicals. First, it 
+        eliminates the need to add chemicals to the process, which reduces waste and environmental impact. Furthermore, 
+        electrolysis is a highly efficient and controllable method that can be tailored to different types of contaminants and 
+        specific treatment needs. This results in a safer, more economical, and more environmentally friendly process for water purification`,
+
     'position': 'Position',
     'president': 'President and CEO',
     'chief executive manager': 'CEO',

@@ -87,6 +87,53 @@ export const pt = {
 
     'faq': 'Perguntas frequentes',
 
+    'how does your company contribute to sustainability and the use of clean energy': 'Como sua empresa contribui para a sustentabilidade e o uso de energia limpa?',
+
+    'faq_aswer_1':
+        `Estamos empenhados em promover a sustentabilidade através do desenvolvimento de soluções baseadas em energia limpa e
+        uso de recursos hídricos. Oferecemos consultoria e serviços na implementação de tecnologias energéticas
+        energia renovável, como painéis solares e sistemas de energia eólica, bem como estações de tratamento de água não utilizadas
+        produtos químicos. Também trabalhamos na otimização do consumo de energia de nossos clientes por meio de tecnologias
+        inteligentes que reduzem o impacto ambiental`,
+
+    'what is the process for custom software development with your company': 'Qual é o processo de desenvolvimento de software customizado com sua empresa?',
+
+    'faq_aswer_2':
+        `O processo de desenvolvimento de software customizado conosco começa com uma consulta inicial para entender seu
+        requisitos e objetivos. A seguir, criamos um plano de projeto detalhado e desenvolvemos um protótipo para sua análise.
+        Depois de ajustar o protótipo com base no seu feedback, procedemos ao desenvolvimento e implantação completos.
+        Por fim, oferecemos suporte e manutenção contínuos para garantir que o software continue a funcionar de maneira ideal`,
+
+    'what kind of support and maintenance do you offer for your technology solutions': 'Que tipo de suporte e manutenção você oferece para suas soluções tecnológicas?',
+
+    'faq_aswer_3':
+        `Oferecemos suporte técnico e manutenção contínuos para todas as nossas soluções tecnológicas. Isto inclui a correção
+        detecção de erros, atualização de software e otimização de desempenho. Nossa equipe de suporte está disponível para
+        resolver quaisquer problemas que possam surgir e fazer ajustes com base nas novas necessidades do seu negócio`,
+    
+    'how does your company ensure data security in its software solutions': 'Como sua empresa garante a segurança dos dados em suas soluções de software?',
+
+    'faq_aswer_4':
+        `A segurança dos dados é uma prioridade para nós. Implementamos medidas avançadas de segurança nas nossas soluções
+        software, incluindo criptografia de dados, autenticação de usuário e monitoramento contínuo de ameaças. Realizamos auditorias
+        verificações de segurança regulares e seguimos as melhores práticas do setor para proteger as informações confidenciais de nossos clientes`,
+    
+    'how do water treatment plants work': 'Como funcionam as estações de tratamento de água?',
+
+    'faq_aswer_5':
+        `Nossas estações de tratamento de água são projetadas para purificar a água através de processos avançados de eletrólise e
+        reações de oxidação-redução. A eletrólise permite que os poluentes sejam decompostos em componentes inofensivos sem a necessidade de
+        adicionam produtos químicos, enquanto as reações de oxidação-redução removem impurezas e metais pesados. Esta abordagem não
+        Não só é eficaz, mas também é mais seguro e sustentável para o meio ambiente`,
+
+    'what are the advantages of using electrolysis in water treatment compared to traditional methods': 'Quais são as vantagens do uso da eletrólise no tratamento de água em comparação aos métodos tradicionais?',
+
+    'faq_aswer_6':
+        `O uso da eletrólise no tratamento de água oferece diversas vantagens em relação aos métodos tradicionais que utilizam produtos
+        produtos químicos. Primeiro, elimina a necessidade de adicionar produtos químicos ao processo, reduzindo o desperdício e o impacto
+        ambiental. Além disso, a eletrólise é um método altamente eficiente e controlável que pode ser adaptado a diferentes tipos de
+        contaminantes e necessidades específicas de tratamento. Isso resulta em um processo mais seguro, econômico e ecológico para purificação de água`,
+
     'position': 'Posição',
     'president': 'Presidente e CEO',
     'chief executive manager': 'CEO',

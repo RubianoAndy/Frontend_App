@@ -24,12 +24,28 @@ export default class FaqComponent {
 
   questions = [
     { 
-      question: 'How do I know if a product is available in boutiques?', 
-      answer: 'Remember you can query the status of your orders any time in My orders in the My account section. If you are not registered at Mango.com, you can access directly in the Orders section. In this case, you will have to enter your e-mail address and order number.'
+      question: 'how does your company contribute to sustainability and the use of clean energy', 
+      answer: 'faq_aswer_1',
     },
     { 
-      question: 'What is the return policy?', 
-      answer: 'You can return your product within 30 days of purchase. Please refer to our return policy for more details.'
+      question: 'what is the process for custom software development with your company', 
+      answer: 'faq_aswer_2',
+    },
+    { 
+      question: 'what kind of support and maintenance do you offer for your technology solutions', 
+      answer: 'faq_aswer_3',
+    },
+    { 
+      question: 'how does your company ensure data security in its software solutions', 
+      answer: 'faq_aswer_4',
+    },
+    { 
+      question: 'how do water treatment plants work', 
+      answer: 'faq_aswer_5',
+    },
+    { 
+      question: 'what are the advantages of using electrolysis in water treatment compared to traditional methods', 
+      answer: 'faq_aswer_6',
     },
   ];
 

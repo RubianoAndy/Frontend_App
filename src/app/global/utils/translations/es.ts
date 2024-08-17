@@ -87,6 +87,53 @@ export const es = {
 
     'faq': 'Preguntas frecuentes',
 
+    'how does your company contribute to sustainability and the use of clean energy': '¿Cómo contribuye su empresa a la sostenibilidad y el uso de energías limpias?',
+
+    'faq_aswer_1':
+        `Nos comprometemos a promover la sostenibilidad a través del desarrollo de soluciones basadas en energías limpias y 
+        aprovechamiento del recurso hídrico. Ofrecemos consultoría y servicios en la implementación de tecnologías de energía 
+        renovable como paneles solares y sistemas de energía eólica, así mismo como plantas de tratamiento de agua sin usar 
+        químicos. También trabajamos en la optimización del consumo energético de nuestros clientes mediante tecnologías 
+        inteligentes que reducen el impacto ambiental`,
+
+    'what is the process for custom software development with your company': '¿Cuál es el proceso para el desarrollo de software personalizado con su empresa?',
+
+    'faq_aswer_2':
+        `El proceso para desarrollar software personalizado con nosotros comienza con una consulta inicial para entender sus 
+        requisitos y objetivos. Luego, creamos un plan de proyecto detallado y desarrollamos un prototipo para su revisión. 
+        Después de ajustar el prototipo según sus comentarios, procedemos al desarrollo completo y a la implementación. 
+        Finalmente, ofrecemos soporte y mantenimiento continuos para asegurar que el software siga funcionando de manera óptima`,
+
+    'what kind of support and maintenance do you offer for your technology solutions': '¿Qué tipo de soporte y mantenimiento ofrecen para sus soluciones tecnológicas?',
+
+    'faq_aswer_3':
+        `Ofrecemos soporte técnico y mantenimiento continuos para todas nuestras soluciones tecnológicas. Esto incluye la corrección 
+        de errores, la actualización de software y la optimización del rendimiento. Nuestro equipo de soporte está disponible para 
+        resolver cualquier problema que pueda surgir y para realizar ajustes según las necesidades cambiantes de su empresa`,
+    
+    'how does your company ensure data security in its software solutions': '¿Cómo asegura su empresa la seguridad de los datos en sus soluciones de software?',
+
+    'faq_aswer_4':
+        `La seguridad de los datos es una prioridad para nosotros. Implementamos medidas de seguridad avanzadas en nuestras soluciones 
+        de software, incluyendo encriptación de datos, autenticación de usuarios y monitoreo continuo de amenazas. Realizamos auditorías 
+        de seguridad regulares y seguimos las mejores prácticas de la industria para proteger la información sensible de nuestros clientes`,
+    
+    'how do water treatment plants work': '¿Cómo funcionan las plantas de tratamiento de agua?',
+
+    'faq_aswer_5':
+        `Nuestras plantas de tratamiento de agua están diseñadas para purificar el agua mediante procesos avanzados de electrólisis y 
+        reacciones de óxido-reducción. La electrólisis permite descomponer los contaminantes en componentes inofensivos sin necesidad de 
+        añadir productos químicos, mientras que las reacciones de óxido-reducción eliminan impurezas y metales pesados. Este enfoque no 
+        solo es eficaz, sino que también es más seguro y sostenible para el medio ambiente`,
+
+    'what are the advantages of using electrolysis in water treatment compared to traditional methods': '¿Cuáles son las ventajas de utilizar electrólisis en el tratamiento de agua en comparación con los métodos tradicionales?',
+
+    'faq_aswer_6':
+        `El uso de electrólisis en el tratamiento de agua ofrece varias ventajas sobre los métodos tradicionales que utilizan productos 
+        químicos. En primer lugar, elimina la necesidad de añadir sustancias químicas al proceso, lo que reduce los residuos y el impacto 
+        ambiental. Además, la electrólisis es un método altamente eficiente y controlable que puede adaptarse a diferentes tipos de 
+        contaminantes y necesidades específicas de tratamiento. Esto resulta en un proceso más seguro, económico y ecológico para la purificación del agua`,
+
     'position': 'Cargo',
     'president': 'Presidente y CEO',
     'chief executive manager': 'CEO',
