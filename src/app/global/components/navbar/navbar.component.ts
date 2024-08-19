@@ -31,8 +31,8 @@ export class NavbarComponent implements OnInit, OnDestroy {
   navbarOptions = [
     { url: '/', title: 'home'},
     { url: '/about', title: 'about'},
-    { url: '/contact', title: 'contact'},
     { url: '/faq', title: 'faq'},
+    { url: '/contact', title: 'contact'},
   ];
 
   constructor (

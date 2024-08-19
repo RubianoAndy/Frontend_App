@@ -1,23 +1,10 @@
-<div class="flex flex-col max-w-sm w-full h-full p-4 rounded-lg border border-gray-200 hover:border-green-500">
-    <img class="rounded-lg" [src]="member.picture" alt=""/>
+<div class="w-full max-w-sm mx-auto bg-white shadow-lg rounded-lg p-12 flex flex-col justify-center items-center">
+    <div class="mb-8">
+        <img class="object-center object-cover rounded-full h-36 w-36" [src]="member.picture" alt="photo">
+    </div>
 
-    <h2 class="mb-1 text-xl font-medium text-green-700 text-center">{{ member.name }}</h2>
-
-    <p class="text-sm text-center text-black">
-        {{ getTranslation('position') }}: {{ getTranslation(member.position) }}
-    </p>
-
-    <div class="flex mt-4 justify-center sm:mt-0">
-        <a *ngIf="member.facebook" [href]="member.facebook" target="_blank">
-            <img src="assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
-        </a>
-        
-        <a *ngIf="member.linkedin" [href]="member.linkedin" target="_blank">
-            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
-        </a>
-        
-        <a *ngIf="member.whatsapp" [href]="member.whatsapp" target="_blank">
-            <img src="assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
-        </a>
+    <div class="text-center">
+        <p class="text-xl text-black font-bold mb-2">{{ member.name }}</p>
+        <p class="text-base text-black font-normal">{{ getTranslation('position') }}: {{ getTranslation(member.position) }}</p>
     </div>
 </div>

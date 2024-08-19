@@ -78,7 +78,7 @@ export default class AboutComponent implements OnInit, OnDestroy {
       description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
     },
     {
-      logo: environment.logo_plants_white,
+      logo: environment.logo_plants_black,
       name: 'study, conservation and reproduction of carnivorous plants division',
       description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
     }
