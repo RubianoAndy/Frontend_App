@@ -72,11 +72,22 @@ export const pt = {
     'we are committed to the environment': '¡Estamos comprometidos com o meio ambiente!',
 
     'company_description' : 
-        `Somos um grupo empresarial especializado na inovação e criação de tecnologia amiga do ambiente. Dedicamo-nos a 
-        criar soluções sustentáveis, incluindo estações de tratamento de água sem produtos químicos, sistemas de energia 
-        solar fotovoltaica e desenvolvimento de software. Também nos especializamos na reprodução e comercialização de 
-        plantas carnívoras, oferecendo uma grande variedade de espécies. Além disso, criamos conteúdo informativo e 
-        educativo sobre essas plantas fascinantes.`,
+        `Somos um grupo empresarial especializado na inovação e criação de tecnologia amiga do ambiente.
+        Dedicamo-nos a criar soluções sustentáveis, incluindo estações de tratamento de água sem agentes químicos,
+        sistemas de energia solar fotovoltaica e desenvolvimento de software. Também nos concentramos na reprodução e
+        comercialização e geração de conteúdo informativo de plantas carnívoras`,
+    
+    'mission': 'Missão',
+
+    'mission_text' : 
+        `Proporcionar um impacto positivo ao planeta através da inovação, da responsabilidade social corporativa e da sustentabilidade ambiental, criando 
+        tecnologias limpas, desenvolvendo software de ponta e protegendo, conservando e comercializando plantas carnívoras de forma responsável`,
+
+    'vision': 'Visão',
+
+    'vision_text' : 
+        `Temos o compromisso de tornar este planeta um lugar melhor, gerando soluções ecologicamente corretas, responsáveis
+        social corporativo e otimização de recursos naturais`,
 
     'home': 'Página inicial',
     'about': 'Nós',

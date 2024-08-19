@@ -74,10 +74,21 @@ export const es = {
     'company_description' : 
         `Somos un grupo empresarial especializado en la innovación y creación de tecnología amigable con el medio ambiente. 
         Nos dedicamos a crear soluciones sostenibles, incluyendo plantas de tratamiento de agua sin agentes químicos, 
-        sistemas de energía solar fotovoltaica y desarrollo de software. También nos especializamos en la reproducción y 
-        comercialización de plantas carnívoras, ofreciendo una amplia variedad de especies. Además, creamos contenido informativo 
-        y educativo sobre estas fascinantes plantas.`,
+        sistemas de energía solar fotovoltaica y desarrollo de software. También nos enfocamos en la reproducción y 
+        comercialización y generación de contenido informativo de plantas carnívoras`,
 
+    'mission': 'Misión',
+
+    'mission_text' : 
+        `Dar un impacto positivo al planeta mediante la innovación, responsabilidad social corporativa y sostenibilidad ambiental, creando tecnologías limpias, 
+        desarrollando software de vanguardia y protegiendo, conservando y comercializando responsablemente plantas carnívoras`,
+
+    'vision': 'Visión',
+
+    'vision_text' : 
+        `Estamos comprometidos con hacer de este planeta un lugar mejor mediante la generación de soluciones amigables con el medio ambiente, la responsabilidad 
+        social corporativa y la optimización de recursos naturales`,
+    
     'home': 'Inicio',
     'about': 'Nosotros',
     'contact': 'Contacto',

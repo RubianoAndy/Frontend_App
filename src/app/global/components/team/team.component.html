@@ -7,4 +7,18 @@
         <p class="text-xl text-black font-bold mb-2">{{ member.name }}</p>
         <p class="text-base text-black font-normal">{{ getTranslation('position') }}: {{ getTranslation(member.position) }}</p>
     </div>
+
+    <div class="flex mt-4 justify-center sm:mt-0">
+        <a *ngIf="member.facebook" [href]="member.facebook" target="_blank">
+            <img src="assets/social media/Facebook.png" alt="Facebook" style="width: 30px; height: auto;">
+        </a>
+
+        <a *ngIf="member.linkedin" [href]="member.linkedin" target="_blank">
+            <img src="assets/social media/LinkedIn.png" alt="LinkedIn" style="width: 30px; height: auto;">
+        </a>
+
+        <a *ngIf="member.whatsapp" [href]="member.whatsapp" target="_blank">
+            <img src="assets/social media/WhatsApp.png" alt="WhatsApp" style="width: 30px; height: auto;">
+        </a>
+    </div>
 </div>

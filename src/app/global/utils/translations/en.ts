@@ -72,11 +72,22 @@ export const en = {
     'we are committed to the environment': 'We are committed to the environment!',
 
     'company_description' : 
-        `We are a business group specialising in innovation and creating environmentally friendly technology. 
-        We are dedicated to creating sustainable solutions, including chemical-free water treatment plants, 
-        solar photovoltaic power systems and software development. We also specialise in the reproduction and 
-        commercialisation of carnivorous plants, offering a wide variety of species. In addition, we create 
-        informative and educational content about these fascinating plants.`,
+        `We are a business group specialized in innovation and creation of environmentally friendly technology.
+        We are dedicated to creating sustainable solutions, including water treatment plants without chemicals,
+        photovoltaic solar energy systems and software development. We also focus on the reproduction and
+        marketing and generation of informative content of carnivorous plants`,
+
+    'mission': 'Mission',
+
+    'mission_text' : 
+        `Making a positive impact on the planet through innovation, corporate social responsibility and environmental sustainability, 
+        creating clean technologies, developing cutting-edge software and protecting, conserving and responsibly marketing carnivorous plants`,
+
+    'vision': 'Vision',
+
+    'vision_text' : 
+        `We are committed to making this planet a better place by generating environmentally friendly solutions, corporate social 
+        responsibility and optimizing natural resources`,
 
     'home': 'Home',
     'about': 'About',
