@@ -5,7 +5,6 @@ import { NavbarComponent } from '../../../global/components/navbar/navbar.compon
 import { BannerComponent } from '../../../global/components/banner/banner.component';
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 import { TeamComponent } from '../../../global/components/team/team.component';
-import { CompanyCardComponent } from '../../../global/components/company-card/company-card.component';
 
 import { Subscription } from 'rxjs';
 
@@ -20,7 +19,6 @@ import { environment } from '../../../global/utils/environments/environment';
     FooterComponent,
     BannerComponent,
     TeamComponent,
-    CompanyCardComponent,
     NgFor,
   ],
   templateUrl: './about.component.html',
@@ -36,24 +34,24 @@ export default class AboutComponent implements OnInit, OnDestroy {
   company_leader = {
     logo: this.logo,
     name: 'international company',
-    description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+    description: 'it bears the name of the company and is dedicated to planning strategies and projects, as well as legal, judicial, financial, payroll and brand development work'
   };
 
   companies = [
     {
       logo: environment.logo_engineering,
       name: 'engineering, development and innovation division',
-      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+      description: 'responsible for promoting innovation through electronic engineering and software development, generating cutting-edge and highly reliable solutions'
     },
     {
       logo: environment.logo_social,
       name: 'corporate social responsibility and environment division',
-      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+      description: 'leads corporate social responsibility and environmental sustainability strategies, minimizing the negative impact on the planet and improving the organizational climate'
     },
     {
       logo: environment.logo_plants_black,
       name: 'study, conservation and reproduction of carnivorous plants division',
-      description: 'Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba, Esto es un texto de prueba'
+      description: 'specialized in the study, research, conservation, reproduction and responsible marketing of carnivorous plants, ensuring their preservation and promoting their knowledge and care'
     }
   ];
 

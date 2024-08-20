@@ -4,6 +4,11 @@ export const en = {
     'corporate social responsibility and environment division': 'Corporate social responsibility and environment division',
     'study, conservation and reproduction of carnivorous plants division': 'Study, conservation and reproduction of carnivorous plants division',
 
+    'it bears the name of the company and is dedicated to planning strategies and projects, as well as legal, judicial, financial, payroll and brand development work': 'It bears the name of the company and is dedicated to planning strategies and projects, as well as legal, judicial, financial, payroll and brand development work',
+    'responsible for promoting innovation through electronic engineering and software development, generating cutting-edge and highly reliable solutions': 'Responsible for promoting innovation through electronic engineering and software development, generating cutting-edge and highly reliable solutions',
+    'leads corporate social responsibility and environmental sustainability strategies, minimizing the negative impact on the planet and improving the organizational climate': 'Leads corporate social responsibility and environmental sustainability strategies, minimizing the negative impact on the planet and improving the organizational climate',
+    'specialized in the study, research, conservation, reproduction and responsible marketing of carnivorous plants, ensuring their preservation and promoting their knowledge and care': 'Specialized in the study, research, conservation, reproduction and responsible marketing of carnivorous plants, ensuring their preservation and promoting their knowledge and care',
+
     'all rights reserved': 'All rights reserved',
 
     'spanish': 'Spanish',

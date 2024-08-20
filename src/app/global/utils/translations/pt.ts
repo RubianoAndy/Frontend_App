@@ -4,6 +4,11 @@ export const pt = {
     'corporate social responsibility and environment division': 'Divisão de Responsabilidade Social Corporativa e Meio Ambiente',
     'study, conservation and reproduction of carnivorous plants division': 'Divisão de estudo, conservação e reprodução de plantas carnívoras',
 
+    'it bears the name of the company and is dedicated to planning strategies and projects, as well as legal, judicial, financial, payroll and brand development work': 'Leva o nome da empresa e se dedica ao planejamento de estratégias e projetos, além de tarefas jurídicas, jurídicas, financeiras, folha de pagamento e desenvolvimento de marca',
+    'responsible for promoting innovation through electronic engineering and software development, generating cutting-edge and highly reliable solutions': 'Responsável por promover a inovação através da engenharia eletrônica e desenvolvimento de software, gerando soluções de ponta e altamente confiáveis',
+    'leads corporate social responsibility and environmental sustainability strategies, minimizing the negative impact on the planet and improving the organizational climate': 'Liderar estratégias de responsabilidade social corporativa e sustentabilidade ambiental, minimizando o impacto negativo no planeta e melhorando o clima organizacional',
+    'specialized in the study, research, conservation, reproduction and responsible marketing of carnivorous plants, ensuring their preservation and promoting their knowledge and care': 'Especializada no estudo, investigação, conservação, reprodução e comercialização responsável de plantas carnívoras, garantindo a sua preservação e promovendo o seu conhecimento e cuidado',
+
     'all rights reserved': 'Todos os direitos reservados',
 
     'spanish': 'Espanhol',
