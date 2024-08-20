@@ -89,6 +89,22 @@ export const es = {
         `Estamos comprometidos con hacer de este planeta un lugar mejor mediante la generación de soluciones amigables con el medio ambiente, la responsabilidad 
         social corporativa y la optimización de recursos naturales`,
     
+    'philosophy': 'Filosofía',
+    
+    'innovation': 'Innovación',
+    'resilience': 'Resiliencia',
+    'corporate social responsibility': 'Responsabilidad social corporativa',
+    'environmental commitment': 'Compromiso social y ambiental',
+    'transparency': 'Transparencia',
+    'respect': 'Respeto',
+
+    'we are constantly improving to provide innovative and technological solutions': 'Estamos en constante mejora para brindar soluciones innovadoras y tecnológicas',
+    'we adapt to changes and difficult events by learning from them, developing new skills and continually improving': 'Nos adaptamos a los cambios y eventos difíciles aprendiendo de ellos, desarrollando nuevas habilidades y mejorando continuamente',
+    'every part inside and outside the organization is important to us, therefore, we seek to ensure that all interest groups are taken into account': 'Cada parte dentro y fuera de la organización es importante para nosotros, por ello, buscamos que todos los grupos de interés sean tenidos en cuenta',
+    'we develop solutions that generate the greatest positive impact on the environment, making this world a better place for everyone': 'Desarrollamos soluciones que generen el mayor impacto positivo al medio ambiente, haciendo de este mundo un mejor lugar para todos',
+    'all our processes are transparent and honest, generating greater confidence in all interest groups': 'Todos nuestros procesos son transparentes y honestos generando una mayor confianza en todos los grupos de interés',
+    'we encourage respect among all, avoiding discrimination or offense of any kind, achieving a positive organizational climate for everyone': 'Fomentamos el respeto entre todos, evitando la discriminación u ofensa de ningún tipo, logrando que el clima organizacional sea positivo para todos',
+
     'home': 'Inicio',
     'about': 'Nosotros',
     'contact': 'Contacto',

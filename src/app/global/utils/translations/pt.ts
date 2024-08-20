@@ -89,6 +89,22 @@ export const pt = {
         `Temos o compromisso de tornar este planeta um lugar melhor, gerando soluções ecologicamente corretas, responsáveis
         social corporativo e otimização de recursos naturais`,
 
+    'philosophy': 'Filosofia',
+
+    'innovation': 'Inovação',
+    'resilience': 'Resiliência',
+    'corporate social responsibility': 'Responsabilidade social corporativa',
+    'environmental commitment': 'Compromisso ambiental',
+    'transparency': 'Transparência',
+    'respect': 'Respeito',
+
+    'we are constantly improving to provide innovative and technological solutions': 'Estamos em constante aprimoramento para oferecer soluções inovadoras e tecnológicas',
+    'we adapt to changes and difficult events by learning from them, developing new skills and continually improving': 'Adaptamo-nos às mudanças e aos acontecimentos difíceis, aprendendo com eles, desenvolvendo novas competências e melhorando continuamente',
+    'every part inside and outside the organization is important to us, therefore, we seek to ensure that all interest groups are taken into account': 'Cada parte dentro e fora da organização é importante para nós, por isso procuramos garantir que todos os grupos de interesse sejam levados em consideração',
+    'we develop solutions that generate the greatest positive impact on the environment, making this world a better place for everyone': 'Desenvolvemos soluções que geram o maior impacto positivo ao meio ambiente, tornando este mundo um lugar melhor para todos',
+    'all our processes are transparent and honest, generating greater confidence in all interest groups': 'Todos os nossos processos são transparentes e honestos, gerando maior confiança em todos os grupos de interesse',
+    'we encourage respect among all, avoiding discrimination or offense of any kind, achieving a positive organizational climate for everyone': 'Promovemos o respeito entre todos, evitando discriminações ou ofensas de qualquer natureza, garantindo que o clima organizacional seja positivo para todos',
+
     'home': 'Página inicial',
     'about': 'Nós',
     'contact': 'Contate-nos',

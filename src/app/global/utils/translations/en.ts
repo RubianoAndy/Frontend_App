@@ -89,6 +89,22 @@ export const en = {
         `We are committed to making this planet a better place by generating environmentally friendly solutions, corporate social 
         responsibility and optimizing natural resources`,
 
+    'philosophy': 'Philosophy',
+
+    'innovation': 'Innovation',
+    'resilience': 'Resilience',
+    'corporate social responsibility': 'Corporate social responsibility',
+    'environmental commitment': 'Environmental commitment',
+    'transparency': 'Transparency',
+    'respect': 'Respect',
+
+    'we are constantly improving to provide innovative and technological solutions': 'We are constantly improving to provide innovative and technological solutions',
+    'we adapt to changes and difficult events by learning from them, developing new skills and continually improving': 'We adapt to changes and difficult events by learning from them, developing new skills and continually improving',
+    'every part inside and outside the organization is important to us, therefore, we seek to ensure that all interest groups are taken into account': 'Every part inside and outside the organization is important to us, therefore, we seek to ensure that all interest groups are taken into account',
+    'we develop solutions that generate the greatest positive impact on the environment, making this world a better place for everyone': 'We develop solutions that generate the greatest positive impact on the environment, making this world a better place for everyone',
+    'all our processes are transparent and honest, generating greater confidence in all interest groups': 'All our processes are transparent and honest, generating greater confidence in all interest groups',
+    'we encourage respect among all, avoiding discrimination or offense of any kind, achieving a positive organizational climate for everyone': 'We encourage respect among all, avoiding discrimination or offense of any kind, achieving a positive organizational climate for everyone',
+    
     'home': 'Home',
     'about': 'About',
     'contact': 'Contact',
