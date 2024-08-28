@@ -5,6 +5,7 @@ import { BannerComponent } from '../../../global/components/banner/banner.compon
 import { FooterComponent } from '../../../global/components/footer/footer.component';
 
 import { TranslateService } from '../../../global/services/translate/translate.service';
+import { environment } from '../../../global/utils/environments/environment';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,7 @@ import { TranslateService } from '../../../global/services/translate/translate.s
   styleUrl: './contact.component.css'
 })
 export default class ContactComponent {
-  bannerUrl: string= 'assets/images/landingpage/Banner/Contact.jpg';
+  bannerUrl: string = 'assets/images/landingpage/Banner/Contact.jpg';
 
   constructor (
     private translateService: TranslateService,

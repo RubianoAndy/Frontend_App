@@ -2,27 +2,36 @@
 
 <app-banner [url]="bannerUrl"></app-banner>
 
-<div class="px-4 md:px-9">
+<div class="max-w-screen-xl mx-auto px-4 md:px-9">
     <div class="py-4 text-center">
         <h1 class="text-center text-4xl md:text-5xl font-bold text-black">{{ getTranslation('contact') }}</h1>
     </div>
 
-    <div class="flex justify-center max-w-screen-xl mx-auto py-4 overflow-hidden bg-white">
-        <div class="grid grid-cols-2 max-w-screen-lg mx-auto">
-            <div class="py-20 bg-slate-100 relative before:absolute before:h-full before:w-screen before:bg-[#f7d0b6] before:top-0 before:right-0">
-                <div class="relative z-20 pl-12">
-                    <h2 class="text-sky-950 font-black text-5xl leading-snug mb-10">Finpoint is here <br>to help you</h2>
-                    <p class="text-sky-950 text-sm">
-                        Purus in massa tempor nec. Magna etiam tempor orci eu lobortis elementum nibh tellus molestie. Faucibus ornare suspendisse sed nisi lacus sed viverra. Diam in arcu cursus euismod quis viverra nibh cras pulvinar.
-                    </p>
-                    <button class="mt-8 text-sky-950 uppercase py-3 text-sm px-10 border border-sky-950 hover:bg-white hover:bg-opacity-10">Talk with expert</button>
-                </div>
-            </div>
-    
-            <div class="w-full flex flex-col">
-                <img src="https://picsum.photos/800/600" class="h-full w-full" alt="">
-            </div>
+    <div class="grid w-full grid-cols-1 gap-5 md:grid-cols-2">
+        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
+            <span class="text-4xl text-green-600">
+                <i class="fa-solid fa-envelope"></i>
+            </span>
+            <p class="text-2xl font-extrabold text-dark-grey-900">{{ getTranslation('email') }}</p>
+            <p class="text-lg font-base text-purple-blue-500">ar.andy.rubiano&#64;gmail.com</p>
         </div>
+
+        <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
+            <span class="text-4xl text-green-600">
+                <i class="fa-solid fa-phone"></i>
+            </span>
+            <p class="text-2xl font-extrabold text-dark-grey-900">{{ getTranslation('mobile') }}</p>
+            <a class="text-lg font-base text-purple-blue-500" href="https://wa.me/573178737226" target="_blank">+57 317 873 7226</a>
+        </div>
+
+        <!-- <div class="flex flex-col items-center gap-3 px-8 py-10 bg-white rounded-3xl shadow-main">
+            <span class="text-4xl text-green-600">
+                <i class="fa-solid fa-location-dot"></i>
+            </span>
+            <p class="text-2xl font-extrabold text-dark-grey-900">Location</p>
+            <p class="text-base leading-7 text-dark-grey-600">Find us at our office</p>
+            <a class="text-lg font-bold text-purple-blue-500" target="_blank" href="https://goo.gl/maps/QcWzYETAh4FS3KTD7">10924 Urna Convallis</a>
+        </div> -->
     </div>
 </div>
 
