@@ -56,6 +56,10 @@ export const pt = {
     'name@email.com': 'nome@email.com',
     'password': 'Senha',
 
+    'subject': 'Assunto',
+    'message': 'Mensagem',
+    'send': 'Enviar',
+
     'have account': '¿Você já tem uma conta?',
     'forgot password': '¿Você esqueceu sua senha?',
     'change password': 'Alterar a senha',
@@ -66,13 +70,14 @@ export const pt = {
     'code expired': 'Código expirou',
     'password changed successfully': 'Senha alterada com sucesso',
 
+    'name': 'Nome',
     'first name': 'Primeiro nome',
     'second name': 'Segundo nome',
     'first lastname': 'Primeiro sobrenome',
     'second lastname': 'Segundo sobrenome',
     'identification number': 'Número de identificação',
     'birth date': 'Data de nascimento',
-    'mobile': 'Celular',
+    'mobile': 'Móvel',
 
     'we are committed to the environment': '¡Estamos comprometidos com o meio ambiente!',
 
@@ -317,4 +322,8 @@ export const pt = {
         `Reservamo-nos o direito de modificar estes termos e condições a qualquer momento. As alterações serão publicadas nesta página e 
         Eles entrarão em vigor imediatamente após a publicação. Seu uso continuado do site após a publicação de quaisquer alterações 
         constitui a sua aceitação das novas condições`,
+
+    'contact_info':
+        `Se precisar de ajuda com a nossa candidatura ou quiser entrar em contacto connosco, convidamo-lo a preencher o seguinte formulário.
+        Você também pode nos enviar sua dúvida por e-mail ou WhatsApp. Estamos aqui para ajudá-lo e tirar suas dúvidas!`,
 };

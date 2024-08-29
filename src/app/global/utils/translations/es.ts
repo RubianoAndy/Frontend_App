@@ -56,6 +56,10 @@ export const es = {
     'name@email.com': 'nombre@email.com',
     'password': 'Contraseña',
 
+    'subject': 'Asunto',
+    'message': 'Mensaje',
+    'send': 'Enviar',
+
     'have account': '¿Ya tienes cuenta?',
     'forgot password': '¿Olvidaste tu contraseña?',
     'change password': 'Cambiar la contraseña',
@@ -66,6 +70,7 @@ export const es = {
     'code expired': 'Código expirado',
     'password changed successfully': 'Contraseña cambiada exitosamente',
 
+    'name': 'Nombre',
     'first name': 'Primer nombre',
     'second name': 'Segundo nombre',
     'first lastname': 'Primer apellido',
@@ -317,4 +322,8 @@ export const es = {
         `Nos reservamos el derecho de modificar estos términos y condiciones en cualquier momento. Los cambios se publicarán en esta página y 
         serán efectivos inmediatamente después de su publicación. Tu uso continuado del sitio web después de la publicación de cualquier cambio 
         constituye tu aceptación de las nuevas condiciones`,
+
+    'contact_info':
+        `Si necesitas asistencia con nuestro aplicativo o deseas ponerte en contacto con nosotros, te invitamos a diligenciar el siguiente formulario. 
+        También puedes enviarnos tu consulta a través de correo electrónico o WhatsApp. ¡Estamos aquí para ayudarte y responder a tus inquietudes!`,
 };

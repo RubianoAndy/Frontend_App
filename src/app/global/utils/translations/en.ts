@@ -56,6 +56,10 @@ export const en = {
     'name@email.com': 'name@email.com',
     'password': 'Password',
 
+    'subject': 'Subject',
+    'message': 'Message',
+    'send': 'Send',
+
     'have account': 'Have account?',
     'forgot password': 'Forgot your password?',
     'change password': 'Change password',
@@ -66,6 +70,7 @@ export const en = {
     'code expired': 'Code expired',
     'password changed successfully': 'Password changed successfully',
 
+    'name': 'Name',
     'first name': 'First name',
     'second name': 'Second name',
     'first lastname': 'First lastname',
@@ -317,4 +322,8 @@ export const en = {
         `We reserve the right to modify these terms and conditions at any time. Changes will be posted on this page and 
         They will be effective immediately upon publication. Your continued use of the website after the posting of any changes 
         constitutes your acceptance of the new conditions`,
+
+    'contact_info':
+        `If you need assistance with our application or would like to contact us, please fill out the following form.
+        You can also send us your query via email or WhatsApp. We are here to help you and answer your questions!`,
 };
