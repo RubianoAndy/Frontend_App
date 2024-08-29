@@ -4,6 +4,7 @@ export const environment = {
   apiUrl: 'http://localhost:8000/api/backend/',
   currentYear: new Date().getFullYear(),
   site_name: 'Andy Rubiano™ - International company',
+  email: 'ar.andy.rubiano@gmail.com',
   
   logo: 'assets/logos/Logo.png',
   logo_brazil: 'assets/logos/Logo Brasil.png',

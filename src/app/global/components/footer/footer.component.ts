@@ -19,6 +19,7 @@ export class FooterComponent implements OnInit, OnDestroy {
   logo = environment.logo;
   page = environment.site_name;
   currentYear = environment.currentYear;
+  email = environment.email;
 
   private languageSubscription: Subscription | undefined;
 

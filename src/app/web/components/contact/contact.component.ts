@@ -20,6 +20,7 @@ import { environment } from '../../../global/utils/environments/environment';
 })
 export default class ContactComponent {
   bannerUrl: string = 'assets/images/landingpage/Banner/Contact.jpg';
+  email = environment.email;
 
   constructor (
     private translateService: TranslateService,
